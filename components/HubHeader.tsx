@@ -21,7 +21,7 @@ export default function HubHeader() {
       }
       router.push(`/?${params.toString()}`);
     },
-    [search, searchParams, router]
+    [search, searchParams, router],
   );
 
   return (

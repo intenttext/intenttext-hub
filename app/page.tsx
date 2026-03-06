@@ -50,6 +50,50 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="mx-auto max-w-6xl border-t border-[var(--border)] px-6 py-8">
+        <div className="flex flex-col items-center gap-3 text-sm text-[var(--text-muted)]">
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/intenttext/intenttext"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--text)] transition-colors"
+            >
+              GitHub
+            </a>
+            <span>·</span>
+            <a
+              href="https://www.npmjs.com/package/@intenttext/core"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--text)] transition-colors"
+            >
+              npm
+            </a>
+            <span>·</span>
+            <a
+              href="https://iteditor.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--text)] transition-colors"
+            >
+              Editor
+            </a>
+            <span>·</span>
+            <a
+              href="https://github.com/intenttext/intenttext/blob/main/docs/SPEC.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--text)] transition-colors"
+            >
+              Spec
+            </a>
+          </div>
+          <p>IntentText — The first document format that is natively JSON.</p>
+        </div>
+      </footer>
     </main>
   );
 }

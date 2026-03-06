@@ -59,7 +59,7 @@ export async function getTemplateCount(options: {
 }
 
 export async function getTemplateBySlug(
-  slug: string
+  slug: string,
 ): Promise<HubTemplate | null> {
   const { db } = await connectToDatabase();
   const collection = db.collection<HubTemplate>("templates");
@@ -80,7 +80,7 @@ export async function submitTemplate(
   template: Omit<
     HubTemplate,
     "_id" | "downloads" | "views" | "createdAt" | "updatedAt"
-  >
+  >,
 ): Promise<{ success: boolean; slug?: string; error?: string }> {
   const { db } = await connectToDatabase();
   const collection = db.collection<HubTemplate>("templates");
@@ -121,7 +121,7 @@ export async function getPendingTemplates(): Promise<HubTemplate[]> {
 
 export async function approveTemplate(
   slug: string,
-  reviewedBy: string
+  reviewedBy: string,
 ): Promise<void> {
   const { db } = await connectToDatabase();
   await db.collection("templates").updateOne(
@@ -132,14 +132,14 @@ export async function approveTemplate(
         reviewedBy,
         updatedAt: new Date(),
       },
-    }
+    },
   );
 }
 
 export async function rejectTemplate(
   slug: string,
   reviewedBy: string,
-  reason: string
+  reason: string,
 ): Promise<void> {
   const { db } = await connectToDatabase();
   await db.collection("templates").updateOne(
@@ -151,6 +151,6 @@ export async function rejectTemplate(
         rejectionReason: reason,
         updatedAt: new Date(),
       },
-    }
+    },
   );
 }
