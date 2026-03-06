@@ -7,13 +7,10 @@ const categories = [
   { key: "agent", label: "Agents" },
   { key: "workflow", label: "Workflows" },
   { key: "document", label: "Documents" },
+  { key: "sealed", label: "🔒 Sealed" },
 ];
 
-export default function CategoryTabs({
-  active,
-}: {
-  active: string;
-}) {
+export default function CategoryTabs({ active }: { active: string }) {
   const router = useRouter();
   const searchParams = useSearchParams();
 

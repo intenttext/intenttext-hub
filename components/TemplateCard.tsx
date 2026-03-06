@@ -7,11 +7,7 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
   document: { bg: "rgba(166,227,161,0.15)", text: "var(--green)" },
 };
 
-export default function TemplateCard({
-  template,
-}: {
-  template: HubTemplate;
-}) {
+export default function TemplateCard({ template }: { template: HubTemplate }) {
   const colors = categoryColors[template.category] ?? categoryColors.document;
 
   return (
@@ -25,6 +21,16 @@ export default function TemplateCard({
       >
         {template.category}
       </span>
+      {template.trust?.frozen && (
+        <span className="mb-3 ml-2 inline-block w-fit rounded-full bg-[rgba(243,139,168,0.12)] px-2.5 py-1 text-xs font-semibold text-[rgba(243,139,168,1)]">
+          🔒 Sealed
+        </span>
+      )}
+      {template.trust?.tracked && !template.trust?.frozen && (
+        <span className="mb-3 ml-2 inline-block w-fit rounded-full bg-[rgba(137,180,250,0.12)] px-2.5 py-1 text-xs font-semibold text-[var(--blue)]">
+          📋 Tracked
+        </span>
+      )}
       <h3 className="mb-1 text-lg font-bold text-[var(--text)] group-hover:text-[var(--purple)]">
         {template.name}
       </h3>

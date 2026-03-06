@@ -18,4 +18,10 @@ export interface HubTemplate {
   updatedAt: Date;
   reviewedBy?: string;
   rejectionReason?: string;
+  trust?: {
+    tracked: boolean;
+    frozen: boolean;
+    frozenAt?: string;
+    signers?: string[];
+  };
 }
