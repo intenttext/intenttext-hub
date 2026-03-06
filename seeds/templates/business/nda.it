@@ -1,0 +1,70 @@
+title: Non-Disclosure Agreement
+meta: | type: template | domain: business | description: Mutual non-disclosure agreement with confidential information definitions, obligations, term, and remedies | theme: legal | version: 1.0 | author: IntentText
+---
+section: Parties
+---
+note: Disclosing Party
+  *Name:* {{disclosing_party_name}}
+  *Address:* {{disclosing_party_address}}
+  *Representative:* {{disclosing_party_contact}} · {{disclosing_party_email}}
+---
+note: Receiving Party
+  *Name:* {{receiving_party_name}}
+  *Address:* {{receiving_party_address}}
+  *Representative:* {{receiving_party_contact}} · {{receiving_party_email}}
+---
+section: Purpose
+---
+note: Purpose of Disclosure
+  {{purpose}}
+---
+section: Definition of Confidential Information
+---
+note: Confidential Information Includes
+  {{confidential_info_definition}}
+---
+note: Exclusions
+  {{exclusions}}
+---
+section: Obligations of Receiving Party
+---
+note: Non-Disclosure Obligations
+  {{obligations}}
+---
+note: Permitted Disclosures
+  {{permitted_disclosures}}
+---
+section: Term and Duration
+---
+note: Agreement Term
+  *Effective Date:* {{effective_date}}
+  *Disclosure Period:* {{disclosure_period}}
+  *Confidentiality Duration:* {{confidentiality_duration}}
+---
+section: Return of Materials
+---
+note: Return or Destruction
+  {{return_clause}}
+---
+section: Remedies
+---
+note: Remedies for Breach
+  {{remedies}}
+---
+section: General Provisions
+---
+note: Governing Law and Miscellaneous
+  *Governing Law:* {{governing_law}}
+  *Entire Agreement:* This NDA constitutes the entire agreement between the parties regarding confidentiality and supersedes all prior discussions on the subject.
+  *Amendment:* Modifications must be in writing and signed by both parties.
+---
+section: Signatures
+---
+sign: {{disclosing_party_signatory}}
+  | role: {{disclosing_party_title}} | on behalf of: {{disclosing_party_name}} | at: {{disclosing_signed_date}}
+---
+sign: {{receiving_party_signatory}}
+  | role: {{receiving_party_title}} | on behalf of: {{receiving_party_name}} | at: {{receiving_signed_date}}
+---
+freeze: NDA executed
+  | at: {{freeze_date}} | by: {{disclosing_party_signatory}}

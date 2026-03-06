@@ -1,14 +1,29 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+interface UserSession {
+  user_id: string;
+  username: string;
+  avatar_url: string;
+  role: string;
+}
 
 export default function HubHeader() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") ?? "");
+  const [user, setUser] = useState<UserSession | null>(null);
+
+  useEffect(() => {
+    fetch("/api/auth/me")
+      .then((r) => r.json())
+      .then((d) => setUser(d.user ?? null))
+      .catch(() => {});
+  }, []);
 
   const handleSearch = useCallback(
     (e: React.FormEvent) => {
@@ -57,7 +72,7 @@ export default function HubHeader() {
               </button>
             </form>
             <Link
-              href="/submit"
+              href="/publish"
               className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[var(--purple)] px-5 py-2 text-sm font-medium text-[var(--surface-2)] hover:opacity-90"
             >
               <svg
@@ -73,8 +88,31 @@ export default function HubHeader() {
               >
                 <path d="M12 5v14M5 12h14" />
               </svg>
-              Submit
+              Publish
             </Link>
+            {user ? (
+              <Link
+                href="/account"
+                className="flex shrink-0 items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-sm text-[var(--text)] hover:border-[var(--purple)]"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={user.avatar_url}
+                  alt={user.username}
+                  width={24}
+                  height={24}
+                  className="rounded-full"
+                />
+                {user.username}
+              </Link>
+            ) : (
+              <a
+                href="/api/auth/login"
+                className="shrink-0 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-medium text-[var(--text)] hover:border-[var(--purple)]"
+              >
+                Sign in
+              </a>
+            )}
           </div>
         </div>
       </div>

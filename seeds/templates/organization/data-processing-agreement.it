@@ -1,0 +1,108 @@
+title: {{agreement_title}}
+meta: | type: template | domain: organization | description: GDPR-compliant data processing agreement covering controller-processor obligations, data types, safeguards, and sub-processors | theme: legal | version: 1.0 | author: IntentText
+---
+section: Parties
+---
+note: Data Controller
+  *Name:* {{controller_name}}
+  *Address:* {{controller_address}}
+  *Registration Number:* {{controller_registration}}
+  *Contact:* {{controller_contact}} · {{controller_email}}
+  *Data Protection Officer:* {{controller_dpo}} · {{controller_dpo_email}}
+---
+note: Data Processor
+  *Name:* {{processor_name}}
+  *Address:* {{processor_address}}
+  *Registration Number:* {{processor_registration}}
+  *Contact:* {{processor_contact}} · {{processor_email}}
+  *Data Protection Officer:* {{processor_dpo}} · {{processor_dpo_email}}
+---
+section: Subject Matter and Duration
+---
+note: Processing Overview
+  *Agreement ID:* {{agreement_id}}
+  *Effective Date:* {{effective_date}}
+  *Duration:* {{duration}}
+  *Nature of Processing:* {{nature_of_processing}}
+  *Purpose of Processing:* {{purpose_of_processing}}
+---
+section: Categories of Data Subjects and Personal Data
+---
+note: Data Subjects
+  {{data_subjects}}
+---
+note: Categories of Personal Data
+  {{data_categories}}
+---
+note: Special Categories of Data
+  {{special_categories}}
+---
+section: Controller Obligations
+---
+note: Controller Responsibilities
+  {{controller_obligations}}
+---
+section: Processor Obligations
+---
+note: Processor Responsibilities
+  {{processor_obligations}}
+---
+section: Technical and Organisational Measures
+---
+note: Security Safeguards
+  {{security_measures}}
+---
+section: Sub-Processors
+---
+note: Sub-Processing Arrangements
+  {{sub_processor_terms}}
+---
+each: sub_processors
+  note: {{sub_processor_name}}
+    *Location:* {{sub_processor_location}} · *Purpose:* {{sub_processor_purpose}} · *Data Transferred:* {{sub_processor_data}}
+---
+section: International Transfers
+---
+note: Cross-Border Data Transfers
+  {{transfer_safeguards}}
+---
+section: Data Subject Rights
+---
+note: Assistance with Data Subject Requests
+  {{data_subject_rights}}
+---
+section: Data Breach Notification
+---
+note: Breach Notification Procedure
+  {{breach_notification}}
+---
+section: Audit Rights
+---
+note: Audit and Inspection
+  {{audit_rights}}
+---
+section: Termination and Data Return
+---
+note: Data Return and Deletion
+  {{data_return}}
+---
+section: Liability and Indemnification
+---
+note: Liability
+  {{liability}}
+---
+section: Governing Law
+---
+note: Jurisdiction
+  {{governing_law}}
+---
+section: Signatures
+---
+sign: {{controller_signatory}}
+  | role: {{controller_signatory_title}} | on behalf of: {{controller_name}} | at: {{controller_signed_date}}
+---
+sign: {{processor_signatory}}
+  | role: {{processor_signatory_title}} | on behalf of: {{processor_name}} | at: {{processor_signed_date}}
+---
+freeze: DPA executed
+  | at: {{freeze_date}} | by: {{controller_signatory}}

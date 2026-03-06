@@ -1,0 +1,64 @@
+title: Business Proposal
+meta: | type: template | domain: business | description: Business proposal with executive summary, solution overview, pricing breakdown, timeline, and call to action | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Cover
+---
+note: Proposal Information
+  *Proposal Number:* {{proposal_number}}
+  *Date:* {{date}}
+  *Valid Until:* {{valid_until}}
+  *Prepared For:* {{client_name}}, {{client_company}}
+  *Prepared By:* {{author_name}}, {{author_company}}
+---
+section: Executive Summary
+---
+note: Overview
+  {{executive_summary}}
+---
+section: Problem Statement
+---
+note: Current Challenges
+  {{problem_statement}}
+---
+section: Proposed Solution
+---
+note: Solution Overview
+  {{solution_overview}}
+---
+note: Key Benefits
+  {{key_benefits}}
+---
+section: Pricing
+---
+each: pricing_items
+  note: {{item}}
+    *Description:* {{description}} · *Cost:* {{cost}}
+---
+note: Pricing Summary
+  *Total Investment:* {{total_cost}}
+  *Payment Terms:* {{pricing_payment_terms}}
+---
+section: Timeline
+---
+each: timeline_items
+  note: {{phase}}
+    *Duration:* {{duration}} · *Deliverables:* {{deliverables}}
+---
+note: Project Duration
+  *Estimated Start:* {{start_date}}
+  *Estimated Completion:* {{end_date}}
+---
+section: Why Us
+---
+note: Our Qualifications
+  {{qualifications}}
+---
+section: Next Steps
+---
+note: Call to Action
+  {{next_steps}}
+---
+note: Contact
+  {{contact_name}}
+  {{contact_title}}
+  {{contact_email}} · {{contact_phone}}

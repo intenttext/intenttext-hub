@@ -1,0 +1,47 @@
+title: Business Memo
+meta: | type: template | domain: business | description: Internal business memorandum with structured header, body sections, and approval workflow | theme: corporate | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: {{author}}
+track: | version: 0.9 | by: {{author}} | note: Initial draft
+---
+section: Memo Header
+---
+note: Memorandum
+  *To:* {{to}}
+  *From:* {{from}}
+  *Date:* {{date}}
+  *Subject:* {{subject}}
+  *Priority:* {{priority}}
+  *Distribution:* {{distribution}}
+---
+section: Executive Summary
+---
+note: Summary
+  {{executive_summary}}
+---
+section: Background
+---
+note: Context
+  {{background}}
+---
+section: Analysis
+---
+note: Findings
+  {{analysis}}
+---
+section: Recommendation
+---
+note: Recommended Action
+  {{recommendation}}
+---
+section: Next Steps
+---
+note: Implementation Plan
+  {{next_steps}}
+---
+section: Attachments
+---
+note: Supporting Materials
+  {{attachments}}
+---
+approve: {{approver_name}}
+  | role: {{approver_title}} | at: {{approval_date}}

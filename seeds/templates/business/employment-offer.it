@@ -1,0 +1,65 @@
+title: Employment Offer Letter
+meta: | type: template | domain: business | description: Job offer letter with role details, compensation, benefits, start date, and acceptance conditions | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Offer Details
+---
+note: Position Offered
+  *Company:* {{company_name}}
+  *Position:* {{position_title}}
+  *Department:* {{department}}
+  *Reporting To:* {{reporting_to}}
+  *Employment Type:* {{employment_type}}
+  *Start Date:* {{start_date}}
+  *Work Location:* {{work_location}}
+---
+section: Compensation
+---
+note: Base Compensation
+  *Annual Salary:* {{annual_salary}}
+  *Pay Frequency:* {{pay_frequency}}
+  *Signing Bonus:* {{signing_bonus}}
+---
+note: Equity
+  {{equity_details}}
+---
+note: Performance Bonus
+  {{bonus_details}}
+---
+section: Benefits
+---
+note: Benefits Package
+  {{benefits_summary}}
+---
+note: Paid Time Off
+  {{pto_details}}
+---
+section: Conditions of Employment
+---
+note: Contingencies
+  {{conditions}}
+---
+note: At-Will Statement
+  {{at_will_statement}}
+---
+section: Confidentiality and Non-Compete
+---
+note: Agreements Required
+  {{agreements}}
+---
+section: Acceptance
+---
+note: Acceptance Instructions
+  To accept this offer, please sign below and return this letter by {{acceptance_deadline}}. If we do not receive your signed acceptance by this date, this offer will expire.
+---
+note: Candidate
+  *Name:* {{candidate_name}}
+  *Email:* {{candidate_email}}
+---
+sign: {{hiring_manager}}
+  | role: {{hiring_manager_title}} | on behalf of: {{company_name}} | at: {{offer_date}}
+---
+sign: {{candidate_name}}
+  | role: Candidate | at: {{acceptance_date}}
+---
+freeze: Offer accepted
+  | at: {{freeze_date}} | by: {{hiring_manager}}

@@ -1,0 +1,45 @@
+title: {{log_title}}
+meta: | type: template | domain: agent | description: Agent execution audit log capturing session metadata, step-by-step actions, tool invocations, and immutable session history | theme: technical | version: 1.0 | author: IntentText
+track: | version: {{log_version}} | by: {{recorded_by}} | note: Session {{session_id}} recorded
+---
+section: Session Metadata
+---
+note: Session Details
+  *Session ID:* {{session_id}}
+  *Agent:* {{agent_name}}
+  *Model:* {{model}}
+  *Started:* {{session_start}}
+  *Ended:* {{session_end}}
+  *Duration:* {{session_duration}}
+  *Status:* {{session_status}}
+  *Trigger:* {{trigger_event}}
+---
+section: Execution Log
+---
+each: log_entries
+  note: Step {{step_number}} — {{action}}
+    *Timestamp:* {{timestamp}}
+    *Tool:* {{tool_used}}
+    *Input Summary:* {{input_summary}}
+    *Output Summary:* {{output_summary}}
+    *Latency:* {{latency}}
+    *Tokens:* {{token_count}}
+    *Status:* {{status}}
+---
+section: Resource Usage
+---
+note: Consumption Summary
+  *Total Steps:* {{total_steps}}
+  *Total Tokens:* {{total_tokens}}
+  *Total Latency:* {{total_latency}}
+  *Estimated Cost:* {{estimated_cost}}
+  *Tools Invoked:* {{tools_invoked}}
+---
+section: Outcome
+---
+note: Result
+  {{outcome_summary}}
+---
+freeze: Session {{session_id}} complete — audit log sealed
+---
+note: Recorded by {{recorded_by}} · {{record_date}}

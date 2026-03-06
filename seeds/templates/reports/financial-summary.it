@@ -1,0 +1,65 @@
+title: Financial Period Summary
+meta: | type: template | domain: business | description: Financial period summary with revenue breakdown, expense analysis, profit metrics, and executive highlights | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Report Information
+---
+note: Period Details
+  *Company:* {{company_name}}
+  *Period:* {{period}}
+  *Prepared By:* {{prepared_by}}
+  *Report Date:* {{report_date}}
+  *Currency:* {{currency}}
+---
+section: Revenue
+---
+each: revenue_lines
+  note: {{source}}
+    *Amount:* {{amount}} · *Prior Period:* {{prior_period}} · *Change:* {{change}} · *Notes:* {{notes}}
+---
+note: Revenue Totals
+  *Total Revenue:* {{total_revenue}}
+  *Prior Period Revenue:* {{prior_period_revenue}}
+  *Revenue Growth:* {{revenue_growth}}
+---
+section: Expenses
+---
+each: expense_lines
+  note: {{category}}
+    *Amount:* {{amount}} · *Budget:* {{budget}} · *Variance:* {{variance}} · *Notes:* {{notes}}
+---
+note: Expense Totals
+  *Total Expenses:* {{total_expenses}}
+  *Budget:* {{total_budget}}
+  *Overall Variance:* {{expense_variance}}
+---
+section: Profitability
+---
+note: Profit Metrics
+  *Gross Profit:* {{gross_profit}}
+  *Gross Margin:* {{gross_margin}}
+  *Operating Profit:* {{operating_profit}}
+  *Operating Margin:* {{operating_margin}}
+  *Net Profit:* {{net_profit}}
+  *Net Margin:* {{net_margin}}
+  *EBITDA:* {{ebitda}}
+---
+section: Key Metrics
+---
+note: Performance Indicators
+  *Monthly Recurring Revenue:* {{mrr}}
+  *Customer Acquisition Cost:* {{cac}}
+  *Lifetime Value:* {{ltv}}
+  *LTV/CAC Ratio:* {{ltv_cac_ratio}}
+  *Burn Rate:* {{burn_rate}}
+  *Runway:* {{runway}}
+---
+section: Highlights and Commentary
+---
+note: Executive Summary
+  {{executive_summary}}
+---
+note: Risks and Outlook
+  {{risks_outlook}}
+---
+approve: {{cfo_name}}
+  | role: Chief Financial Officer | at: {{cfo_approval_date}}

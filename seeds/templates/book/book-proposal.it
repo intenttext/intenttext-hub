@@ -1,0 +1,47 @@
+title: Book Proposal
+meta: | type: template | domain: book | description: Formal book proposal to a publisher with overview, market analysis, chapter outline, author biography, and sample chapter | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Proposal Overview
+---
+note: *{{book_title}}*
+  {{subtitle}}
+  by {{author_name}}
+---
+note: {{overview}}
+---
+section: Market Analysis
+---
+note: *Target Audience*
+  {{target_audience}}
+---
+note: *Comparable Titles*
+  {{comparable_titles}}
+---
+note: *Market Opportunity*
+  {{market_opportunity}}
+---
+section: Chapter Outline
+---
+each: chapters
+  note: *Chapter {{number}}: {{title}}*
+    {{summary}}
+---
+section: About the Author
+---
+note: {{author_bio}}
+---
+note: *Previous Publications*
+  {{previous_publications}}
+---
+section: Specifications
+---
+note: Estimated word count: {{word_count}}
+  Estimated delivery: {{delivery_date}}
+  Illustrations: {{illustrations}}
+  Format: {{format}}
+---
+section: Sample Chapter
+---
+note: *From Chapter {{sample_chapter_number}}: {{sample_chapter_title}}*
+---
+note: {{sample_excerpt}}

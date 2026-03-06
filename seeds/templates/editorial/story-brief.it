@@ -1,0 +1,44 @@
+title: Story Brief
+meta: | type: template | domain: editorial | description: Editorial story brief for pitching with angle, audience, sources, and deadline | theme: minimal | version: 1.0 | author: IntentText
+---
+section: Story Overview
+---
+note: {{working_title}}
+  *Reporter:* {{reporter_name}}
+  *Editor:* {{assigning_editor}}
+  *Section:* {{section}}
+  *Pitch Date:* {{pitch_date}}
+---
+section: Angle
+---
+note: {{angle}}
+---
+section: Target Audience
+---
+note: {{audience}}
+---
+section: Key Questions
+---
+each: key_questions
+  note: {{question}}
+    *Why it matters:* {{relevance}}
+---
+section: Sources
+---
+each: sources
+  note: {{name}} — {{role}}
+    *Affiliation:* {{affiliation}}
+    *Contact:* {{contact}}
+    *What they bring:* {{value}}
+---
+section: Logistics
+---
+note: Production Details
+  *Deadline:* {{deadline}}
+  *Target Word Count:* {{word_count}}
+  *Multimedia:* {{multimedia_needs}}
+  *Travel Required:* {{travel}}
+---
+section: Background
+---
+note: {{background_context}}

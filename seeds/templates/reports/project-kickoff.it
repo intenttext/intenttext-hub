@@ -1,0 +1,66 @@
+title: Project Kickoff Document
+meta: | type: template | domain: business | description: Project kickoff document with goals, scope, team roster, timeline milestones, risks, and stakeholder sign-off | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Project Overview
+---
+note: Project Details
+  *Project Name:* {{project_name}}
+  *Project Code:* {{project_code}}
+  *Sponsor:* {{sponsor_name}}
+  *Project Manager:* {{project_manager}}
+  *Start Date:* {{start_date}}
+  *Target Completion:* {{target_completion}}
+  *Budget:* {{budget}}
+---
+section: Goals and Objectives
+---
+note: Strategic Goals
+  {{strategic_goals}}
+---
+note: Success Criteria
+  {{success_criteria}}
+---
+section: Scope
+---
+note: In Scope
+  {{in_scope}}
+---
+note: Out of Scope
+  {{out_of_scope}}
+---
+section: Team
+---
+each: team_members
+  note: {{name}}
+    *Role:* {{role}} · *Department:* {{department}} · *Allocation:* {{allocation}} · *Contact:* {{email}}
+---
+section: Timeline and Milestones
+---
+each: milestones
+  task: {{name}}
+    | target: {{target_date}} | owner: {{owner}} | status: {{status}}
+---
+section: Risks
+---
+each: risks
+  warning: {{description}}
+    | likelihood: {{likelihood}} | impact: {{impact}} | mitigation: {{mitigation}} | owner: {{owner}}
+---
+section: Key Decisions
+---
+note: Decisions Made at Kickoff
+  {{decisions}}
+---
+section: Communication Plan
+---
+note: Cadence
+  *Status Reports:* {{status_cadence}}
+  *Steering Committee:* {{steering_cadence}}
+  *Team Standups:* {{standup_cadence}}
+  *Escalation Path:* {{escalation_path}}
+---
+approve: {{sponsor_name}}
+  | role: Executive Sponsor | at: {{sponsor_approval_date}}
+---
+approve: {{project_manager}}
+  | role: Project Manager | at: {{pm_approval_date}}

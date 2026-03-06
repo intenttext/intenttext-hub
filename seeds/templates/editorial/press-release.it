@@ -1,0 +1,42 @@
+title: Press Release
+meta: | type: template | domain: editorial | description: Press release with headline, dateline, executive quotes, body, and boilerplate | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Release Header
+---
+note: FOR IMMEDIATE RELEASE
+  *Date:* {{release_date}}
+---
+section: Headline
+---
+note: {{headline}}
+  *{{subheadline}}*
+---
+section: Dateline and Lede
+---
+note: {{dateline}} — {{lede}}
+---
+section: Body
+---
+each: body_paragraphs
+  note: {{text}}
+---
+quote: {{executive_quote}} | by: {{executive_name}}, {{executive_title}}, {{company_name}}
+---
+each: additional_paragraphs
+  note: {{text}}
+---
+quote: {{partner_quote}} | by: {{partner_name}}, {{partner_title}}, {{partner_organization}}
+---
+section: Boilerplate
+---
+note: About {{company_name}}
+  {{boilerplate}}
+---
+section: Media Contact
+---
+note: {{contact_name}}
+  *Title:* {{contact_title}}
+  *Email:* {{contact_email}}
+  *Phone:* {{contact_phone}}
+---
+note: ###

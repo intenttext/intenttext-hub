@@ -1,0 +1,41 @@
+title: {{tree_name}}
+meta: | type: template | domain: agent | description: Agent decision logic tree with conditional branches, weighted outcomes, and fallback paths for structured reasoning | theme: technical | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: {{author}} | note: Decision tree defined {{created_date}}
+---
+section: Decision Context
+---
+note: Overview
+  *Agent:* {{agent_name}}
+  *Model:* {{model}}
+  *Objective:* {{objective}}
+  *Input Signal:* {{input_signal}}
+  *Confidence Threshold:* {{confidence_threshold}}
+---
+note: Evaluation Criteria
+  {{evaluation_criteria}}
+---
+section: Decision Nodes
+---
+each: decision_nodes
+  decision: {{label}} | condition: {{condition}} | weight: {{weight}}
+    *Description:* {{description}}
+    *Outcome if True:* {{outcome_true}}
+    *Outcome if False:* {{outcome_false}}
+    *Data Source:* {{data_source}}
+    *Confidence:* {{confidence}}
+---
+section: Fallback Path
+---
+note: Default Outcome
+  *Fallback Action:* {{fallback_action}}
+  *Trigger:* {{fallback_trigger}}
+  *Notification:* {{fallback_notification}}
+---
+section: Audit Trail
+---
+note: Logging
+  *Log Destination:* {{log_destination}}
+  *Retention:* {{log_retention}}
+  *Include Reasoning:* {{include_reasoning}}
+---
+note: Decision tree maintained by {{author}} · {{created_date}}

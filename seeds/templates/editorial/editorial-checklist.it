@@ -1,0 +1,32 @@
+title: Editorial Checklist
+meta: | type: template | domain: editorial | description: Pre-publication checklist covering fact verification, legal clearance, and asset rights | theme: minimal | version: 1.0 | author: IntentText
+---
+section: Publication Details
+---
+note: {{article_title}}
+  *Author:* {{author_name}}
+  *Section:* {{section}}
+  *Target Publish Date:* {{publish_date}}
+  *Editor:* {{editor_name}}
+---
+section: Pre-Publication Checks
+---
+each: checklist_items
+  note: {{task}}
+    *Owner:* {{owner}}
+    *Status:* {{status}}
+    *Notes:* {{notes}}
+---
+section: Legal and Compliance
+---
+note: Legal Review
+  *Reviewed by:* {{legal_reviewer}}
+  *Date:* {{legal_review_date}}
+  *Outcome:* {{legal_outcome}}
+  *Conditions:* {{legal_conditions}}
+---
+section: Final Sign-Off
+---
+approve: {{editor_name}} | role: Managing Editor | date: {{approval_date}}
+---
+freeze: {{freeze_reason}}

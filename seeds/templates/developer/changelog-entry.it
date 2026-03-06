@@ -1,0 +1,53 @@
+title: {{project_name}} — Release {{version}}
+meta: | type: template | domain: developer | description: Changelog and release notes entry with categorized changes for added, changed, fixed, and removed items | theme: technical | version: 1.0 | author: IntentText
+---
+section: Release Information
+---
+note: Release Details
+  *Version:* {{version}}
+  *Release Date:* {{release_date}}
+  *Codename:* {{codename}}
+  *Stability:* {{stability}}
+  *Upgrade Path:* {{upgrade_path}}
+---
+note: Summary
+  {{release_summary}}
+---
+section: Added
+---
+each: added_items
+  note: {{title}}
+    {{description}}
+---
+section: Changed
+---
+each: changed_items
+  note: {{title}}
+    {{description}}
+---
+section: Fixed
+---
+each: fixed_items
+  note: {{title}}
+    {{description}}
+---
+section: Removed
+---
+each: removed_items
+  note: {{title}}
+    {{description}}
+---
+section: Breaking Changes
+---
+note: Migration Notes
+  {{breaking_changes}}
+---
+section: Known Issues
+---
+note: Open Issues
+  {{known_issues}}
+---
+section: Contributors
+---
+note: Acknowledgements
+  {{contributors}}

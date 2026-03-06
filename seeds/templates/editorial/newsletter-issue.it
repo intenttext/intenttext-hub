@@ -1,0 +1,36 @@
+title: Newsletter Issue
+meta: | type: template | domain: editorial | description: Newsletter issue with header, editorial intro, story summaries, and sign-off | theme: editorial | version: 1.0 | author: IntentText
+---
+section: Header
+---
+note: {{newsletter_name}} · {{issue_label}}
+  *Date:* {{publish_date}}
+  *Editor:* {{editor_name}}
+---
+section: Editor Introduction
+---
+note: {{intro}}
+---
+section: Stories
+---
+each: stories
+  note: {{headline}}
+    {{summary}}
+    *By {{author}}* · *Read time:* {{read_time}}
+---
+section: Commentary
+---
+quote: {{commentary_quote}} | by: {{commentary_attribution}}
+---
+section: Quick Links
+---
+each: quick_links
+  note: {{title}}
+    {{description}} · *Source:* {{source}}
+---
+section: Sign-Off
+---
+note: {{sign_off}}
+  *{{editor_name}}, {{editor_title}}*
+---
+track: {{issue_label}} | status: {{issue_status}} | date: {{publish_date}}

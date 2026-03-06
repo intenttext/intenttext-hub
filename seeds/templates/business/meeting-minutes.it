@@ -1,0 +1,54 @@
+title: Meeting Minutes
+meta: | type: template | domain: business | description: Structured meeting minutes with attendees, agenda, decisions, action items, and next meeting scheduling | theme: minimal | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: Corporate Secretary
+track: | version: 0.9 | by: Corporate Secretary | note: Draft circulated for review
+---
+section: Meeting Information
+---
+note: Details
+  *Meeting Title:* {{meeting_title}}
+  *Date:* {{meeting_date}}
+  *Time:* {{start_time}} — {{end_time}}
+  *Location:* {{location}}
+  *Called By:* {{called_by}}
+---
+section: Attendees
+---
+each: attendees
+  note: {{name}}
+    *Role:* {{role}} · *Department:* {{department}} · *Status:* {{status}}
+---
+section: Agenda
+---
+note: Agenda Items
+  {{agenda}}
+---
+section: Discussion Summary
+---
+note: Key Discussion Points
+  {{discussion_summary}}
+---
+section: Decisions
+---
+note: Decisions Reached
+  {{decisions}}
+---
+section: Action Items
+---
+each: action_items
+  note: {{task}}
+    *Assigned To:* {{assigned_to}} · *Deadline:* {{deadline}} · *Priority:* {{priority}}
+---
+section: Next Meeting
+---
+note: Scheduled Follow-Up
+  *Date:* {{next_meeting_date}}
+  *Time:* {{next_meeting_time}}
+  *Location:* {{next_meeting_location}}
+  *Preliminary Agenda:* {{next_meeting_agenda}}
+---
+note: Minutes Prepared By
+  {{prepared_by}} · {{prepared_date}}
+---
+approve: {{chair_name}}
+  | role: Meeting Chair | at: {{approved_date}}

@@ -3,6 +3,8 @@ import type { HubTemplate } from "../types/hub";
 
 export async function getTemplates(options: {
   category?: string;
+  domain?: string;
+  tier?: string;
   search?: string;
   limit?: number;
   skip?: number;
@@ -13,8 +15,16 @@ export async function getTemplates(options: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const filter: Record<string, any> = { status: "approved" };
 
+  if (options.tier && options.tier !== "all") {
+    filter.tier = options.tier;
+  }
+
   if (options.category && options.category !== "all") {
     filter.category = options.category;
+  }
+
+  if (options.domain && options.domain !== "all") {
+    filter.domain = options.domain;
   }
 
   if (options.search) {
@@ -35,6 +45,8 @@ export async function getTemplates(options: {
 
 export async function getTemplateCount(options: {
   category?: string;
+  domain?: string;
+  tier?: string;
   search?: string;
 }): Promise<number> {
   const { db } = await connectToDatabase();
@@ -43,8 +55,16 @@ export async function getTemplateCount(options: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const filter: Record<string, any> = { status: "approved" };
 
+  if (options.tier && options.tier !== "all") {
+    filter.tier = options.tier;
+  }
+
   if (options.category && options.category !== "all") {
     filter.category = options.category;
+  }
+
+  if (options.domain && options.domain !== "all") {
+    filter.domain = options.domain;
   }
 
   if (options.search) {
@@ -129,7 +149,9 @@ export async function approveTemplate(
     {
       $set: {
         status: "approved",
+        tier: "curated",
         reviewedBy,
+        reviewed_at: new Date(),
         updatedAt: new Date(),
       },
     },
@@ -153,4 +175,80 @@ export async function rejectTemplate(
       },
     },
   );
+}
+
+export async function submitForReview(
+  slug: string,
+  ownerId: string,
+): Promise<boolean> {
+  const { db } = await connectToDatabase();
+  const result = await db.collection("templates").updateOne(
+    {
+      slug,
+      owner_id: ownerId,
+      status: { $in: ["community", "changes_requested", "rejected"] },
+    },
+    {
+      $set: {
+        status: "pending_review",
+        tier: "community", // stays community until approved
+        updatedAt: new Date(),
+      },
+    },
+  );
+  return result.modifiedCount > 0;
+}
+
+export async function requestChanges(
+  slug: string,
+  reviewedBy: string,
+  feedback: string,
+): Promise<void> {
+  const { db } = await connectToDatabase();
+  await db.collection("templates").updateOne(
+    { slug },
+    {
+      $set: {
+        status: "changes_requested",
+        reviewedBy,
+        review_feedback: feedback,
+        reviewed_at: new Date(),
+        updatedAt: new Date(),
+      },
+    },
+  );
+}
+
+export async function getTemplatesByOwner(
+  ownerId: string,
+): Promise<HubTemplate[]> {
+  const { db } = await connectToDatabase();
+  return db
+    .collection<HubTemplate>("templates")
+    .find({ owner_id: ownerId })
+    .sort({ createdAt: -1 })
+    .toArray();
+}
+
+export async function getCommunityTemplatesByUsername(
+  username: string,
+): Promise<HubTemplate[]> {
+  const { db } = await connectToDatabase();
+  return db
+    .collection<HubTemplate>("templates")
+    .find({
+      author: username,
+      status: { $in: ["community", "approved"] },
+    })
+    .sort({ createdAt: -1 })
+    .toArray();
+}
+
+export async function getReviewQueue(): Promise<HubTemplate[]> {
+  const { db } = await connectToDatabase();
+  return db
+    .collection<HubTemplate>("templates")
+    .find({ status: { $in: ["pending", "pending_review"] } })
+    .sort({ createdAt: 1 })
+    .toArray();
 }

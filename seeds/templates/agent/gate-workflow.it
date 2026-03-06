@@ -1,0 +1,36 @@
+title: {{workflow_name}}
+meta: | type: template | domain: agent | description: Gate-based approval workflow with sequential stages, approval gates, and escalation rules for controlled agent execution | theme: technical | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: {{author}} | note: Workflow created {{created_date}}
+---
+section: Workflow Configuration
+---
+note: Overview
+  *Workflow ID:* {{workflow_id}}
+  *Owner:* {{owner}}
+  *Environment:* {{environment}}
+  *SLA:* {{sla}}
+  *Escalation Policy:* {{escalation_policy}}
+---
+section: Stages
+---
+each: stages
+  step: {{stage_name}} | tool: {{tool}} | timeout: {{timeout}}
+    *Description:* {{description}}
+    *Input:* {{input}}
+    *Output:* {{output}}
+    *On Failure:* {{on_failure}}
+  gate: {{gate_label}} | approver: {{approver}} | timeout: {{gate_timeout}}
+    approve: {{approval_criteria}}
+---
+section: Final Gate
+---
+gate: {{final_gate_label}} | approver: {{final_approver}} | timeout: {{final_gate_timeout}}
+  approve: {{final_approval_criteria}}
+---
+section: Completion
+---
+note: Success
+  *Deliverable:* {{deliverable}}
+  *Notification:* {{completion_notification}}
+---
+note: Workflow maintained by {{author}} · {{created_date}}

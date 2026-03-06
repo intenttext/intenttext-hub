@@ -1,0 +1,73 @@
+title: {{spec_title}}
+meta: | type: template | domain: developer | description: Technical specification with requirements, design decisions, implementation plan, and approval workflow | theme: technical | version: 1.0 | author: IntentText
+track: | version: {{current_version}} | by: {{author}} | note: {{version_note}}
+track: | version: 0.2 | by: {{author}} | note: Design section and requirements finalized after review
+track: | version: 0.1 | by: {{author}} | note: Initial draft circulated for feedback
+---
+section: Overview
+---
+note: Document Information
+  *Spec ID:* {{spec_id}}
+  *Status:* {{status}}
+  *Author:* {{author}} · {{author_email}}
+  *Team:* {{team}}
+  *Created:* {{created_date}}
+  *Target Release:* {{target_release}}
+---
+note: Problem Statement
+  {{problem_statement}}
+---
+note: Proposed Solution
+  {{proposed_solution}}
+---
+section: Requirements
+---
+each: requirements
+  note: {{requirement_id}} — {{title}}
+    *Priority:* {{priority}} · *Category:* {{category}}
+    {{description}}
+---
+section: Design
+---
+note: Architecture Overview
+  {{architecture_overview}}
+---
+note: Data Model
+  {{data_model}}
+---
+note: API Surface
+  {{api_surface}}
+---
+note: Security Considerations
+  {{security_considerations}}
+---
+section: Implementation Plan
+---
+note: Phases
+  {{implementation_phases}}
+---
+note: Dependencies
+  {{dependencies}}
+---
+note: Testing Strategy
+  {{testing_strategy}}
+---
+section: Constraints
+---
+policy: {{constraint_title}}
+  {{constraint_body}}
+---
+section: Performance Targets
+---
+note: Benchmarks
+  {{performance_targets}}
+---
+section: Open Questions
+---
+note: Unresolved Items
+  {{open_questions}}
+---
+section: Approval
+---
+approve: {{tech_lead}}
+  | role: {{tech_lead_title}} | at: {{approval_date}}

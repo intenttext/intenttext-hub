@@ -1,0 +1,34 @@
+title: Fact-Check Record
+meta: | type: template | domain: editorial | description: Fact-checking documentation with claims, sources, verdicts, and immutable audit trail | theme: minimal | version: 1.0 | author: IntentText
+---
+section: Article Information
+---
+note: {{article_title}}
+  *Author:* {{article_author}}
+  *Fact-Checker:* {{fact_checker}}
+  *Date Assigned:* {{date_assigned}}
+  *Date Completed:* {{date_completed}}
+  *Section:* {{section}}
+---
+section: Claims and Verdicts
+---
+each: claims
+  note: Claim — {{claim}}
+    *Source Cited:* {{source_cited}}
+    *Verification Source:* {{verification_source}}
+    *Verdict:* {{verdict}}
+    *Notes:* {{notes}}
+---
+section: Overall Assessment
+---
+note: {{overall_assessment}}
+  *Claims Reviewed:* {{total_claims}}
+  *Verified:* {{verified_count}}
+  *Corrected:* {{corrected_count}}
+  *Unverifiable:* {{unverifiable_count}}
+---
+section: Sign-Off
+---
+approve: {{fact_checker}} | role: Senior Fact-Checker | date: {{date_completed}}
+---
+freeze: Fact-check record finalized — immutable audit trail

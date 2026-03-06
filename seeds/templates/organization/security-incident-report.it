@@ -1,0 +1,70 @@
+title: {{report_title}}
+meta: | type: template | domain: organization | description: Security incident report with timeline, impact analysis, response actions, and lessons learned | theme: technical | version: 1.0 | author: IntentText
+---
+section: Incident Summary
+---
+note: Incident Details
+  *Incident ID:* {{incident_id}}
+  *Severity:* {{severity}}
+  *Status:* {{status}}
+  *Date Detected:* {{date_detected}}
+  *Date Reported:* {{date_reported}}
+  *Date Resolved:* {{date_resolved}}
+  *Reported By:* {{reported_by}}
+  *Incident Commander:* {{incident_commander}}
+---
+note: Executive Summary
+  {{executive_summary}}
+---
+section: Timeline of Events
+---
+each: timeline_events
+  note: {{timestamp}} — {{event_title}}
+    {{event_description}}
+---
+section: Affected Systems
+---
+note: Impacted Assets
+  {{affected_systems}}
+---
+section: Impact Assessment
+---
+note: Business Impact
+  *Data Compromised:* {{data_compromised}}
+  *Users Affected:* {{users_affected}}
+  *Service Downtime:* {{service_downtime}}
+  *Financial Impact:* {{financial_impact}}
+  *Regulatory Implications:* {{regulatory_implications}}
+---
+section: Root Cause Analysis
+---
+note: Root Cause
+  {{root_cause}}
+---
+section: Response Actions Taken
+---
+note: Containment and Eradication
+  {{containment_actions}}
+---
+note: Recovery
+  {{recovery_actions}}
+---
+section: Lessons Learned
+---
+note: Key Takeaways
+  {{lessons_learned}}
+---
+section: Action Items
+---
+each: action_items
+  task: {{action_id}} — {{action_title}}
+    *Owner:* {{action_owner}} · *Priority:* {{action_priority}} · *Due:* {{action_due_date}}
+    {{action_description}}
+---
+section: Approval
+---
+approve: {{ciso_name}}
+  | role: {{ciso_title}} | at: {{approval_date}}
+---
+freeze: Incident closed
+  | at: {{freeze_date}} | by: {{ciso_name}}

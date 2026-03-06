@@ -5,6 +5,13 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
   agent: { bg: "rgba(203,166,247,0.15)", text: "var(--purple)" },
   workflow: { bg: "rgba(137,180,250,0.15)", text: "var(--blue)" },
   document: { bg: "rgba(166,227,161,0.15)", text: "var(--green)" },
+  business: { bg: "rgba(137,180,250,0.15)", text: "var(--blue)" },
+  editorial: { bg: "rgba(249,226,175,0.15)", text: "var(--yellow)" },
+  book: { bg: "rgba(250,179,135,0.15)", text: "var(--orange)" },
+  personal: { bg: "rgba(166,227,161,0.15)", text: "var(--green)" },
+  organization: { bg: "rgba(137,180,250,0.15)", text: "var(--blue)" },
+  developer: { bg: "rgba(203,166,247,0.15)", text: "var(--purple)" },
+  other: { bg: "rgba(147,153,178,0.15)", text: "var(--text-muted)" },
 };
 
 export default function TemplateCard({ template }: { template: HubTemplate }) {

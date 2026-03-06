@@ -1,4 +1,8 @@
-import { parseIntentTextSafe, validateDocumentSemantic, type IntentDocument } from "@intenttext/core";
+import {
+  parseIntentTextSafe,
+  validateDocumentSemantic,
+  type IntentDocument,
+} from "@intenttext/core";
 
 export interface SubmissionValidationResult {
   valid: boolean;
@@ -9,7 +13,7 @@ export interface SubmissionValidationResult {
 
 export function validateSubmission(
   source: string,
-  meta: { name: string; category: string; description: string }
+  meta: { name: string; category: string; description: string },
 ): SubmissionValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
@@ -25,7 +29,7 @@ export function validateSubmission(
 
   if (parseResult.errors.length > 0) {
     errors.push(
-      ...parseResult.errors.map((e) => `Line ${e.line}: ${e.message}`)
+      ...parseResult.errors.map((e) => `Line ${e.line}: ${e.message}`),
     );
   }
 
@@ -33,15 +37,29 @@ export function validateSubmission(
     errors.push("Template must have at least 3 blocks.");
   }
 
-  const hasTitle = parseResult.document.blocks.some(
-    (b) => b.type === "title"
-  );
+  const hasTitle = parseResult.document.blocks.some((b) => b.type === "title");
   if (!hasTitle) {
     errors.push("Template must have a title: block.");
   }
 
-  if (!["agent", "workflow", "document"].includes(meta.category)) {
-    errors.push("Category must be agent, workflow, or document.");
+  const validCategories = ["agent", "workflow", "document"];
+  const validDomains = [
+    "business",
+    "editorial",
+    "book",
+    "personal",
+    "agent",
+    "organization",
+    "developer",
+    "other",
+  ];
+  if (
+    !validCategories.includes(meta.category) &&
+    !validDomains.includes(meta.category)
+  ) {
+    errors.push(
+      "Category must be agent, workflow, document, or a valid domain.",
+    );
   }
 
   const semanticResult = validateDocumentSemantic(parseResult.document);
@@ -58,7 +76,7 @@ export function validateSubmission(
     const tool = String(block.properties?.tool ?? "");
     if (suspiciousPatterns.some((p) => p.test(tool))) {
       errors.push(
-        `Block "${block.content}" contains a suspicious tool: value.`
+        `Block "${block.content}" contains a suspicious tool: value.`,
       );
     }
   }

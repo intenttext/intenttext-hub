@@ -41,10 +41,23 @@ export default async function HomePage({
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-lg font-bold text-[var(--text-muted)]">
-              Coming Soon
+              Explore
             </h2>
             <p className="mt-1 text-sm text-[var(--text-muted)]">
-              GitHub OAuth · intenttext install CLI · Template composition ·
+              <a
+                href="/themes"
+                className="text-[var(--purple)] hover:underline"
+              >
+                Browse Themes
+              </a>
+              {" · "}
+              <a
+                href="/publish"
+                className="text-[var(--purple)] hover:underline"
+              >
+                Publish a Template
+              </a>
+              {" · "}
               Star &amp; fork · Org templates
             </p>
           </div>

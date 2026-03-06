@@ -1,0 +1,84 @@
+title: {{request_title}}
+meta: | type: template | domain: organization | description: Change management request with impact analysis, risk assessment, rollback plan, and change advisory board approval | theme: corporate | version: 1.0 | author: IntentText
+track: | version: {{current_version}} | by: {{requester}} | note: {{version_note}}
+track: | version: 0.2 | by: {{requester}} | note: Risk assessment and rollback plan added
+track: | version: 0.1 | by: {{requester}} | note: Initial submission
+---
+section: Request Summary
+---
+note: Change Request Details
+  *Request ID:* {{request_id}}
+  *Priority:* {{priority}}
+  *Category:* {{category}}
+  *Status:* {{status}}
+  *Requested By:* {{requester}} · {{requester_email}}
+  *Department:* {{department}}
+  *Date Submitted:* {{date_submitted}}
+  *Requested Implementation Date:* {{requested_date}}
+---
+section: Description of Change
+---
+note: Change Description
+  {{change_description}}
+---
+note: Business Justification
+  {{business_justification}}
+---
+section: Impact Analysis
+---
+note: Systems and Services Affected
+  {{systems_affected}}
+---
+note: User Impact
+  {{user_impact}}
+---
+note: Dependencies
+  {{dependencies}}
+---
+section: Risk Assessment
+---
+note: Risk Analysis
+  *Risk Level:* {{risk_level}}
+  *Probability of Failure:* {{failure_probability}}
+  *Impact if Failed:* {{failure_impact}}
+---
+note: Risk Factors
+  {{risk_factors}}
+---
+section: Implementation Plan
+---
+note: Implementation Steps
+  {{implementation_plan}}
+---
+note: Implementation Window
+  *Start:* {{implementation_start}}
+  *End:* {{implementation_end}}
+  *Maintenance Window:* {{maintenance_window}}
+---
+section: Testing and Validation
+---
+note: Test Plan
+  {{test_plan}}
+---
+section: Rollback Plan
+---
+note: Rollback Procedure
+  {{rollback_plan}}
+---
+note: Rollback Criteria
+  {{rollback_criteria}}
+---
+section: Communication Plan
+---
+note: Stakeholder Notifications
+  {{communication_plan}}
+---
+section: Resource Requirements
+---
+note: Resources and Budget
+  {{resource_requirements}}
+---
+section: Approval
+---
+approve: {{cab_chair}}
+  | role: {{cab_chair_title}} | at: {{approval_date}}

@@ -7,6 +7,9 @@ const categories = [
   { key: "agent", label: "Agents" },
   { key: "workflow", label: "Workflows" },
   { key: "document", label: "Documents" },
+  { key: "business", label: "Business" },
+  { key: "editorial", label: "Editorial" },
+  { key: "developer", label: "Developer" },
   { key: "sealed", label: "🔒 Sealed" },
 ];
 

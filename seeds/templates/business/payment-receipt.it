@@ -1,0 +1,36 @@
+title: Payment Receipt
+meta: | type: template | domain: business | description: Payment confirmation receipt with amount, method, reference number, and date | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Receipt Details
+---
+note: Payment Confirmation
+  *Receipt Number:* {{receipt_number}}
+  *Date:* {{date}}
+  *Status:* {{status}}
+---
+note: Received From
+  {{payer_name}}
+  {{payer_company}}
+  {{payer_address}}
+---
+note: Issued By
+  {{issuer_company}}
+  {{issuer_address}}
+  {{issuer_email}}
+---
+section: Payment Information
+---
+note: Transaction Details
+  *Amount:* {{amount}}
+  *Payment Method:* {{payment_method}}
+  *Reference Number:* {{reference_number}}
+  *Invoice Reference:* {{invoice_reference}}
+---
+note: Description
+  {{description}}
+---
+sign: {{issuer_signatory}}
+  | role: {{issuer_role}} | at: {{signed_date}}
+---
+freeze: Receipt issued
+  | at: {{freeze_date}} | by: {{issuer_signatory}}

@@ -1,6 +1,8 @@
 import { config } from "dotenv";
 import { MongoClient } from "mongodb";
 import { parseIntentText } from "@intenttext/core";
+import * as fs from "fs";
+import * as path from "path";
 
 config({ path: ".env.local" });
 
@@ -553,6 +555,79 @@ step: Mobile layout fixes
   },
 ];
 
+/**
+ * Load templates from the templates/ directory.
+ * Each .it file is a template; each .data.json is example data.
+ * Metadata (slug, name, description, domain) is extracted from the parsed document.
+ */
+function loadFileTemplates(): Array<{
+  slug: string;
+  name: string;
+  description: string;
+  category: string;
+  domain: string;
+  tags: string[];
+  source: string;
+  example_data?: Record<string, unknown>;
+  recommended_theme?: string;
+}> {
+  const templatesDir = path.resolve(__dirname, "..", "seeds", "templates");
+  if (!fs.existsSync(templatesDir)) return [];
+
+  const result: ReturnType<typeof loadFileTemplates> = [];
+  const domains = fs
+    .readdirSync(templatesDir)
+    .filter((d) => fs.statSync(path.join(templatesDir, d)).isDirectory());
+
+  for (const domain of domains) {
+    const domainDir = path.join(templatesDir, domain);
+    const itFiles = fs.readdirSync(domainDir).filter((f) => f.endsWith(".it"));
+
+    for (const itFile of itFiles) {
+      const slug = itFile.replace(/\.it$/, "");
+      const source = fs.readFileSync(path.join(domainDir, itFile), "utf-8");
+      const doc = parseIntentText(source);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const md = doc.metadata as Record<string, unknown> | undefined;
+
+      const meta = (md?.meta as Record<string, string>) || {};
+      const title = (md?.title as string) || slug.replace(/-/g, " ");
+
+      let exampleData: Record<string, unknown> | undefined;
+      const dataFile = path.join(domainDir, `${slug}.data.json`);
+      if (fs.existsSync(dataFile)) {
+        exampleData = JSON.parse(fs.readFileSync(dataFile, "utf-8"));
+      }
+
+      result.push({
+        slug,
+        name: title,
+        description: String(meta.description || ""),
+        category: mapDomainToCategory(domain),
+        domain,
+        tags: [domain, String(meta.type || "template")],
+        source,
+        example_data: exampleData,
+        recommended_theme: meta.theme ? String(meta.theme) : undefined,
+      });
+    }
+  }
+
+  return result;
+}
+
+/** Map v2.10 domains to legacy Hub categories for backward compat. */
+function mapDomainToCategory(domain: string): string {
+  switch (domain) {
+    case "agent":
+      return "agent";
+    case "developer":
+      return "workflow";
+    default:
+      return "document";
+  }
+}
+
 async function seed() {
   console.log("Connecting to MongoDB…");
   const client = new MongoClient(MONGODB_URI);
@@ -571,6 +646,7 @@ async function seed() {
   );
   console.log("Indexes created.");
 
+  // Seed inline templates (legacy)
   for (const tmpl of templates) {
     const existing = await collection.findOne({ slug: tmpl.slug });
     if (existing) {
@@ -594,7 +670,45 @@ async function seed() {
     console.log(`  ✓  ${tmpl.slug} — inserted.`);
   }
 
-  console.log(`\nDone. ${templates.length} templates processed.`);
+  // Seed file-based templates (v2.10 — from templates/ directory)
+  const fileTemplates = loadFileTemplates();
+  let fileCount = 0;
+  for (const tmpl of fileTemplates) {
+    const existing = await collection.findOne({ slug: tmpl.slug });
+    if (existing) {
+      console.log(`  ⏭  ${tmpl.slug} — already exists, skipping.`);
+      continue;
+    }
+
+    const document = parseIntentText(tmpl.source);
+
+    await collection.insertOne({
+      slug: tmpl.slug,
+      name: tmpl.name,
+      description: tmpl.description,
+      category: tmpl.category,
+      domain: tmpl.domain,
+      tags: tmpl.tags,
+      source: tmpl.source,
+      example_data: tmpl.example_data,
+      recommended_theme: tmpl.recommended_theme,
+      document,
+      author: "intenttext",
+      status: "approved",
+      tier: "curated",
+      autoApproved: true,
+      downloads: 0,
+      views: 0,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+    fileCount++;
+    console.log(`  ✓  ${tmpl.slug} — inserted (file).`);
+  }
+
+  console.log(
+    `\nDone. ${templates.length} inline + ${fileCount} file templates seeded.`,
+  );
   await client.close();
 }
 

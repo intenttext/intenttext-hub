@@ -1,0 +1,53 @@
+title: Invoice with Tax Breakdown
+meta: | type: template | domain: business | description: Invoice with multiple tax rate breakdown, subtotal, itemized taxes, and total | theme: corporate | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: Accounts Receivable
+---
+section: Invoice Details
+---
+note: Invoice Information
+  *Invoice Number:* {{invoice_number}}
+  *Date:* {{date}}
+  *Due Date:* {{due_date}}
+  *Payment Terms:* {{payment_terms}}
+  *Currency:* {{currency}}
+---
+note: From
+  {{company_name}}
+  {{company_address}}
+  *Tax ID:* {{company_tax_id}}
+  {{company_email}}
+---
+note: Bill To
+  {{client_name}}
+  {{client_company}}
+  {{client_address}}
+  *Tax ID:* {{client_tax_id}}
+  {{client_email}}
+---
+section: Line Items
+---
+each: items
+  note: {{description}}
+    *Quantity:* {{quantity}} · *Unit Price:* {{unit_price}} · *Tax Category:* {{tax_category}} · *Amount:* {{amount}}
+---
+section: Tax Breakdown
+---
+each: tax_lines
+  note: {{tax_name}} ({{tax_rate}})
+    *Taxable Amount:* {{taxable_amount}} · *Tax Amount:* {{tax_amount}}
+---
+section: Totals
+---
+note: Summary
+  *Subtotal:* {{subtotal}}
+  *Total Tax:* {{total_tax}}
+  *Total Due:* {{total}}
+---
+note: Payment Instructions
+  {{payment_instructions}}
+---
+sign: {{authorized_by}}
+  | role: Controller | at: {{signed_date}}
+---
+freeze: Invoice finalized
+  | at: {{freeze_date}} | by: {{authorized_by}}

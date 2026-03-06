@@ -1,0 +1,78 @@
+title: {{runbook_title}}
+meta: | type: template | domain: developer | description: Operational runbook with service overview, on-call procedures, escalation paths, and SLA obligations | theme: technical | version: 1.0 | author: IntentText
+track: | version: {{current_version}} | by: {{maintainer}} | note: {{version_note}}
+track: | version: 0.2 | by: {{maintainer}} | note: Escalation matrix and SLA section added
+track: | version: 0.1 | by: {{maintainer}} | note: Initial runbook created from incident retrospectives
+---
+section: Service Overview
+---
+note: Service Information
+  *Service Name:* {{service_name}}
+  *Service ID:* {{service_id}}
+  *Team:* {{owning_team}}
+  *Tier:* {{service_tier}}
+  *Repository:* {{repository_url}}
+  *Dashboard:* {{dashboard_url}}
+  *Alerting Channel:* {{alerting_channel}}
+---
+note: Description
+  {{service_description}}
+---
+note: Architecture Summary
+  {{architecture_summary}}
+---
+section: On-Call
+---
+note: On-Call Rotation
+  *Schedule:* {{oncall_schedule}}
+  *Primary:* {{oncall_primary}}
+  *Secondary:* {{oncall_secondary}}
+  *Escalation Manager:* {{escalation_manager}}
+---
+section: Standard Operating Procedures
+---
+each: procedures
+  note: {{procedure_name}}
+    *Trigger:* {{trigger}}
+    *Severity:* {{severity}}
+    *Steps:*
+    {{steps}}
+---
+section: Escalation Path
+---
+each: escalation_path
+  note: {{level}}
+    *Contact:* {{contact}}
+    *Role:* {{role}}
+    *Response Time:* {{response_time}}
+    *When to Escalate:* {{escalation_criteria}}
+---
+section: SLA Obligations
+---
+policy: Service Level Commitments
+  {{sla_obligations}}
+---
+section: Dependencies
+---
+note: Upstream Dependencies
+  {{upstream_dependencies}}
+---
+note: Downstream Consumers
+  {{downstream_consumers}}
+---
+section: Recovery Procedures
+---
+note: Disaster Recovery
+  {{disaster_recovery}}
+---
+note: Data Backup and Restore
+  {{backup_restore}}
+---
+section: Maintenance
+---
+note: Routine Maintenance Tasks
+  {{maintenance_tasks}}
+---
+note: Last Reviewed
+  *Date:* {{last_reviewed_date}}
+  *Reviewer:* {{reviewer}}

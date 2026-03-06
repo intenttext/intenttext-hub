@@ -1,0 +1,49 @@
+title: CV / Resume
+meta: | type: template | domain: personal | description: Professional CV with contact, summary, experience, education, and skills sections | theme: corporate | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: Career Services
+---
+section: Contact Information
+---
+note: Personal Details
+  *Name:* {{full_name}}
+  *Title:* {{professional_title}}
+  *Email:* {{email}}
+  *Phone:* {{phone}}
+  *Location:* {{location}}
+  *LinkedIn:* {{linkedin_url}}
+  *Portfolio:* {{portfolio_url}}
+---
+section: Professional Summary
+---
+note: Summary
+  {{summary}}
+---
+section: Work Experience
+---
+each: experience_items
+  note: {{role}} — {{company}}
+    *Period:* {{start_date}} – {{end_date}}
+    *Location:* {{location}}
+    {{description}}
+---
+section: Education
+---
+each: education_items
+  note: {{degree}} — {{institution}}
+    *Graduated:* {{graduation_year}}
+    *Focus:* {{focus_area}}
+    {{honors}}
+---
+section: Skills
+---
+each: skills
+  note: {{category}}
+    {{skill_list}}
+---
+section: Certifications
+---
+note: Professional Certifications
+  {{certifications}}
+---
+note: Languages
+  {{languages}}

@@ -1,0 +1,52 @@
+title: Project Risk Register
+meta: | type: template | domain: business | description: Project risk register with categorized risks, likelihood and impact ratings, mitigation strategies, and version tracking | theme: corporate | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: {{register_owner}} | note: {{latest_review_note}}
+track: | version: 0.9 | by: {{register_owner}} | note: Initial risk identification workshop
+---
+section: Register Information
+---
+note: Details
+  *Project:* {{project_name}}
+  *Project Code:* {{project_code}}
+  *Risk Owner:* {{register_owner}}
+  *Last Reviewed:* {{last_reviewed}}
+  *Next Review:* {{next_review}}
+  *Total Open Risks:* {{total_open_risks}}
+---
+section: Risk Summary
+---
+note: Risk Distribution
+  *Critical:* {{critical_count}} · *High:* {{high_count}} · *Medium:* {{medium_count}} · *Low:* {{low_count}}
+  *Risks Mitigated This Period:* {{mitigated_count}}
+  *New Risks Identified:* {{new_risks_count}}
+---
+section: Risk Register
+---
+each: risks
+  warning: {{title}}
+    *Risk ID:* {{risk_id}} · *Category:* {{category}} · *Status:* {{status}}
+    *Likelihood:* {{likelihood}} · *Impact:* {{impact}} · *Risk Score:* {{risk_score}}
+    *Description:* {{description}}
+    *Trigger:* {{trigger}}
+    *Mitigation Strategy:* {{mitigation}}
+    *Contingency Plan:* {{contingency}}
+    *Owner:* {{owner}} · *Review Date:* {{review_date}}
+---
+section: Risk Matrix
+---
+note: Scoring Guide
+  *5 — Critical:* Project failure or major strategic impact
+  *4 — High:* Significant schedule or budget overrun
+  *3 — Medium:* Manageable with active intervention
+  *2 — Low:* Minor impact, unlikely to affect delivery
+  *1 — Minimal:* Negligible impact
+---
+section: Closed Risks
+---
+note: Recently Closed
+  {{closed_risks}}
+---
+section: Approval
+---
+approve: {{register_owner}}
+  | role: Risk Owner | at: {{approval_date}}

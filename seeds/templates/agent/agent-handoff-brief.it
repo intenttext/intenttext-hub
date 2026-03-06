@@ -1,0 +1,49 @@
+title: {{brief_title}}
+meta: | type: template | domain: agent | description: Agent-to-agent handoff document with context transfer, state snapshot, pending tasks, and execution instructions | theme: technical | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: {{source_agent}} | note: Handoff initiated {{handoff_timestamp}}
+---
+section: Handoff Summary
+---
+note: Transfer Details
+  *From Agent:* {{source_agent}}
+  *To Agent:* {{target_agent}}
+  *Reason:* {{handoff_reason}}
+  *Urgency:* {{urgency}}
+  *Session ID:* {{session_id}}
+---
+section: Context
+---
+context: {{context_label}}
+  {{context_body}}
+---
+note: State Snapshot
+  *Current Phase:* {{current_phase}}
+  *Progress:* {{progress_summary}}
+  *Last Successful Action:* {{last_action}}
+  *Working Data:* {{working_data_location}}
+---
+section: Pending Tasks
+---
+each: pending_tasks
+  task: {{task_name}} | priority: {{priority}} | deadline: {{deadline}}
+    *Description:* {{description}}
+    *Acceptance Criteria:* {{acceptance_criteria}}
+    *Dependencies:* {{dependencies}}
+    *Notes:* {{notes}}
+---
+section: Instructions for Receiving Agent
+---
+note: Execution Guidance
+  {{execution_instructions}}
+---
+note: Constraints
+  {{constraints}}
+---
+note: Known Risks
+  {{known_risks}}
+---
+section: Handoff Signal
+---
+emit: {{handoff_event}} | phase: handoff | level: info
+---
+note: Handoff prepared by {{source_agent}} · {{handoff_timestamp}}

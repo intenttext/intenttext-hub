@@ -1,0 +1,46 @@
+title: {{checklist_title}}
+meta: | type: template | domain: organization | description: Compliance verification checklist with regulatory requirements tracked as tasks and officer approval | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Overview
+---
+note: Compliance Programme Details
+  *Checklist ID:* {{checklist_id}}
+  *Regulation / Framework:* {{framework}}
+  *Reporting Period:* {{reporting_period}}
+  *Business Unit:* {{business_unit}}
+  *Prepared By:* {{prepared_by}}
+  *Preparation Date:* {{preparation_date}}
+---
+note: Scope
+  {{scope}}
+---
+section: Compliance Requirements
+---
+each: requirements
+  task: {{requirement_id}} — {{requirement_title}}
+    {{requirement_description}}
+---
+section: Findings Summary
+---
+note: Summary of Results
+  *Total Requirements:* {{total_requirements}}
+  *Compliant:* {{compliant_count}}
+  *Partially Compliant:* {{partial_count}}
+  *Non-Compliant:* {{non_compliant_count}}
+  *Not Applicable:* {{na_count}}
+---
+note: Key Findings
+  {{key_findings}}
+---
+section: Remediation Plan
+---
+note: Open Remediation Items
+  {{remediation_plan}}
+---
+section: Approval
+---
+approve: {{compliance_officer}}
+  | role: {{compliance_officer_title}} | at: {{approval_date}}
+---
+freeze: Checklist completed
+  | at: {{freeze_date}} | by: {{compliance_officer}}

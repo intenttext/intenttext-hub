@@ -1,0 +1,76 @@
+title: Employee Performance Review
+meta: | type: template | domain: business | description: Annual employee performance review with goals assessment, achievement highlights, competency ratings, and development plan | theme: corporate | version: 1.0 | author: IntentText
+---
+section: Review Information
+---
+note: Details
+  *Employee:* {{employee_name}}
+  *Employee ID:* {{employee_id}}
+  *Title:* {{employee_title}}
+  *Department:* {{department}}
+  *Manager:* {{manager_name}}
+  *Review Period:* {{review_period}}
+  *Review Date:* {{review_date}}
+---
+section: Goals Assessment
+---
+each: goals
+  note: {{goal}}
+    *Weight:* {{weight}} · *Target:* {{target}} · *Actual:* {{actual}} · *Rating:* {{rating}}
+    *Commentary:* {{commentary}}
+---
+note: Overall Goal Attainment
+  *Weighted Score:* {{overall_goal_score}}
+---
+section: Key Achievements
+---
+each: achievements
+  note: {{title}}
+    {{description}}
+    *Impact:* {{impact}} · *Quarter:* {{quarter}}
+---
+section: Competency Assessment
+---
+note: Technical Skills
+  *Rating:* {{technical_rating}}
+  {{technical_commentary}}
+---
+note: Communication and Collaboration
+  *Rating:* {{communication_rating}}
+  {{communication_commentary}}
+---
+note: Leadership and Initiative
+  *Rating:* {{leadership_rating}}
+  {{leadership_commentary}}
+---
+note: Problem Solving and Judgment
+  *Rating:* {{problem_solving_rating}}
+  {{problem_solving_commentary}}
+---
+section: Overall Performance
+---
+note: Summary
+  *Overall Rating:* {{overall_rating}}
+  *Recommendation:* {{recommendation}}
+---
+note: Manager Commentary
+  {{manager_commentary}}
+---
+section: Development Plan
+---
+note: Areas for Growth
+  {{growth_areas}}
+---
+note: Development Actions
+  {{development_actions}}
+---
+note: Career Aspirations
+  {{career_aspirations}}
+---
+section: Sign-Off
+---
+sign: {{employee_name}}
+  | role: Employee | at: {{employee_sign_date}}
+---
+sign: {{manager_name}}
+  | role: Manager | at: {{manager_sign_date}}

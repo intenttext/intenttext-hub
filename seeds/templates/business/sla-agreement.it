@@ -1,0 +1,74 @@
+title: Service Level Agreement
+meta: | type: template | domain: business | description: Service level agreement with uptime commitments, response times, performance metrics, and penalty clauses | theme: legal | version: 1.0 | author: IntentText
+---
+section: Parties
+---
+note: Service Provider
+  *Name:* {{provider_name}}
+  *Address:* {{provider_address}}
+  *Contact:* {{provider_contact}} · {{provider_email}}
+---
+note: Customer
+  *Name:* {{customer_name}}
+  *Address:* {{customer_address}}
+  *Contact:* {{customer_contact}} · {{customer_email}}
+---
+section: Agreement Overview
+---
+note: Agreement Details
+  *Agreement ID:* {{agreement_id}}
+  *Effective Date:* {{effective_date}}
+  *Term:* {{term}}
+  *Renewal:* {{renewal_terms}}
+  *Services Covered:* {{services_covered}}
+---
+section: Service Level Metrics
+---
+each: sla_metrics
+  note: {{metric_name}}
+    *Target:* {{target}} · *Measurement Period:* {{measurement_period}} · *Measurement Method:* {{measurement_method}} · *Penalty for Breach:* {{penalty}}
+---
+section: Uptime Commitment
+---
+note: Availability
+  *Monthly Uptime Target:* {{uptime_target}}
+  *Scheduled Maintenance Window:* {{maintenance_window}}
+  *Maintenance Notification:* {{maintenance_notice}}
+  *Exclusions:* {{uptime_exclusions}}
+---
+section: Incident Response
+---
+note: Response and Resolution Times
+  *Severity 1 (Critical):* Response within {{sev1_response}}, resolution within {{sev1_resolution}}
+  *Severity 2 (High):* Response within {{sev2_response}}, resolution within {{sev2_resolution}}
+  *Severity 3 (Medium):* Response within {{sev3_response}}, resolution within {{sev3_resolution}}
+  *Severity 4 (Low):* Response within {{sev4_response}}, resolution within {{sev4_resolution}}
+---
+note: Escalation Procedure
+  {{escalation_procedure}}
+---
+section: Service Credits
+---
+note: Credit Schedule
+  {{credit_schedule}}
+---
+note: Credit Limitations
+  {{credit_limitations}}
+---
+section: Reporting
+---
+note: Performance Reporting
+  {{reporting_terms}}
+---
+section: Review and Amendment
+---
+note: SLA Review
+  {{review_terms}}
+---
+section: Signatures
+---
+sign: {{provider_signatory}}
+  | role: {{provider_signatory_title}} | on behalf of: {{provider_name}} | at: {{provider_signed_date}}
+---
+sign: {{customer_signatory}}
+  | role: {{customer_signatory_title}} | on behalf of: {{customer_name}} | at: {{customer_signed_date}}

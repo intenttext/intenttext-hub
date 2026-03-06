@@ -1,0 +1,33 @@
+title: Opinion Column
+meta: | type: template | domain: editorial | description: Op-ed column with headline, byline, argumentative body, supporting quotes, and author bio | theme: editorial | version: 1.0 | author: IntentText
+---
+section: Headline
+---
+note: {{headline}}
+  *By {{byline}}* · {{publication_date}}
+---
+section: Opening
+---
+note: {{opening_paragraph}}
+---
+section: Argument
+---
+each: body_paragraphs
+  note: {{text}}
+---
+quote: {{supporting_quote}} | by: {{supporting_quote_source}}
+---
+section: Counterpoint
+---
+note: {{counterpoint}}
+---
+quote: {{counterpoint_quote}} | by: {{counterpoint_quote_source}}
+---
+section: Conclusion
+---
+note: {{closing_paragraph}}
+---
+section: About the Author
+---
+note: {{author_bio}}
+  *Contact:* {{author_contact}}

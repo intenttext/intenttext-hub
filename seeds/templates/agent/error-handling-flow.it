@@ -1,0 +1,53 @@
+title: {{spec_name}}
+meta: | type: template | domain: agent | description: Error handling specification with typed errors, detection strategies, recovery procedures, escalation paths, and policy rules | theme: technical | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: {{author}} | note: Spec created {{created_date}}
+---
+section: Scope
+---
+note: Overview
+  *System:* {{system_name}}
+  *Agent:* {{agent_name}}
+  *Environment:* {{environment}}
+  *Coverage:* {{coverage_description}}
+---
+section: Error Types
+---
+each: error_types
+  error: {{name}} | severity: {{severity}} | code: {{error_code}}
+    *Category:* {{category}}
+    *Description:* {{description}}
+    *Detection:* {{detection_method}}
+    *Recovery:* {{recovery_action}}
+    *Escalation:* {{escalation_path}}
+    *SLA:* {{response_sla}}
+---
+section: Error Handling Policies
+---
+policy: {{retry_policy_name}} | scope: global
+  *Max Retries:* {{max_retries}}
+  *Backoff Strategy:* {{backoff_strategy}}
+  *Circuit Breaker Threshold:* {{circuit_breaker_threshold}}
+  *Cooldown Period:* {{cooldown_period}}
+---
+policy: {{logging_policy_name}} | scope: global
+  *Log Level:* {{log_level}}
+  *Destination:* {{log_destination}}
+  *Include Stack Trace:* {{include_stack_trace}}
+  *PII Redaction:* {{pii_redaction}}
+---
+section: Escalation Matrix
+---
+note: Escalation Rules
+  *Severity Critical:* {{escalation_critical}}
+  *Severity High:* {{escalation_high}}
+  *Severity Medium:* {{escalation_medium}}
+  *Severity Low:* {{escalation_low}}
+---
+section: Monitoring
+---
+note: Alerting
+  *Dashboard:* {{dashboard_url}}
+  *Alert Channel:* {{alert_channel}}
+  *On-Call Rotation:* {{oncall_rotation}}
+---
+note: Spec maintained by {{author}} · {{created_date}}

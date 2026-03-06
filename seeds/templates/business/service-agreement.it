@@ -1,0 +1,76 @@
+title: Service Agreement
+meta: | type: template | domain: business | description: Full service contract with parties, scope, payment terms, termination clauses, and dual-party signatures | theme: legal | version: 1.0 | author: IntentText
+track: | version: 1.0 | by: Legal
+track: | version: 0.9 | by: Legal | note: Internal review draft
+track: | version: 0.8 | by: Operations | note: Initial scope definition
+---
+section: Parties
+---
+note: Service Provider
+  *Name:* {{provider_name}}
+  *Address:* {{provider_address}}
+  *Contact:* {{provider_contact}} · {{provider_email}}
+  *Registration:* {{provider_registration}}
+---
+note: Client
+  *Name:* {{client_name}}
+  *Address:* {{client_address}}
+  *Contact:* {{client_contact}} · {{client_email}}
+  *Registration:* {{client_registration}}
+---
+section: Scope of Services
+---
+note: Services Description
+  {{services_description}}
+---
+note: Deliverables
+  {{deliverables}}
+---
+note: Service Period
+  *Effective Date:* {{effective_date}}
+  *Term:* {{term}}
+  *Renewal:* {{renewal_terms}}
+---
+section: Payment Terms
+---
+note: Compensation
+  *Total Contract Value:* {{contract_value}}
+  *Payment Schedule:* {{payment_schedule}}
+  *Late Payment Penalty:* {{late_penalty}}
+  *Invoicing:* {{invoicing_terms}}
+---
+section: Confidentiality
+---
+note: Confidentiality Obligations
+  {{confidentiality_clause}}
+---
+section: Termination
+---
+note: Termination Conditions
+  *For Convenience:* {{termination_convenience}}
+  *For Cause:* {{termination_cause}}
+  *Effect of Termination:* {{termination_effect}}
+---
+section: Limitation of Liability
+---
+note: Liability Cap
+  {{liability_clause}}
+---
+section: Governing Law
+---
+note: Jurisdiction
+  {{governing_law}}
+---
+section: Signatures
+---
+approve: {{legal_reviewer}}
+  | role: Legal Counsel | at: {{review_date}}
+---
+sign: {{provider_signatory}}
+  | role: {{provider_signatory_title}} | on behalf of: {{provider_name}} | at: {{provider_signed_date}}
+---
+sign: {{client_signatory}}
+  | role: {{client_signatory_title}} | on behalf of: {{client_name}} | at: {{client_signed_date}}
+---
+freeze: Agreement executed
+  | at: {{freeze_date}} | by: {{legal_reviewer}}

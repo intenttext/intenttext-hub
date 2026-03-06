@@ -1,0 +1,71 @@
+title: {{policy_title}}
+meta: | type: template | domain: organization | description: Organizational policy document with purpose, scope, policy statements, responsibilities, and approval workflow | theme: legal | version: 1.0 | author: IntentText
+track: | version: {{current_version}} | by: {{policy_owner}} | note: {{version_note}}
+track: | version: 0.2 | by: {{policy_owner}} | note: Stakeholder feedback incorporated
+track: | version: 0.1 | by: {{policy_owner}} | note: Initial draft
+---
+section: Document Control
+---
+note: Policy Information
+  *Policy ID:* {{policy_id}}
+  *Department:* {{department}}
+  *Classification:* {{classification}}
+  *Effective Date:* {{effective_date}}
+  *Review Date:* {{next_review_date}}
+  *Supersedes:* {{supersedes}}
+---
+section: Purpose
+---
+note: Purpose
+  {{purpose}}
+---
+section: Scope
+---
+note: Scope
+  {{scope}}
+---
+section: Definitions
+---
+note: Key Definitions
+  {{definitions}}
+---
+section: Policy Statements
+---
+each: policy_statements
+  note: {{statement_title}}
+    {{statement_body}}
+---
+section: Responsibilities
+---
+each: responsible_parties
+  note: {{party_role}}
+    {{party_responsibilities}}
+---
+section: Compliance and Enforcement
+---
+note: Compliance Requirements
+  {{compliance_requirements}}
+---
+note: Enforcement
+  {{enforcement}}
+---
+section: Exceptions
+---
+note: Exception Process
+  {{exception_process}}
+---
+section: Related Documents
+---
+note: References
+  {{related_documents}}
+---
+section: Approval
+---
+approve: {{policy_owner}}
+  | role: {{policy_owner_title}} | at: {{owner_approval_date}}
+---
+sign: {{executive_sponsor}}
+  | role: {{executive_title}} | at: {{executive_signed_date}}
+---
+freeze: Policy enacted
+  | at: {{freeze_date}} | by: {{executive_sponsor}}
