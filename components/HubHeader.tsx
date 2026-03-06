@@ -58,8 +58,9 @@ export default function HubHeader() {
             </form>
             <Link
               href="/submit"
-              className="shrink-0 rounded-lg bg-[var(--purple)] px-3 py-2 text-sm font-medium text-[var(--surface-2)] hover:opacity-90"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[var(--purple)] px-5 py-2 text-sm font-medium text-[var(--surface-2)] hover:opacity-90"
             >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12h14"/></svg>
               Submit
             </Link>
           </div>
