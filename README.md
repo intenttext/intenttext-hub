@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IntentText Hub
 
-## Getting Started
+The curated registry for `.it` templates — browse agent definitions, workflow patterns, and document templates.
 
-First, run the development server:
+Built with Next.js 14, MongoDB, and Tailwind CSS.
+
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.local.example .env.local
+# Edit .env.local with your MongoDB URI and admin token
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## MongoDB Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a DigitalOcean Managed MongoDB cluster
+2. Create a database user with read/write permissions
+3. Add your IP to the trusted sources (or 0.0.0.0/0 for Vercel)
+4. Get your connection string from the cluster dashboard
+5. Add `MONGODB_URI` to `.env.local`
 
-## Learn More
+### Create indexes
 
-To learn more about Next.js, take a look at the following resources:
+Run this once after connecting:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```javascript
+db.templates.createIndex({ slug: 1 }, { unique: true })
+db.templates.createIndex({ category: 1, status: 1 })
+db.templates.createIndex({ tags: 1 })
+db.templates.createIndex({ status: 1, createdAt: -1 })
+db.templates.createIndex(
+  { name: "text", description: "text", tags: "text" },
+  { name: "search_index" }
+)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Seed starter templates
 
-## Deploy on Vercel
+```bash
+npm run seed
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This inserts 9 starter templates (3 agents, 3 workflows, 3 documents). Safe to run multiple times — existing templates are skipped.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+1. Push to GitHub
+2. Import repo in Vercel dashboard
+3. Add environment variables:
+   - `MONGODB_URI`
+   - `REQUIRE_APPROVAL=false`
+   - `ADMIN_TOKEN`
+   - `NEXT_PUBLIC_APP_URL`
+4. Deploy
+5. Run seed: `npx ts-node lib/seed.ts` (with production `MONGODB_URI`)
+
+## API
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/templates` | GET | List templates (query: `category`, `q`, `limit`, `skip`) |
+| `/api/templates/[slug]` | GET | Get single template |
+| `/api/templates/[slug]` | POST | Increment download count |
+| `/api/submit` | POST | Submit a new template |
+| `/api/admin/approve` | GET | List pending templates (requires `Authorization` header) |
+| `/api/admin/approve` | POST | Approve or reject a template (requires `Authorization` header) |
+
+## Coming Soon
+
+- **GitHub OAuth** — submit templates with your GitHub identity
+- **intenttext install** — CLI to install templates directly into your project
+- **Template composition** — combine multiple templates
+- **Star and fork** — community curation
+- **Org templates** — private template registries for teams
