@@ -1,9 +1,14 @@
+import { config } from "dotenv";
 import { MongoClient } from "mongodb";
 import { parseIntentText } from "@intenttext/core";
 
-const MONGODB_URI =
-  process.env.MONGODB_URI ??
-  "mongodb+srv://user:pass@cluster.mongo.ondigitalocean.com/intenttext-hub?tls=true&authSource=admin";
+config({ path: ".env.local" });
+
+const MONGODB_URI = process.env.MONGODB_URI!;
+if (!MONGODB_URI) {
+  console.error("MONGODB_URI not set. Add it to .env.local");
+  process.exit(1);
+}
 const DB_NAME = "intenttext-hub";
 
 interface SeedTemplate {
@@ -562,7 +567,7 @@ async function seed() {
   await collection.createIndex({ status: 1, createdAt: -1 });
   await collection.createIndex(
     { name: "text", description: "text", tags: "text" },
-    { name: "search_index" }
+    { name: "search_index" },
   );
   console.log("Indexes created.");
 

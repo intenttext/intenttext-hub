@@ -33,6 +33,31 @@ export async function getTemplates(options: {
     .toArray();
 }
 
+export async function getTemplateCount(options: {
+  category?: string;
+  search?: string;
+}): Promise<number> {
+  const { db } = await connectToDatabase();
+  const collection = db.collection<HubTemplate>("templates");
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const filter: Record<string, any> = { status: "approved" };
+
+  if (options.category && options.category !== "all") {
+    filter.category = options.category;
+  }
+
+  if (options.search) {
+    filter.$or = [
+      { name: { $regex: options.search, $options: "i" } },
+      { description: { $regex: options.search, $options: "i" } },
+      { tags: { $in: [new RegExp(options.search, "i")] } },
+    ];
+  }
+
+  return collection.countDocuments(filter);
+}
+
 export async function getTemplateBySlug(
   slug: string
 ): Promise<HubTemplate | null> {

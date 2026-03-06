@@ -8,7 +8,7 @@
   --surface-2: #181825;
   --border: #45475a;
   --text: #cdd6f4;
-  --text-muted: #6c7086;
+  --text-muted: #9399b2;
   --purple: #cba6f7;
   --blue: #89b4fa;
   --green: #a6e3a1;
@@ -44,7 +44,7 @@ body {
   color: #fab387;
 }
 .it-comment {
-  color: #6c7086;
+  color: #7f849c;
   font-style: italic;
 }
 .it-divider {

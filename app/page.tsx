@@ -1,18 +1,25 @@
 import { Suspense } from "react";
-import { getTemplates } from "@/lib/templates";
+import { getTemplates, getTemplateCount } from "@/lib/templates";
 import TemplateGrid from "@/components/TemplateGrid";
 import HubHeader from "@/components/HubHeader";
-import Link from "next/link";
+
+const PAGE_SIZE = 12;
 
 export default async function HomePage({
   searchParams,
 }: {
-  searchParams: { category?: string; q?: string };
+  searchParams: { category?: string; q?: string; page?: string };
 }) {
   const category = searchParams.category ?? "all";
   const search = searchParams.q ?? "";
+  const page = Math.max(1, parseInt(searchParams.page ?? "1"));
+  const skip = (page - 1) * PAGE_SIZE;
 
-  const templates = await getTemplates({ category, search });
+  const [templates, total] = await Promise.all([
+    getTemplates({ category, search, limit: PAGE_SIZE, skip }),
+    getTemplateCount({ category, search }),
+  ]);
+  const totalPages = Math.ceil(total / PAGE_SIZE);
 
   return (
     <main>
@@ -24,6 +31,8 @@ export default async function HomePage({
           templates={JSON.parse(JSON.stringify(templates))}
           category={category}
           search={search}
+          page={page}
+          totalPages={totalPages}
         />
       </Suspense>
 
@@ -39,12 +48,6 @@ export default async function HomePage({
               Star &amp; fork · Org templates
             </p>
           </div>
-          <Link
-            href="/submit"
-            className="rounded-lg bg-[var(--surface)] px-4 py-2 text-sm font-medium text-[var(--purple)] hover:bg-[var(--border)]"
-          >
-            Submit a template
-          </Link>
         </div>
       </section>
     </main>
