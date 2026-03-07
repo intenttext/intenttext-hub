@@ -2,16 +2,16 @@ import Link from "next/link";
 import type { HubTemplate } from "@/types/hub";
 
 const categoryColors: Record<string, { bg: string; text: string }> = {
-  agent: { bg: "rgba(203,166,247,0.15)", text: "var(--purple)" },
-  workflow: { bg: "rgba(137,180,250,0.15)", text: "var(--blue)" },
-  document: { bg: "rgba(166,227,161,0.15)", text: "var(--green)" },
-  business: { bg: "rgba(137,180,250,0.15)", text: "var(--blue)" },
-  editorial: { bg: "rgba(249,226,175,0.15)", text: "var(--yellow)" },
-  book: { bg: "rgba(250,179,135,0.15)", text: "var(--orange)" },
-  personal: { bg: "rgba(166,227,161,0.15)", text: "var(--green)" },
-  organization: { bg: "rgba(137,180,250,0.15)", text: "var(--blue)" },
-  developer: { bg: "rgba(203,166,247,0.15)", text: "var(--purple)" },
-  other: { bg: "rgba(147,153,178,0.15)", text: "var(--text-muted)" },
+  agent: { bg: "rgba(167,139,250,0.12)", text: "var(--purple)" },
+  workflow: { bg: "rgba(96,165,250,0.12)", text: "var(--blue)" },
+  document: { bg: "rgba(74,222,128,0.12)", text: "var(--green)" },
+  business: { bg: "rgba(96,165,250,0.12)", text: "var(--blue)" },
+  editorial: { bg: "rgba(251,191,36,0.12)", text: "var(--yellow)" },
+  book: { bg: "rgba(251,146,60,0.12)", text: "var(--orange)" },
+  personal: { bg: "rgba(74,222,128,0.12)", text: "var(--green)" },
+  organization: { bg: "rgba(96,165,250,0.12)", text: "var(--blue)" },
+  developer: { bg: "rgba(167,139,250,0.12)", text: "var(--purple)" },
+  other: { bg: "rgba(136,146,176,0.12)", text: "var(--text-muted)" },
 };
 
 export default function TemplateCard({ template }: { template: HubTemplate }) {
@@ -29,12 +29,12 @@ export default function TemplateCard({ template }: { template: HubTemplate }) {
         {template.category}
       </span>
       {template.trust?.frozen && (
-        <span className="mb-3 ml-2 inline-block w-fit rounded-full bg-[rgba(243,139,168,0.12)] px-2.5 py-1 text-xs font-semibold text-[rgba(243,139,168,1)]">
+        <span className="mb-3 ml-2 inline-block w-fit rounded-full bg-[rgba(251,113,133,0.12)] px-2.5 py-1 text-xs font-semibold text-[var(--red)]">
           🔒 Sealed
         </span>
       )}
       {template.trust?.tracked && !template.trust?.frozen && (
-        <span className="mb-3 ml-2 inline-block w-fit rounded-full bg-[rgba(137,180,250,0.12)] px-2.5 py-1 text-xs font-semibold text-[var(--blue)]">
+        <span className="mb-3 ml-2 inline-block w-fit rounded-full bg-[rgba(96,165,250,0.12)] px-2.5 py-1 text-xs font-semibold text-[var(--blue)]">
           📋 Tracked
         </span>
       )}

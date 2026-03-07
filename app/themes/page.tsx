@@ -48,8 +48,8 @@ function ThemeCard({ theme }: { theme: HubTheme }) {
           <span
             className={`rounded-full px-2 py-0.5 font-medium ${
               theme.tier === "curated"
-                ? "bg-[rgba(166,227,161,0.15)] text-[var(--green)]"
-                : "bg-[rgba(137,180,250,0.15)] text-[var(--blue)]"
+                ? "bg-[rgba(74,222,128,0.12)] text-[var(--green)]"
+                : "bg-[rgba(96,165,250,0.12)] text-[var(--blue)]"
             }`}
           >
             {theme.tier}

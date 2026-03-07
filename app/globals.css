@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --bg: #1e1e2e;
-  --surface: #313244;
-  --surface-2: #181825;
-  --border: #45475a;
-  --text: #cdd6f4;
-  --text-muted: #9399b2;
-  --purple: #cba6f7;
-  --blue: #89b4fa;
-  --green: #a6e3a1;
-  --orange: #fab387;
-  --red: #f38ba8;
-  --yellow: #f9e2af;
+  --bg: #0f1117;
+  --surface: #1a1d2e;
+  --surface-2: #141621;
+  --border: #2a2d3e;
+  --text: #e2e8f0;
+  --text-muted: #8892b0;
+  --purple: #a78bfa;
+  --blue: #60a5fa;
+  --green: #4ade80;
+  --orange: #fb923c;
+  --red: #fb7185;
+  --yellow: #fbbf24;
 }
 
 body {
@@ -24,32 +24,32 @@ body {
 
 /* ItSourceViewer syntax highlighting */
 .it-source {
-  background: #181825;
+  background: #141621;
   border-radius: 8px;
   padding: 20px;
   font-family: "JetBrains Mono", "GeistMono", monospace;
   font-size: 13px;
   line-height: 1.7;
   overflow-x: auto;
-  color: #cdd6f4;
+  color: #e2e8f0;
 }
 .it-kw {
-  color: #cba6f7;
+  color: #a78bfa;
   font-weight: 600;
 }
 .it-prop {
-  color: #89b4fa;
+  color: #60a5fa;
 }
 .it-var {
-  color: #fab387;
+  color: #fb923c;
 }
 .it-comment {
-  color: #7f849c;
+  color: #64748b;
   font-style: italic;
 }
 .it-divider {
-  color: #45475a;
+  color: #2a2d3e;
 }
 .it-bold {
-  color: #f9e2af;
+  color: #fbbf24;
 }
