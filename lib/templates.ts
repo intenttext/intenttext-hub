@@ -19,9 +19,13 @@ export async function getTemplates(options: {
     filter.tier = options.tier;
   }
 
+  const DOMAIN_FILTERS = ["business", "editorial", "developer", "book", "personal", "organization", "reports"];
+
   if (options.category && options.category !== "all") {
     if (options.category === "sealed") {
       filter["trust.frozen"] = true;
+    } else if (DOMAIN_FILTERS.includes(options.category)) {
+      filter.domain = options.category;
     } else {
       filter.category = options.category;
     }
@@ -63,9 +67,13 @@ export async function getTemplateCount(options: {
     filter.tier = options.tier;
   }
 
+  const DOMAIN_FILTERS = ["business", "editorial", "developer", "book", "personal", "organization", "reports"];
+
   if (options.category && options.category !== "all") {
     if (options.category === "sealed") {
       filter["trust.frozen"] = true;
+    } else if (DOMAIN_FILTERS.includes(options.category)) {
+      filter.domain = options.category;
     } else {
       filter.category = options.category;
     }
