@@ -1,6 +1,6 @@
 import { config } from "dotenv";
 import { MongoClient } from "mongodb";
-import { parseIntentText } from "@intenttext/core";
+import { parseIntentText, generateThemeCSS, listBuiltinThemes, getBuiltinTheme } from "@intenttext/core";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -709,6 +709,50 @@ async function seed() {
   console.log(
     `\nDone. ${templates.length} inline + ${fileCount} file templates seeded.`,
   );
+
+  // ── Seed built-in themes ──
+  console.log("\nSeeding themes…");
+  const themesCollection = db.collection("themes");
+  await themesCollection.createIndex({ slug: 1 }, { unique: true });
+  await themesCollection.createIndex({ status: 1 });
+  await themesCollection.createIndex({ tier: 1 });
+
+  const themeNames = listBuiltinThemes();
+  let themeCount = 0;
+  for (const name of themeNames) {
+    const theme = getBuiltinTheme(name);
+    if (!theme) continue;
+
+    const existing = await themesCollection.findOne({ slug: name });
+    if (existing) {
+      console.log(`  ⏭  ${name} — already exists, skipping.`);
+      continue;
+    }
+
+    const webCss = generateThemeCSS(theme, "web");
+    const printCss = generateThemeCSS(theme, "print");
+
+    await themesCollection.insertOne({
+      id: `builtin-${name}`,
+      owner_id: "system",
+      slug: name,
+      title: name.charAt(0).toUpperCase() + name.slice(1),
+      description: theme.description || "",
+      theme_json: JSON.stringify(theme),
+      web_css: webCss,
+      print_css: printCss,
+      status: "approved",
+      tier: "curated",
+      installs: 0,
+      stars: 0,
+      created_at: new Date(),
+      updated_at: new Date(),
+    });
+    themeCount++;
+    console.log(`  ✓  ${name} — inserted.`);
+  }
+
+  console.log(`\n${themeCount} themes seeded.`);
   await client.close();
 }
 
