@@ -20,7 +20,7 @@ export default function TemplateCard({ template }: { template: HubTemplate }) {
   return (
     <Link
       href={`/templates/${template.slug}`}
-      className="group flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--purple)]"
+      className="group flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-sm shadow-black/10 transition-all hover:border-[var(--purple)] hover:shadow-md hover:shadow-purple-500/5"
     >
       <span
         className="mb-3 inline-block w-fit rounded-full px-3 py-1 text-xs font-semibold uppercase"

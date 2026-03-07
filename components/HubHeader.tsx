@@ -24,7 +24,7 @@ export default function HubHeader() {
   );
 
   return (
-    <header className="bg-[var(--surface-2)]">
+    <header className="bg-gradient-to-b from-[var(--surface-2)] to-[var(--bg)]">
       <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>

@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0f1117;
-  --surface: #1a1d2e;
-  --surface-2: #141621;
-  --border: #2a2d3e;
-  --text: #e2e8f0;
-  --text-muted: #8892b0;
+  --bg: #1a1d28;
+  --surface: #252a38;
+  --surface-2: #1f2330;
+  --border: #363d52;
+  --text: #e8ecf4;
+  --text-muted: #8b93ab;
   --purple: #a78bfa;
   --blue: #60a5fa;
   --green: #4ade80;
   --orange: #fb923c;
   --red: #fb7185;
   --yellow: #fbbf24;
+  --glow: rgba(167, 139, 250, 0.06);
 }
 
 body {
@@ -24,14 +25,15 @@ body {
 
 /* ItSourceViewer syntax highlighting */
 .it-source {
-  background: #141621;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
   font-family: "JetBrains Mono", "GeistMono", monospace;
   font-size: 13px;
   line-height: 1.7;
   overflow-x: auto;
-  color: #e2e8f0;
+  color: var(--text);
 }
 .it-kw {
   color: #a78bfa;
@@ -44,11 +46,11 @@ body {
   color: #fb923c;
 }
 .it-comment {
-  color: #64748b;
+  color: #717b96;
   font-style: italic;
 }
 .it-divider {
-  color: #2a2d3e;
+  color: var(--border);
 }
 .it-bold {
   color: #fbbf24;
