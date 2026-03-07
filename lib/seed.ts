@@ -1,6 +1,11 @@
 import { config } from "dotenv";
 import { MongoClient } from "mongodb";
-import { parseIntentText, generateThemeCSS, listBuiltinThemes, getBuiltinTheme } from "@intenttext/core";
+import {
+  parseIntentText,
+  generateThemeCSS,
+  listBuiltinThemes,
+  getBuiltinTheme,
+} from "@intenttext/core";
 import * as fs from "fs";
 import * as path from "path";
 

@@ -19,7 +19,15 @@ export async function getTemplates(options: {
     filter.tier = options.tier;
   }
 
-  const DOMAIN_FILTERS = ["business", "editorial", "developer", "book", "personal", "organization", "reports"];
+  const DOMAIN_FILTERS = [
+    "business",
+    "editorial",
+    "developer",
+    "book",
+    "personal",
+    "organization",
+    "reports",
+  ];
 
   if (options.category && options.category !== "all") {
     if (options.category === "sealed") {
@@ -67,7 +75,15 @@ export async function getTemplateCount(options: {
     filter.tier = options.tier;
   }
 
-  const DOMAIN_FILTERS = ["business", "editorial", "developer", "book", "personal", "organization", "reports"];
+  const DOMAIN_FILTERS = [
+    "business",
+    "editorial",
+    "developer",
+    "book",
+    "personal",
+    "organization",
+    "reports",
+  ];
 
   if (options.category && options.category !== "all") {
     if (options.category === "sealed") {
