@@ -33,6 +33,7 @@ export default async function HomePage({
           search={search}
           page={page}
           totalPages={totalPages}
+          total={total}
         />
       </Suspense>
 
@@ -96,12 +97,12 @@ export default async function HomePage({
             </a>
             <span>·</span>
             <a
-              href="https://github.com/intenttext/intenttext/blob/main/docs/SPEC.md"
+              href="https://itdocs.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[var(--text)] transition-colors"
             >
-              Spec
+              Docs
             </a>
           </div>
           <p>IntentText — The first document format that is natively JSON.</p>

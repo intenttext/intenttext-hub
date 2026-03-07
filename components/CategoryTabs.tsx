@@ -24,6 +24,7 @@ export default function CategoryTabs({ active }: { active: string }) {
     } else {
       params.set("category", category);
     }
+    params.delete("page");
     router.push(`/?${params.toString()}`);
   }
 

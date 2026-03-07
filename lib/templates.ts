@@ -20,7 +20,11 @@ export async function getTemplates(options: {
   }
 
   if (options.category && options.category !== "all") {
-    filter.category = options.category;
+    if (options.category === "sealed") {
+      filter["trust.frozen"] = true;
+    } else {
+      filter.category = options.category;
+    }
   }
 
   if (options.domain && options.domain !== "all") {
@@ -60,7 +64,11 @@ export async function getTemplateCount(options: {
   }
 
   if (options.category && options.category !== "all") {
-    filter.category = options.category;
+    if (options.category === "sealed") {
+      filter["trust.frozen"] = true;
+    } else {
+      filter.category = options.category;
+    }
   }
 
   if (options.domain && options.domain !== "all") {

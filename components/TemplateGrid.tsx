@@ -17,12 +17,14 @@ export default function TemplateGrid({
   search,
   page,
   totalPages,
+  total,
 }: {
   templates: HubTemplate[];
   category: string;
   search: string;
   page: number;
   totalPages: number;
+  total: number;
 }) {
   const params = new URLSearchParams();
   if (category !== "all") params.set("category", category);
@@ -33,8 +35,8 @@ export default function TemplateGrid({
       <div className="mb-6 flex items-center justify-between">
         <CategoryTabs active={category} />
         <span className="text-sm text-[var(--text-muted)]">
-          {templates.length === 0 ? "No" : templates.length} template
-          {templates.length !== 1 ? "s" : ""}
+          {total === 0 ? "No" : total} template
+          {total !== 1 ? "s" : ""}
           {totalPages > 1 && ` · Page ${page} of ${totalPages}`}
         </span>
       </div>
