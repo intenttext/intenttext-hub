@@ -16,15 +16,14 @@ text: Session Details
 ---
 section: Execution Log
 ---
-each: log_entries
-  note: Step {{step_number}} — {{action}}
-    *Timestamp:* {{timestamp}}
-    *Tool:* {{tool_used}}
-    *Input Summary:* {{input_summary}}
-    *Output Summary:* {{output_summary}}
-    *Latency:* {{latency}}
-    *Tokens:* {{token_count}}
-    *Status:* {{status}}
+text: Step {{step_number}} — {{action}}
+  *Timestamp:* {{timestamp}}
+  *Tool:* {{tool_used}}
+  *Input Summary:* {{input_summary}}
+  *Output Summary:* {{output_summary}}
+  *Latency:* {{latency}}
+  *Tokens:* {{token_count}}
+  *Status:* {{status}}
 ---
 section: Resource Usage
 ---
@@ -41,5 +40,7 @@ text: Result
   {{outcome_summary}}
 ---
 text: Recorded by {{recorded_by}} · {{record_date}}
+---
+sign: {{recorded_by}} | role: Agent Recorder | at: {{record_date}} | hash: {{document_hash}}
 ---
 freeze: Session {{session_id}} complete — audit log sealed

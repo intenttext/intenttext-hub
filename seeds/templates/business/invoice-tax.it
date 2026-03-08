@@ -26,15 +26,13 @@ text: Bill To
 ---
 section: Line Items
 ---
-each: items
-  note: {{description}}
-    *Quantity:* {{quantity}} · *Unit Price:* {{unit_price}} · *Tax Category:* {{tax_category}} · *Amount:* {{amount}}
+text: {{description}}
+  *Quantity:* {{quantity}} · *Unit Price:* {{unit_price}} · *Tax Category:* {{tax_category}} · *Amount:* {{amount}}
 ---
 section: Tax Breakdown
 ---
-each: tax_lines
-  note: {{tax_name}} ({{tax_rate}})
-    *Taxable Amount:* {{taxable_amount}} · *Tax Amount:* {{tax_amount}}
+text: {{tax_name}} ({{tax_rate}})
+  *Taxable Amount:* {{taxable_amount}} · *Tax Amount:* {{tax_amount}}
 ---
 section: Totals
 ---

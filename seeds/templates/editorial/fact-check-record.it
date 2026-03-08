@@ -12,12 +12,11 @@ text: {{article_title}}
 ---
 section: Claims and Verdicts
 ---
-each: claims
-  note: Claim — {{claim}}
-    *Source Cited:* {{source_cited}}
-    *Verification Source:* {{verification_source}}
-    *Verdict:* {{verdict}}
-    *Notes:* {{notes}}
+text: Claim — {{claim}}
+  *Source Cited:* {{source_cited}}
+  *Verification Source:* {{verification_source}}
+  *Verdict:* {{verdict}}
+  *Notes:* {{notes}}
 ---
 section: Overall Assessment
 ---

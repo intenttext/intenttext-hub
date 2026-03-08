@@ -22,12 +22,11 @@ text: Constraints
 ---
 section: Execution Steps
 ---
-each: steps
-  step: {{name}} | tool: {{tool}} | timeout: {{step_timeout}}
-    *Description:* {{description}}
-    *Input:* {{input}}
-    *Expected Output:* {{expected_output}}
-    *Fallback:* {{fallback}}
+step: {{name}} | tool: {{tool}} | timeout: {{step_timeout}}
+  *Description:* {{description}}
+  *Input:* {{input}}
+  *Expected Output:* {{expected_output}}
+  *Fallback:* {{fallback}}
 ---
 gate: Checkpoint — validate intermediate results | approver: {{checkpoint_approver}} | timeout: {{checkpoint_timeout}}
 ---

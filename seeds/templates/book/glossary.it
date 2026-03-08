@@ -5,5 +5,4 @@ section: Glossary of Terms
 ---
 text: *{{book_title}}*
 ---
-each: terms
-  note: *{{term}}* — {{definition}}
+text: *{{term}}* — {{definition}}

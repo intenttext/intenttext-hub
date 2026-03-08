@@ -13,15 +13,14 @@ text: Agent Details
 ---
 section: Registered Tools
 ---
-each: tools
-  note: {{name}}
-    *Description:* {{description}}
-    *Endpoint:* {{endpoint}}
-    *Auth:* {{auth_method}}
-    *Inputs:* {{inputs}}
-    *Outputs:* {{outputs}}
-    *Rate Limit:* {{rate_limit}}
-    *Timeout:* {{timeout}}
+text: {{name}}
+  *Description:* {{description}}
+  *Endpoint:* {{endpoint}}
+  *Auth:* {{auth_method}}
+  *Inputs:* {{inputs}}
+  *Outputs:* {{outputs}}
+  *Rate Limit:* {{rate_limit}}
+  *Timeout:* {{timeout}}
 ---
 section: Usage Policies
 ---

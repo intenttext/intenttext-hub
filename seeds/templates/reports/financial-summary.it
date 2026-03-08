@@ -12,9 +12,8 @@ text: Period Details
 ---
 section: Revenue
 ---
-each: revenue_lines
-  note: {{source}}
-    *Amount:* {{amount}} · *Prior Period:* {{prior_period}} · *Change:* {{change}} · *Notes:* {{notes}}
+text: {{source}}
+  *Amount:* {{amount}} · *Prior Period:* {{prior_period}} · *Change:* {{change}} · *Notes:* {{notes}}
 ---
 text: Revenue Totals
   *Total Revenue:* {{total_revenue}}
@@ -23,9 +22,8 @@ text: Revenue Totals
 ---
 section: Expenses
 ---
-each: expense_lines
-  note: {{category}}
-    *Amount:* {{amount}} · *Budget:* {{budget}} · *Variance:* {{variance}} · *Notes:* {{notes}}
+text: {{category}}
+  *Amount:* {{amount}} · *Budget:* {{budget}} · *Variance:* {{variance}} · *Notes:* {{notes}}
 ---
 text: Expense Totals
   *Total Expenses:* {{total_expenses}}

@@ -14,9 +14,8 @@ text: Details
 ---
 section: Attendees
 ---
-each: attendees
-  note: {{name}}
-    *Role:* {{role}} · *Department:* {{department}} · *Status:* {{status}}
+text: {{name}}
+  *Role:* {{role}} · *Department:* {{department}} · *Status:* {{status}}
 ---
 section: Agenda
 ---
@@ -35,9 +34,8 @@ text: Decisions Reached
 ---
 section: Action Items
 ---
-each: action_items
-  note: {{task}}
-    *Assigned To:* {{assigned_to}} · *Deadline:* {{deadline}} · *Priority:* {{priority}}
+text: {{task}}
+  *Assigned To:* {{assigned_to}} · *Deadline:* {{deadline}} · *Priority:* {{priority}}
 ---
 section: Next Meeting
 ---

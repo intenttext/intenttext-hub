@@ -38,15 +38,14 @@ text: Summary Opinion
 ---
 section: Findings
 ---
-each: findings
-  warning: {{title}}
-    *Finding ID:* {{finding_id}} · *Severity:* {{severity}} · *Category:* {{category}}
-    *Description:* {{description}}
-    *Evidence:* {{evidence}}
-    *Risk:* {{risk}}
-    *Recommendation:* {{recommendation}}
-    *Management Response:* {{management_response}}
-    *Remediation Deadline:* {{remediation_deadline}}
+warning: {{title}}
+  *Finding ID:* {{finding_id}} · *Severity:* {{severity}} · *Category:* {{category}}
+  *Description:* {{description}}
+  *Evidence:* {{evidence}}
+  *Risk:* {{risk}}
+  *Recommendation:* {{recommendation}}
+  *Management Response:* {{management_response}}
+  *Remediation Deadline:* {{remediation_deadline}}
 ---
 section: Positive Observations
 ---

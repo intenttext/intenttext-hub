@@ -9,19 +9,16 @@ quote: {{epigraph}} | by: {{epigraph_attribution}}
 ---
 section: {{opening_section_title}}
 ---
-each: opening_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 section: {{middle_section_title}}
 ---
-each: middle_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 quote: {{midpoint_quote}} | by: {{midpoint_quote_attribution}}
 ---
 section: {{closing_section_title}}
 ---
-each: closing_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 text: *{{chapter_closing_line}}*

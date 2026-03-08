@@ -12,8 +12,7 @@ text: {{opening_paragraph}}
 ---
 section: Argument
 ---
-each: body_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 quote: {{supporting_quote}} | by: {{supporting_quote_source}}
 ---

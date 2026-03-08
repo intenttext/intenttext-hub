@@ -27,10 +27,9 @@ text: Company Information
 ---
 section: Evaluation Criteria
 ---
-each: assessment_criteria
-  note: {{criterion_name}} — Score: {{score}}/{{max_score}}
-    *Weight:* {{weight}} · *Risk Rating:* {{risk_rating}}
-    {{criterion_notes}}
+text: {{criterion_name}} — Score: {{score}}/{{max_score}}
+  *Weight:* {{weight}} · *Risk Rating:* {{risk_rating}}
+  {{criterion_notes}}
 ---
 section: Scoring Summary
 ---

@@ -3,8 +3,7 @@ meta: | type: template | domain: book | description: Academic paper abstract wit
 ---
 section: {{paper_title}}
 ---
-each: authors
-  note: {{name}} | affiliation: {{affiliation}}
+text: {{name}} | affiliation: {{affiliation}}
 ---
 section: Abstract
 ---
@@ -12,5 +11,4 @@ text: {{abstract}}
 ---
 section: Keywords
 ---
-each: keywords
-  note: {{keyword}}
+text: {{keyword}}

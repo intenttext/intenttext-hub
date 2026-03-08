@@ -24,12 +24,11 @@ text: State Snapshot
 ---
 section: Pending Tasks
 ---
-each: pending_tasks
-  task: {{task_name}} | priority: {{priority}} | deadline: {{deadline}}
-    *Description:* {{description}}
-    *Acceptance Criteria:* {{acceptance_criteria}}
-    *Dependencies:* {{dependencies}}
-    *Notes:* {{notes}}
+task: {{task_name}} | priority: {{priority}} | deadline: {{deadline}}
+  *Description:* {{description}}
+  *Acceptance Criteria:* {{acceptance_criteria}}
+  *Dependencies:* {{dependencies}}
+  *Notes:* {{notes}}
 ---
 section: Instructions for Receiving Agent
 ---

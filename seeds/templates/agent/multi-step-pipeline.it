@@ -15,12 +15,11 @@ trigger: {{trigger_event}} | event: {{trigger_detail}}
 ---
 section: Pipeline Steps
 ---
-each: pipeline_steps
-  step: {{name}} | tool: {{tool}} | timeout: {{timeout}} | retry: {{retry_count}}
-    *Description:* {{description}}
-    *Depends On:* {{depends_on}}
-    *Input:* {{input}}
-    *On Error:* {{on_error}}
+step: {{name}} | tool: {{tool}} | timeout: {{timeout}} | retry: {{retry_count}}
+  *Description:* {{description}}
+  *Depends On:* {{depends_on}}
+  *Input:* {{input}}
+  *On Error:* {{on_error}}
 ---
 section: Error Handling
 ---

@@ -18,9 +18,8 @@ text: Executive Summary
 ---
 section: Timeline of Events
 ---
-each: timeline_events
-  note: {{timestamp}} — {{event_title}}
-    {{event_description}}
+text: {{timestamp}} — {{event_title}}
+  {{event_description}}
 ---
 section: Affected Systems
 ---
@@ -56,10 +55,9 @@ text: Key Takeaways
 ---
 section: Action Items
 ---
-each: action_items
-  task: {{action_id}} — {{action_title}}
-    *Owner:* {{action_owner}} · *Priority:* {{action_priority}} · *Due:* {{action_due_date}}
-    {{action_description}}
+task: {{action_id}} — {{action_title}}
+  *Owner:* {{action_owner}} · *Priority:* {{action_priority}} · *Due:* {{action_due_date}}
+  {{action_description}}
 ---
 section: Approval
 ---

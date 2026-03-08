@@ -30,19 +30,16 @@ text: Out of Scope
 ---
 section: Team
 ---
-each: team_members
-  note: {{name}}
-    *Role:* {{role}} · *Department:* {{department}} · *Allocation:* {{allocation}} · *Contact:* {{email}}
+text: {{name}}
+  *Role:* {{role}} · *Department:* {{department}} · *Allocation:* {{allocation}} · *Contact:* {{email}}
 ---
 section: Timeline and Milestones
 ---
-each: milestones
-  task: {{name}} | target: {{target_date}} | owner: {{owner}} | status: {{status}}
+task: {{name}} | target: {{target_date}} | owner: {{owner}} | status: {{status}}
 ---
 section: Risks
 ---
-each: risks
-  warning: {{description}} | likelihood: {{likelihood}} | impact: {{impact}} | mitigation: {{mitigation}} | owner: {{owner}}
+warning: {{description}} | likelihood: {{likelihood}} | impact: {{impact}} | mitigation: {{mitigation}} | owner: {{owner}}
 ---
 section: Key Decisions
 ---

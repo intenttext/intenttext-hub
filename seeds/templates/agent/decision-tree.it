@@ -16,13 +16,12 @@ text: Evaluation Criteria
 ---
 section: Decision Nodes
 ---
-each: decision_nodes
-  decision: {{label}} | condition: {{condition}} | weight: {{weight}}
-    *Description:* {{description}}
-    *Outcome if True:* {{outcome_true}}
-    *Outcome if False:* {{outcome_false}}
-    *Data Source:* {{data_source}}
-    *Confidence:* {{confidence}}
+decision: {{label}} | condition: {{condition}} | weight: {{weight}}
+  *Description:* {{description}}
+  *Outcome if True:* {{outcome_true}}
+  *Outcome if False:* {{outcome_false}}
+  *Data Source:* {{data_source}}
+  *Confidence:* {{confidence}}
 ---
 section: Fallback Path
 ---

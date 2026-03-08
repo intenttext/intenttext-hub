@@ -19,17 +19,15 @@ text: {{audience}}
 ---
 section: Key Questions
 ---
-each: key_questions
-  note: {{question}}
-    *Why it matters:* {{relevance}}
+text: {{question}}
+  *Why it matters:* {{relevance}}
 ---
 section: Sources
 ---
-each: sources
-  note: {{name}} — {{role}}
-    *Affiliation:* {{affiliation}}
-    *Contact:* {{contact}}
-    *What they bring:* {{value}}
+text: {{name}} — {{role}}
+  *Affiliation:* {{affiliation}}
+  *Contact:* {{contact}}
+  *What they bring:* {{value}}
 ---
 section: Logistics
 ---

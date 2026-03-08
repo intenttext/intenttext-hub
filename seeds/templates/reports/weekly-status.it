@@ -15,18 +15,15 @@ text: Details
 ---
 section: Accomplishments
 ---
-each: accomplishments
-  done: {{description}} | owner: {{owner}} | completed: {{completed_date}}
+done: {{description}} | owner: {{owner}} | completed: {{completed_date}}
 ---
 section: Blockers
 ---
-each: blockers
-  warning: {{description}} | raised_by: {{raised_by}} | severity: {{severity}} | status: {{status}}
+warning: {{description}} | raised_by: {{raised_by}} | severity: {{severity}} | status: {{status}}
 ---
 section: Next Week Plan
 ---
-each: next_week
-  task: {{description}} | owner: {{owner}} | target: {{target_date}} | priority: {{priority}}
+task: {{description}} | owner: {{owner}} | target: {{target_date}} | priority: {{priority}}
 ---
 section: Key Metrics
 ---

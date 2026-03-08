@@ -24,9 +24,8 @@ text: Agreement Details
 ---
 section: Service Level Metrics
 ---
-each: sla_metrics
-  note: {{metric_name}}
-    *Target:* {{target}} · *Measurement Period:* {{measurement_period}} · *Measurement Method:* {{measurement_method}} · *Penalty for Breach:* {{penalty}}
+text: {{metric_name}}
+  *Target:* {{target}} · *Measurement Period:* {{measurement_period}} · *Measurement Method:* {{measurement_method}} · *Penalty for Breach:* {{penalty}}
 ---
 section: Uptime Commitment
 ---

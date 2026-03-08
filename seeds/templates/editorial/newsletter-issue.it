@@ -13,10 +13,9 @@ text: {{intro}}
 ---
 section: Stories
 ---
-each: stories
-  note: {{headline}}
-    {{summary}}
-    *By {{author}}* · *Read time:* {{read_time}}
+text: {{headline}}
+  {{summary}}
+  *By {{author}}* · *Read time:* {{read_time}}
 ---
 section: Commentary
 ---
@@ -24,9 +23,8 @@ quote: {{commentary_quote}} | by: {{commentary_attribution}}
 ---
 section: Quick Links
 ---
-each: quick_links
-  note: {{title}}
-    {{description}} · *Source:* {{source}}
+text: {{title}}
+  {{description}} · *Source:* {{source}}
 ---
 section: Sign-Off
 ---

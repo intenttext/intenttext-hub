@@ -13,14 +13,13 @@ text: Overview
 ---
 section: Stages
 ---
-each: stages
-  step: {{stage_name}} | tool: {{tool}} | timeout: {{timeout}}
-    *Description:* {{description}}
-    *Input:* {{input}}
-    *Output:* {{output}}
-    *On Failure:* {{on_failure}}
-  gate: {{gate_label}} | approver: {{approver}} | timeout: {{gate_timeout}}
-    approve: {{approval_criteria}} | by: {{approver}}
+step: {{stage_name}} | tool: {{tool}} | timeout: {{timeout}}
+  *Description:* {{description}}
+  *Input:* {{input}}
+  *Output:* {{output}}
+  *On Failure:* {{on_failure}}
+gate: {{gate_label}} | approver: {{approver}} | timeout: {{gate_timeout}}
+  approve: {{approval_criteria}} | by: {{approver}}
 ---
 section: Final Gate
 ---

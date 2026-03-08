@@ -31,15 +31,13 @@ text: Key Definitions
 ---
 section: Policy Statements
 ---
-each: policy_statements
-  note: {{statement_title}}
-    {{statement_body}}
+text: {{statement_title}}
+  {{statement_body}}
 ---
 section: Responsibilities
 ---
-each: responsible_parties
-  note: {{party_role}}
-    {{party_responsibilities}}
+text: {{party_role}}
+  {{party_responsibilities}}
 ---
 section: Compliance and Enforcement
 ---

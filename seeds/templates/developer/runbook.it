@@ -31,21 +31,19 @@ text: On-Call Rotation
 ---
 section: Standard Operating Procedures
 ---
-each: procedures
-  note: {{procedure_name}}
-    *Trigger:* {{trigger}}
-    *Severity:* {{severity}}
-    *Steps:*
-    {{steps}}
+text: {{procedure_name}}
+  *Trigger:* {{trigger}}
+  *Severity:* {{severity}}
+  *Steps:*
+  {{steps}}
 ---
 section: Escalation Path
 ---
-each: escalation_path
-  note: {{level}}
-    *Contact:* {{contact}}
-    *Role:* {{role}}
-    *Response Time:* {{response_time}}
-    *When to Escalate:* {{escalation_criteria}}
+text: {{level}}
+  *Contact:* {{contact}}
+  *Role:* {{role}}
+  *Response Time:* {{response_time}}
+  *When to Escalate:* {{escalation_criteria}}
 ---
 section: SLA Obligations
 ---

@@ -17,8 +17,7 @@ text: Executive Summary
 ---
 section: Timeline
 ---
-each: timeline_events
-  note: {{timestamp}} — {{event}} | actor: {{actor}} | system: {{system}}
+text: {{timestamp}} — {{event}} | actor: {{actor}} | system: {{system}}
 ---
 section: Impact
 ---
@@ -55,8 +54,7 @@ text: Response
 ---
 section: Action Items
 ---
-each: action_items
-  task: {{description}} | owner: {{owner}} | priority: {{priority}} | deadline: {{deadline}} | type: {{action_type}}
+task: {{description}} | owner: {{owner}} | priority: {{priority}} | deadline: {{deadline}} | type: {{action_type}}
 ---
 section: Lessons Learned
 ---

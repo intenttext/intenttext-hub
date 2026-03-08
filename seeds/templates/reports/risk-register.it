@@ -22,15 +22,14 @@ text: Risk Distribution
 ---
 section: Risk Register
 ---
-each: risks
-  warning: {{title}}
-    *Risk ID:* {{risk_id}} · *Category:* {{category}} · *Status:* {{status}}
-    *Likelihood:* {{likelihood}} · *Impact:* {{impact}} · *Risk Score:* {{risk_score}}
-    *Description:* {{description}}
-    *Trigger:* {{trigger}}
-    *Mitigation Strategy:* {{mitigation}}
-    *Contingency Plan:* {{contingency}}
-    *Owner:* {{owner}} · *Review Date:* {{review_date}}
+warning: {{title}}
+  *Risk ID:* {{risk_id}} · *Category:* {{category}} · *Status:* {{status}}
+  *Likelihood:* {{likelihood}} · *Impact:* {{impact}} · *Risk Score:* {{risk_score}}
+  *Description:* {{description}}
+  *Trigger:* {{trigger}}
+  *Mitigation Strategy:* {{mitigation}}
+  *Contingency Plan:* {{contingency}}
+  *Owner:* {{owner}} · *Review Date:* {{review_date}}
 ---
 section: Risk Matrix
 ---

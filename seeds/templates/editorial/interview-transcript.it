@@ -16,9 +16,8 @@ text: Interview Context
 ---
 section: Transcript
 ---
-each: qa_pairs
-  note: Q — {{question}}
-    *{{subject_first_name}}:* {{answer}}
+text: Q — {{question}}
+  *{{subject_first_name}}:* {{answer}}
 ---
 section: Editor Notes
 ---

@@ -29,10 +29,9 @@ text: Data Sources
 ---
 section: Key Findings
 ---
-each: findings
-  note: {{title}}
-    {{detail}}
-    *Data Point:* {{data_point}} · *Confidence:* {{confidence}}
+text: {{title}}
+  {{detail}}
+  *Data Point:* {{data_point}} · *Confidence:* {{confidence}}
 ---
 quote: {{key_excerpt}} | by: {{excerpt_source}}
 ---
@@ -43,10 +42,9 @@ text: Summary of Conclusions
 ---
 section: Recommendations
 ---
-each: recommendations
-  note: {{title}}
-    {{detail}}
-    *Priority:* {{priority}} · *Effort:* {{effort}} · *Expected Impact:* {{expected_impact}}
+text: {{title}}
+  {{detail}}
+  *Priority:* {{priority}} · *Effort:* {{effort}} · *Expected Impact:* {{expected_impact}}
 ---
 section: References
 ---

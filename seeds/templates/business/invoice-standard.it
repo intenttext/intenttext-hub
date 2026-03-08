@@ -23,9 +23,8 @@ text: Bill To
 ---
 section: Line Items
 ---
-each: items
-  note: {{description}}
-    *Quantity:* {{quantity}} · *Unit Price:* {{unit_price}} · *Amount:* {{amount}}
+text: {{description}}
+  *Quantity:* {{quantity}} · *Unit Price:* {{unit_price}} · *Amount:* {{amount}}
 ---
 section: Totals
 ---

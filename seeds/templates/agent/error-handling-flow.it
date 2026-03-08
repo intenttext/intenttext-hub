@@ -12,14 +12,13 @@ text: Overview
 ---
 section: Error Types
 ---
-each: error_types
-  error: {{name}} | severity: {{severity}} | code: {{error_code}}
-    *Category:* {{category}}
-    *Description:* {{description}}
-    *Detection:* {{detection_method}}
-    *Recovery:* {{recovery_action}}
-    *Escalation:* {{escalation_path}}
-    *SLA:* {{response_sla}}
+error: {{name}} | severity: {{severity}} | code: {{error_code}}
+  *Category:* {{category}}
+  *Description:* {{description}}
+  *Detection:* {{detection_method}}
+  *Recovery:* {{recovery_action}}
+  *Escalation:* {{escalation_path}}
+  *SLA:* {{response_sla}}
 ---
 section: Error Handling Policies
 ---

@@ -22,10 +22,9 @@ text: Proposed Solution
 ---
 section: Requirements
 ---
-each: requirements
-  note: {{requirement_id}} — {{title}}
-    *Priority:* {{priority}} · *Category:* {{category}}
-    {{description}}
+text: {{requirement_id}} — {{title}}
+  *Priority:* {{priority}} · *Category:* {{category}}
+  {{description}}
 ---
 section: Design
 ---

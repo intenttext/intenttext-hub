@@ -22,9 +22,8 @@ text: *Market Opportunity*
 ---
 section: Chapter Outline
 ---
-each: chapters
-  note: *Chapter {{number}}: {{title}}*
-    {{summary}}
+text: *Chapter {{number}}: {{title}}*
+  {{summary}}
 ---
 section: About the Author
 ---

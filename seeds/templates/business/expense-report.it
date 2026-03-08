@@ -15,9 +15,8 @@ text: Expense Report Details
 ---
 section: Expense Items
 ---
-each: expenses
-  note: {{date}} — {{description}}
-    *Category:* {{category}} · *Vendor:* {{vendor}} · *Amount:* {{amount}} · *Receipt:* {{receipt_status}}
+text: {{date}} — {{description}}
+  *Category:* {{category}} · *Vendor:* {{vendor}} · *Amount:* {{amount}} · *Receipt:* {{receipt_status}}
 ---
 section: Totals
 ---

@@ -8,10 +8,8 @@ text: *{{subtitle}}*
 ---
 section: Contents
 ---
-each: chapters
-  note: {{number}}. {{title}} | page: {{page}}
+text: {{number}}. {{title}} | page: {{page}}
 ---
 section: Back Matter
 ---
-each: back_matter
-  note: {{title}} | page: {{page}}
+text: {{title}} | page: {{page}}

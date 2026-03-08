@@ -23,9 +23,8 @@ text: Ship To
 ---
 section: Line Items
 ---
-each: items
-  note: {{part_number}} — {{description}}
-    *Quantity:* {{quantity}} · *Unit:* {{unit}} · *Unit Price:* {{unit_price}} · *Amount:* {{amount}}
+text: {{part_number}} — {{description}}
+  *Quantity:* {{quantity}} · *Unit:* {{unit}} · *Unit Price:* {{unit_price}} · *Amount:* {{amount}}
 ---
 section: Totals
 ---

@@ -30,9 +30,8 @@ text: Key Benefits
 ---
 section: Pricing
 ---
-each: pricing_items
-  note: {{item}}
-    *Description:* {{description}} · *Cost:* {{cost}}
+text: {{item}}
+  *Description:* {{description}} · *Cost:* {{cost}}
 ---
 text: Pricing Summary
   *Total Investment:* {{total_cost}}
@@ -40,9 +39,8 @@ text: Pricing Summary
 ---
 section: Timeline
 ---
-each: timeline_items
-  note: {{phase}}
-    *Duration:* {{duration}} · *Deliverables:* {{deliverables}}
+text: {{phase}}
+  *Duration:* {{duration}} · *Deliverables:* {{deliverables}}
 ---
 text: Project Duration
   *Estimated Start:* {{start_date}}

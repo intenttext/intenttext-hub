@@ -17,13 +17,11 @@ text: {{dateline}} — {{lede}}
 ---
 section: Body
 ---
-each: body_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 quote: {{executive_quote}} | by: {{executive_name}}, {{executive_title}}, {{company_name}}
 ---
-each: additional_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 quote: {{partner_quote}} | by: {{partner_name}}, {{partner_title}}, {{partner_organization}}
 ---

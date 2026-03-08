@@ -16,9 +16,8 @@ text: Scope
 ---
 section: Compliance Requirements
 ---
-each: requirements
-  task: {{requirement_id}} — {{requirement_title}}
-    {{requirement_description}}
+task: {{requirement_id}} — {{requirement_title}}
+  {{requirement_description}}
 ---
 section: Findings Summary
 ---

@@ -57,9 +57,8 @@ section: Sub-Processors
 text: Sub-Processing Arrangements
   {{sub_processor_terms}}
 ---
-each: sub_processors
-  note: {{sub_processor_name}}
-    *Location:* {{sub_processor_location}} · *Purpose:* {{sub_processor_purpose}} · *Data Transferred:* {{sub_processor_data}}
+text: {{sub_processor_name}}
+  *Location:* {{sub_processor_location}} · *Purpose:* {{sub_processor_purpose}} · *Data Transferred:* {{sub_processor_data}}
 ---
 section: International Transfers
 ---

@@ -11,11 +11,10 @@ text: {{article_title}}
 ---
 section: Pre-Publication Checks
 ---
-each: checklist_items
-  note: {{task}}
-    *Owner:* {{owner}}
-    *Status:* {{status}}
-    *Notes:* {{notes}}
+text: {{task}}
+  *Owner:* {{owner}}
+  *Status:* {{status}}
+  *Notes:* {{notes}}
 ---
 section: Legal and Compliance
 ---

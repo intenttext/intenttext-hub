@@ -15,27 +15,23 @@ text: Summary
 ---
 section: Added
 ---
-each: added_items
-  note: {{title}}
-    {{description}}
+text: {{title}}
+  {{description}}
 ---
 section: Changed
 ---
-each: changed_items
-  note: {{title}}
-    {{description}}
+text: {{title}}
+  {{description}}
 ---
 section: Fixed
 ---
-each: fixed_items
-  note: {{title}}
-    {{description}}
+text: {{title}}
+  {{description}}
 ---
 section: Removed
 ---
-each: removed_items
-  note: {{title}}
-    {{description}}
+text: {{title}}
+  {{description}}
 ---
 section: Breaking Changes
 ---

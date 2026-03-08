@@ -14,20 +14,18 @@ text: Details
 ---
 section: Goals Assessment
 ---
-each: goals
-  note: {{goal}}
-    *Weight:* {{weight}} · *Target:* {{target}} · *Actual:* {{actual}} · *Rating:* {{rating}}
-    *Commentary:* {{commentary}}
+text: {{goal}}
+  *Weight:* {{weight}} · *Target:* {{target}} · *Actual:* {{actual}} · *Rating:* {{rating}}
+  *Commentary:* {{commentary}}
 ---
 text: Overall Goal Attainment
   *Weighted Score:* {{overall_goal_score}}
 ---
 section: Key Achievements
 ---
-each: achievements
-  note: {{title}}
-    {{description}}
-    *Impact:* {{impact}} · *Quarter:* {{quarter}}
+text: {{title}}
+  {{description}}
+  *Impact:* {{impact}} · *Quarter:* {{quarter}}
 ---
 section: Competency Assessment
 ---

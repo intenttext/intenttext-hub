@@ -15,18 +15,16 @@ text: Engagement Overview
 ---
 section: Your Team
 ---
-each: team_contacts
-  note: {{name}} — {{role}}
-    *Email:* {{email}}
-    *Phone:* {{phone}}
-    *Availability:* {{availability}}
+text: {{name}} — {{role}}
+  *Email:* {{email}}
+  *Phone:* {{phone}}
+  *Availability:* {{availability}}
 ---
 section: Onboarding Process
 ---
-each: onboarding_steps
-  note: Step {{step_number}} — {{step_title}}
-    *Timeline:* {{timeline}}
-    {{description}}
+text: Step {{step_number}} — {{step_title}}
+  *Timeline:* {{timeline}}
+  {{description}}
 ---
 section: Next Steps
 ---
@@ -40,9 +38,8 @@ text: Important Links
 ---
 section: Frequently Asked Questions
 ---
-each: faq_items
-  note: {{question}}
-    {{answer}}
+text: {{question}}
+  {{answer}}
 ---
 section: Contact & Escalation
 ---

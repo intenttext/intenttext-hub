@@ -12,8 +12,7 @@ text: {{lede}}
 ---
 section: Body
 ---
-each: body_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 section: Pull Quote
 ---
@@ -21,8 +20,7 @@ quote: {{pull_quote}} | by: {{pull_quote_attribution}}
 ---
 section: Continued
 ---
-each: continued_paragraphs
-  note: {{text}}
+text: {{text}}
 ---
 quote: {{closing_quote}} | by: {{closing_quote_attribution}}
 ---

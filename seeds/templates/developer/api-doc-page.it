@@ -21,11 +21,10 @@ text: {{method}} {{endpoint_path}}
 ---
 section: Request Parameters
 ---
-each: parameters
-  note: {{name}} · {{location}}
-    *Type:* {{type}} · *Required:* {{required}}
-    *Description:* {{description}}
-    *Example:* {{example}}
+text: {{name}} · {{location}}
+  *Type:* {{type}} · *Required:* {{required}}
+  *Description:* {{description}}
+  *Example:* {{example}}
 ---
 section: Request Body
 ---
@@ -36,9 +35,8 @@ code: ```{{request_body_example}}``` | lang: json
 ---
 section: Response Codes
 ---
-each: response_codes
-  note: {{status}} {{status_text}}
-    {{description}}
+text: {{status}} {{status_text}}
+  {{description}}
 ---
 section: Success Response Example
 ---
