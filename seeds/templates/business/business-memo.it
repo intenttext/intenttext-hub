@@ -43,5 +43,4 @@ section: Attachments
 text: Supporting Materials
   {{attachments}}
 ---
-approve: {{approver_name}}
-  | role: {{approver_title}} | at: {{approval_date}}
+approve: Approved | by: {{approver_name}} | role: {{approver_title}} | at: {{approval_date}}

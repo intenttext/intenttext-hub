@@ -50,5 +50,4 @@ text: Scheduled Follow-Up
 text: Minutes Prepared By
   {{prepared_by}} · {{prepared_date}}
 ---
-approve: {{chair_name}}
-  | role: Meeting Chair | at: {{approved_date}}
+approve: Approved | by: {{chair_name}} | role: Meeting Chair | at: {{approved_date}}

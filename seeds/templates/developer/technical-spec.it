@@ -69,5 +69,4 @@ text: Unresolved Items
 ---
 section: Approval
 ---
-approve: {{tech_lead}}
-  | role: {{tech_lead_title}} | at: {{approval_date}}
+approve: Approved | by: {{tech_lead}} | role: {{tech_lead_title}} | at: {{approval_date}}

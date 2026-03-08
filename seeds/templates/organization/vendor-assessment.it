@@ -60,5 +60,4 @@ text: Assessment Decision
 ---
 section: Approval
 ---
-approve: {{procurement_lead}}
-  | role: {{procurement_lead_title}} | at: {{approval_date}}
+approve: Approved | by: {{procurement_lead}} | role: {{procurement_lead_title}} | at: {{approval_date}}

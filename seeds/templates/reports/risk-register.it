@@ -48,5 +48,4 @@ text: Recently Closed
 ---
 section: Approval
 ---
-approve: {{register_owner}}
-  | role: Risk Owner | at: {{approval_date}}
+approve: Approved | by: {{register_owner}} | role: Risk Owner | at: {{approval_date}}

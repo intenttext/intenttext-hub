@@ -63,14 +63,10 @@ text: Jurisdiction
 ---
 section: Signatures
 ---
-approve: {{legal_reviewer}}
-  | role: Legal Counsel | at: {{review_date}}
+approve: Approved | by: {{legal_reviewer}} | role: Legal Counsel | at: {{review_date}}
 ---
-sign: {{provider_signatory}}
-  | role: {{provider_signatory_title}} | on behalf of: {{provider_name}} | at: {{provider_signed_date}}
+sign: {{provider_signatory}} | role: {{provider_signatory_title}} | on behalf of: {{provider_name}} | at: {{provider_signed_date}} | hash: {{document_hash}}
 ---
-sign: {{client_signatory}}
-  | role: {{client_signatory_title}} | on behalf of: {{client_name}} | at: {{client_signed_date}}
+sign: {{client_signatory}} | role: {{client_signatory_title}} | on behalf of: {{client_name}} | at: {{client_signed_date}} | hash: {{document_hash}}
 ---
-freeze: Agreement executed
-  | at: {{freeze_date}} | by: {{legal_reviewer}}
+freeze: Agreement executed | at: {{freeze_date}} | by: {{legal_reviewer}}

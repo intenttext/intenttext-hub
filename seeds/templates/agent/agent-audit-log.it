@@ -40,6 +40,6 @@ section: Outcome
 text: Result
   {{outcome_summary}}
 ---
-freeze: Session {{session_id}} complete — audit log sealed
----
 text: Recorded by {{recorded_by}} · {{record_date}}
+---
+freeze: Session {{session_id}} complete — audit log sealed

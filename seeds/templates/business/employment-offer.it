@@ -55,11 +55,8 @@ text: Candidate
   *Name:* {{candidate_name}}
   *Email:* {{candidate_email}}
 ---
-sign: {{hiring_manager}}
-  | role: {{hiring_manager_title}} | on behalf of: {{company_name}} | at: {{offer_date}}
+sign: {{hiring_manager}} | role: {{hiring_manager_title}} | on behalf of: {{company_name}} | at: {{offer_date}} | hash: {{document_hash}}
 ---
-sign: {{candidate_name}}
-  | role: Candidate | at: {{acceptance_date}}
+sign: {{candidate_name}} | role: Candidate | at: {{acceptance_date}} | hash: {{document_hash}}
 ---
-freeze: Offer accepted
-  | at: {{freeze_date}} | by: {{hiring_manager}}
+freeze: Offer accepted | at: {{freeze_date}} | by: {{hiring_manager}}

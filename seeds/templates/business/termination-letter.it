@@ -52,11 +52,8 @@ section: Final Acknowledgments
 text: Contact Information
   For questions regarding benefits continuation, contact {{hr_contact_name}} at {{hr_contact_email}}. For questions regarding final pay, contact {{payroll_contact}}.
 ---
-approve: {{hr_approver}}
-  | role: HR Director | at: {{hr_approval_date}}
+approve: Approved | by: {{hr_approver}} | role: HR Director | at: {{hr_approval_date}}
 ---
-sign: {{manager_name}}
-  | role: {{manager_title}} | at: {{signed_date}}
+sign: {{manager_name}} | role: {{manager_title}} | at: {{signed_date}} | hash: {{document_hash}}
 ---
-freeze: Letter delivered
-  | at: {{freeze_date}} | by: {{hr_approver}}
+freeze: Letter delivered | at: {{freeze_date}} | by: {{hr_approver}}

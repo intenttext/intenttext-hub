@@ -61,5 +61,4 @@ text: Executive Summary
 text: Risks and Outlook
   {{risks_outlook}}
 ---
-approve: {{cfo_name}}
-  | role: Chief Financial Officer | at: {{cfo_approval_date}}
+approve: Approved | by: {{cfo_name}} | role: Chief Financial Officer | at: {{cfo_approval_date}}

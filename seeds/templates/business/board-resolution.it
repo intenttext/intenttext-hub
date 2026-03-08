@@ -38,14 +38,11 @@ text: Effectiveness
 section: Director Signatures
 ---
 each: directors
-  sign: {{name}}
-    | role: {{title}} | at: {{signed_date}}
+  sign: {{name}} | role: {{title}} | at: {{signed_date}} | hash: {{document_hash}}
 ---
 text: Corporate Secretary Certification
   I, {{secretary_name}}, Corporate Secretary of {{corporation_name}}, hereby certify that the foregoing is a true and correct copy of the resolution duly adopted at the {{meeting_type}} of the Board of Directors held on {{meeting_date}}.
 ---
-sign: {{secretary_name}}
-  | role: Corporate Secretary | at: {{certification_date}}
+sign: {{secretary_name}} | role: Corporate Secretary | at: {{certification_date}} | hash: {{document_hash}}
 ---
-freeze: Resolution adopted
-  | at: {{freeze_date}} | by: {{secretary_name}}
+freeze: Resolution adopted | at: {{freeze_date}} | by: {{secretary_name}}

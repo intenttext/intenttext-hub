@@ -29,6 +29,6 @@ text: {{overall_assessment}}
 ---
 section: Sign-Off
 ---
-approve: {{fact_checker}} | role: Senior Fact-Checker | date: {{date_completed}}
+approve: Approved | by: {{fact_checker}} | role: Senior Fact-Checker | date: {{date_completed}}
 ---
 freeze: Fact-check record finalized — immutable audit trail

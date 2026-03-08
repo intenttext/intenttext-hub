@@ -60,8 +60,6 @@ text: Prioritized Actions
 ---
 section: Sign-Off
 ---
-approve: {{auditor_name}}
-  | role: Lead Auditor, {{auditor_firm}} | at: {{auditor_sign_date}}
+approve: Approved | by: {{auditor_name}} | role: Lead Auditor, {{auditor_firm}} | at: {{auditor_sign_date}}
 ---
-sign: {{auditee_name}}
-  | role: {{auditee_title}} | at: {{auditee_sign_date}}
+sign: {{auditee_name}} | role: {{auditee_title}} | at: {{auditee_sign_date}} | hash: {{document_hash}}

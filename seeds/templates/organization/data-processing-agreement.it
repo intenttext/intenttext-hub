@@ -98,11 +98,8 @@ text: Jurisdiction
 ---
 section: Signatures
 ---
-sign: {{controller_signatory}}
-  | role: {{controller_signatory_title}} | on behalf of: {{controller_name}} | at: {{controller_signed_date}}
+sign: {{controller_signatory}} | role: {{controller_signatory_title}} | on behalf of: {{controller_name}} | at: {{controller_signed_date}} | hash: {{document_hash}}
 ---
-sign: {{processor_signatory}}
-  | role: {{processor_signatory_title}} | on behalf of: {{processor_name}} | at: {{processor_signed_date}}
+sign: {{processor_signatory}} | role: {{processor_signatory_title}} | on behalf of: {{processor_name}} | at: {{processor_signed_date}} | hash: {{document_hash}}
 ---
-freeze: DPA executed
-  | at: {{freeze_date}} | by: {{controller_signatory}}
+freeze: DPA executed | at: {{freeze_date}} | by: {{controller_signatory}}

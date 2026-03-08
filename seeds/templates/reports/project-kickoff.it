@@ -37,14 +37,12 @@ each: team_members
 section: Timeline and Milestones
 ---
 each: milestones
-  task: {{name}}
-    | target: {{target_date}} | owner: {{owner}} | status: {{status}}
+  task: {{name}} | target: {{target_date}} | owner: {{owner}} | status: {{status}}
 ---
 section: Risks
 ---
 each: risks
-  warning: {{description}}
-    | likelihood: {{likelihood}} | impact: {{impact}} | mitigation: {{mitigation}} | owner: {{owner}}
+  warning: {{description}} | likelihood: {{likelihood}} | impact: {{impact}} | mitigation: {{mitigation}} | owner: {{owner}}
 ---
 section: Key Decisions
 ---
@@ -59,8 +57,6 @@ text: Cadence
   *Team Standups:* {{standup_cadence}}
   *Escalation Path:* {{escalation_path}}
 ---
-approve: {{sponsor_name}}
-  | role: Executive Sponsor | at: {{sponsor_approval_date}}
+approve: Approved | by: {{sponsor_name}} | role: Executive Sponsor | at: {{sponsor_approval_date}}
 ---
-approve: {{project_manager}}
-  | role: Project Manager | at: {{pm_approval_date}}
+approve: Approved | by: {{project_manager}} | role: Project Manager | at: {{pm_approval_date}}

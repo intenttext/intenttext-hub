@@ -61,11 +61,8 @@ text: References
 ---
 section: Approval
 ---
-approve: {{policy_owner}}
-  | role: {{policy_owner_title}} | at: {{owner_approval_date}}
+approve: Approved | by: {{policy_owner}} | role: {{policy_owner_title}} | at: {{owner_approval_date}}
 ---
-sign: {{executive_sponsor}}
-  | role: {{executive_title}} | at: {{executive_signed_date}}
+sign: {{executive_sponsor}} | role: {{executive_title}} | at: {{executive_signed_date}} | hash: {{document_hash}}
 ---
-freeze: Policy enacted
-  | at: {{freeze_date}} | by: {{executive_sponsor}}
+freeze: Policy enacted | at: {{freeze_date}} | by: {{executive_sponsor}}

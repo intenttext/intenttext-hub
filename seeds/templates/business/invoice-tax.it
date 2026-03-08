@@ -46,8 +46,6 @@ text: Summary
 text: Payment Instructions
   {{payment_instructions}}
 ---
-sign: {{authorized_by}}
-  | role: Controller | at: {{signed_date}}
+sign: {{authorized_by}} | role: Controller | at: {{signed_date}} | hash: {{document_hash}}
 ---
-freeze: Invoice finalized
-  | at: {{freeze_date}} | by: {{authorized_by}}
+freeze: Invoice finalized | at: {{freeze_date}} | by: {{authorized_by}}

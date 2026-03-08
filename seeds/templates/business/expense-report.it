@@ -43,8 +43,6 @@ section: Policy Compliance
 text: Compliance Notes
   {{compliance_notes}}
 ---
-sign: {{employee_name}}
-  | role: Employee | at: {{employee_signed_date}}
+sign: {{employee_name}} | role: Employee | at: {{employee_signed_date}} | hash: {{document_hash}}
 ---
-approve: {{manager_name}}
-  | role: {{manager_title}} | at: {{approval_date}}
+approve: Approved | by: {{manager_name}} | role: {{manager_title}} | at: {{approval_date}}

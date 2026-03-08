@@ -60,11 +60,8 @@ text: Governing Law and Miscellaneous
 ---
 section: Signatures
 ---
-sign: {{disclosing_party_signatory}}
-  | role: {{disclosing_party_title}} | on behalf of: {{disclosing_party_name}} | at: {{disclosing_signed_date}}
+sign: {{disclosing_party_signatory}} | role: {{disclosing_party_title}} | on behalf of: {{disclosing_party_name}} | at: {{disclosing_signed_date}} | hash: {{document_hash}}
 ---
-sign: {{receiving_party_signatory}}
-  | role: {{receiving_party_title}} | on behalf of: {{receiving_party_name}} | at: {{receiving_signed_date}}
+sign: {{receiving_party_signatory}} | role: {{receiving_party_title}} | on behalf of: {{receiving_party_name}} | at: {{receiving_signed_date}} | hash: {{document_hash}}
 ---
-freeze: NDA executed
-  | at: {{freeze_date}} | by: {{disclosing_party_signatory}}
+freeze: NDA executed | at: {{freeze_date}} | by: {{disclosing_party_signatory}}

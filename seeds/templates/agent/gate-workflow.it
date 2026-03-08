@@ -20,12 +20,12 @@ each: stages
     *Output:* {{output}}
     *On Failure:* {{on_failure}}
   gate: {{gate_label}} | approver: {{approver}} | timeout: {{gate_timeout}}
-    approve: {{approval_criteria}}
+    approve: {{approval_criteria}} | by: {{approver}}
 ---
 section: Final Gate
 ---
 gate: {{final_gate_label}} | approver: {{final_approver}} | timeout: {{final_gate_timeout}}
-  approve: {{final_approval_criteria}}
+  approve: {{final_approval_criteria}} | by: {{final_approver}}
 ---
 section: Completion
 ---

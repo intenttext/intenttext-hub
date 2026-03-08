@@ -67,8 +67,6 @@ text: SLA Review
 ---
 section: Signatures
 ---
-sign: {{provider_signatory}}
-  | role: {{provider_signatory_title}} | on behalf of: {{provider_name}} | at: {{provider_signed_date}}
+sign: {{provider_signatory}} | role: {{provider_signatory_title}} | on behalf of: {{provider_name}} | at: {{provider_signed_date}} | hash: {{document_hash}}
 ---
-sign: {{customer_signatory}}
-  | role: {{customer_signatory_title}} | on behalf of: {{customer_name}} | at: {{customer_signed_date}}
+sign: {{customer_signatory}} | role: {{customer_signatory_title}} | on behalf of: {{customer_name}} | at: {{customer_signed_date}} | hash: {{document_hash}}

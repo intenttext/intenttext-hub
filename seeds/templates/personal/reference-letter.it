@@ -41,8 +41,6 @@ text: Recommendation
 ---
 section: Authorization
 ---
-sign: {{referee_name}}
-  | role: {{referee_title}} | organization: {{referee_organization}} | at: {{signed_date}}
+sign: {{referee_name}} | role: {{referee_title}} | organization: {{referee_organization}} | at: {{signed_date}} | hash: {{document_hash}}
 ---
-freeze: Reference letter issued
-  | at: {{freeze_date}} | by: {{referee_name}}
+freeze: Reference letter issued | at: {{freeze_date}} | by: {{referee_name}}

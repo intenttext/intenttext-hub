@@ -48,5 +48,4 @@ text: Standard Terms
 ---
 section: Approval
 ---
-approve: {{approver}}
-  | role: Purchasing Manager | at: {{approval_date}}
+approve: Approved | by: {{approver}} | role: Purchasing Manager | at: {{approval_date}}

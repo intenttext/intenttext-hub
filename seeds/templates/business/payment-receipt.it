@@ -29,8 +29,6 @@ text: Transaction Details
 text: Description
   {{description}}
 ---
-sign: {{issuer_signatory}}
-  | role: {{issuer_role}} | at: {{signed_date}}
+sign: {{issuer_signatory}} | role: {{issuer_role}} | at: {{signed_date}} | hash: {{document_hash}}
 ---
-freeze: Receipt issued
-  | at: {{freeze_date}} | by: {{issuer_signatory}}
+freeze: Receipt issued | at: {{freeze_date}} | by: {{issuer_signatory}}

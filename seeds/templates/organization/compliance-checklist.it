@@ -39,8 +39,6 @@ text: Open Remediation Items
 ---
 section: Approval
 ---
-approve: {{compliance_officer}}
-  | role: {{compliance_officer_title}} | at: {{approval_date}}
+approve: Approved | by: {{compliance_officer}} | role: {{compliance_officer_title}} | at: {{approval_date}}
 ---
-freeze: Checklist completed
-  | at: {{freeze_date}} | by: {{compliance_officer}}
+freeze: Checklist completed | at: {{freeze_date}} | by: {{compliance_officer}}

@@ -80,5 +80,4 @@ text: Resources and Budget
 ---
 section: Approval
 ---
-approve: {{cab_chair}}
-  | role: {{cab_chair_title}} | at: {{approval_date}}
+approve: Approved | by: {{cab_chair}} | role: {{cab_chair_title}} | at: {{approval_date}}

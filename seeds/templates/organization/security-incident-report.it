@@ -63,8 +63,6 @@ each: action_items
 ---
 section: Approval
 ---
-approve: {{ciso_name}}
-  | role: {{ciso_title}} | at: {{approval_date}}
+approve: Approved | by: {{ciso_name}} | role: {{ciso_title}} | at: {{approval_date}}
 ---
-freeze: Incident closed
-  | at: {{freeze_date}} | by: {{ciso_name}}
+freeze: Incident closed | at: {{freeze_date}} | by: {{ciso_name}}

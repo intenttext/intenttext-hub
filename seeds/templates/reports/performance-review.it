@@ -69,8 +69,6 @@ text: Career Aspirations
 ---
 section: Sign-Off
 ---
-sign: {{employee_name}}
-  | role: Employee | at: {{employee_sign_date}}
+sign: {{employee_name}} | role: Employee | at: {{employee_sign_date}} | hash: {{document_hash}}
 ---
-sign: {{manager_name}}
-  | role: Manager | at: {{manager_sign_date}}
+sign: {{manager_name}} | role: Manager | at: {{manager_sign_date}} | hash: {{document_hash}}
