@@ -4,40 +4,40 @@ meta: | type: template | domain: book | description: Formal book proposal to a p
 section: Proposal Overview
 ---
 text: *{{book_title}}*
-  {{subtitle}}
-  by {{author_name}}
+text: {{subtitle}}
+text: by {{author_name}}
 ---
 text: {{overview}}
 ---
 section: Market Analysis
 ---
 text: *Target Audience*
-  {{target_audience}}
+text: {{target_audience}}
 ---
 text: *Comparable Titles*
-  {{comparable_titles}}
+text: {{comparable_titles}}
 ---
 text: *Market Opportunity*
-  {{market_opportunity}}
+text: {{market_opportunity}}
 ---
 section: Chapter Outline
 ---
 text: *Chapter {{number}}: {{title}}*
-  {{summary}}
+text: {{summary}}
 ---
 section: About the Author
 ---
 text: {{author_bio}}
 ---
 text: *Previous Publications*
-  {{previous_publications}}
+text: {{previous_publications}}
 ---
 section: Specifications
 ---
 text: Estimated word count: {{word_count}}
-  Estimated delivery: {{delivery_date}}
-  Illustrations: {{illustrations}}
-  Format: {{format}}
+text: Estimated delivery: {{delivery_date}}
+text: Illustrations: {{illustrations}}
+text: Format: {{format}}
 ---
 section: Sample Chapter
 ---

@@ -4,7 +4,7 @@ meta: | type: template | domain: editorial | description: News article with head
 section: Headline
 ---
 text: {{headline}}
-  *{{byline}}* · {{dateline}}
+text: *{{byline}}* · {{dateline}}
 ---
 section: Lede
 ---

@@ -5,29 +5,29 @@ track: | version: 1.0 | by: {{author}} | note: Pipeline defined {{created_date}}
 section: Pipeline Overview
 ---
 text: Configuration
-  *Pipeline ID:* {{pipeline_id}}
-  *Owner:* {{owner}}
-  *Model:* {{model}}
-  *Environment:* {{environment}}
-  *Concurrency:* {{concurrency}}
+text: *Pipeline ID:* {{pipeline_id}}
+text: *Owner:* {{owner}}
+text: *Model:* {{model}}
+text: *Environment:* {{environment}}
+text: *Concurrency:* {{concurrency}}
 ---
 trigger: {{trigger_event}} | event: {{trigger_detail}}
 ---
 section: Pipeline Steps
 ---
 step: {{name}} | tool: {{tool}} | timeout: {{timeout}} | retry: {{retry_count}}
-  *Description:* {{description}}
-  *Depends On:* {{depends_on}}
-  *Input:* {{input}}
-  *On Error:* {{on_error}}
+text: *Description:* {{description}}
+text: *Depends On:* {{depends_on}}
+text: *Input:* {{input}}
+text: *On Error:* {{on_error}}
 ---
 section: Error Handling
 ---
 text: Global Error Strategy
-  *Strategy:* {{error_strategy}}
-  *Dead Letter Queue:* {{dlq_destination}}
-  *Alert Channel:* {{alert_channel}}
-  *Max Pipeline Retries:* {{max_retries}}
+text: *Strategy:* {{error_strategy}}
+text: *Dead Letter Queue:* {{dlq_destination}}
+text: *Alert Channel:* {{alert_channel}}
+text: *Max Pipeline Retries:* {{max_retries}}
 ---
 section: Outputs
 ---
@@ -35,6 +35,6 @@ signal: {{output_event_success}} | phase: complete | level: success
 signal: {{output_event_failure}} | phase: error | level: error
 ---
 text: Output Schema
-  {{output_schema_description}}
+text: {{output_schema_description}}
 ---
 text: Pipeline maintained by {{author}} · Last updated {{created_date}}

@@ -4,37 +4,37 @@ meta: | type: template | domain: organization | description: Compliance verifica
 section: Overview
 ---
 text: Compliance Programme Details
-  *Checklist ID:* {{checklist_id}}
-  *Regulation / Framework:* {{framework}}
-  *Reporting Period:* {{reporting_period}}
-  *Business Unit:* {{business_unit}}
-  *Prepared By:* {{prepared_by}}
-  *Preparation Date:* {{preparation_date}}
+text: *Checklist ID:* {{checklist_id}}
+text: *Regulation / Framework:* {{framework}}
+text: *Reporting Period:* {{reporting_period}}
+text: *Business Unit:* {{business_unit}}
+text: *Prepared By:* {{prepared_by}}
+text: *Preparation Date:* {{preparation_date}}
 ---
 text: Scope
-  {{scope}}
+text: {{scope}}
 ---
 section: Compliance Requirements
 ---
 task: {{requirement_id}} — {{requirement_title}}
-  {{requirement_description}}
+text: {{requirement_description}}
 ---
 section: Findings Summary
 ---
 text: Summary of Results
-  *Total Requirements:* {{total_requirements}}
-  *Compliant:* {{compliant_count}}
-  *Partially Compliant:* {{partial_count}}
-  *Non-Compliant:* {{non_compliant_count}}
-  *Not Applicable:* {{na_count}}
+text: *Total Requirements:* {{total_requirements}}
+text: *Compliant:* {{compliant_count}}
+text: *Partially Compliant:* {{partial_count}}
+text: *Non-Compliant:* {{non_compliant_count}}
+text: *Not Applicable:* {{na_count}}
 ---
 text: Key Findings
-  {{key_findings}}
+text: {{key_findings}}
 ---
 section: Remediation Plan
 ---
 text: Open Remediation Items
-  {{remediation_plan}}
+text: {{remediation_plan}}
 ---
 section: Approval
 ---

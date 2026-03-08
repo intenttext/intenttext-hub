@@ -4,7 +4,7 @@ meta: | type: template | domain: editorial | description: Op-ed column with head
 section: Headline
 ---
 text: {{headline}}
-  *By {{byline}}* · {{publication_date}}
+text: *By {{byline}}* · {{publication_date}}
 ---
 section: Opening
 ---
@@ -29,4 +29,4 @@ text: {{closing_paragraph}}
 section: About the Author
 ---
 text: {{author_bio}}
-  *Contact:* {{author_contact}}
+text: *Contact:* {{author_contact}}

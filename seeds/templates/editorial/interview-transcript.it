@@ -4,20 +4,20 @@ meta: | type: template | domain: editorial | description: Q&A interview transcri
 section: Subject Profile
 ---
 text: {{subject_name}}
-  *Title:* {{subject_title}}
-  *Organization:* {{subject_organization}}
-  *Bio:* {{subject_bio}}
+text: *Title:* {{subject_title}}
+text: *Organization:* {{subject_organization}}
+text: *Bio:* {{subject_bio}}
 ---
 text: Interview Context
-  *Interviewer:* {{interviewer_name}}, {{interviewer_title}}
-  *Date:* {{interview_date}}
-  *Location:* {{location}}
-  *Duration:* {{duration}}
+text: *Interviewer:* {{interviewer_name}}, {{interviewer_title}}
+text: *Date:* {{interview_date}}
+text: *Location:* {{location}}
+text: *Duration:* {{duration}}
 ---
 section: Transcript
 ---
 text: Q — {{question}}
-  *{{subject_first_name}}:* {{answer}}
+text: *{{subject_first_name}}:* {{answer}}
 ---
 section: Editor Notes
 ---

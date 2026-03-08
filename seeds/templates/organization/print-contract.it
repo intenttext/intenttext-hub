@@ -11,14 +11,14 @@ section: Parties
 paragraph: This Agreement ("Agreement") is entered into as of {{effective_date}} by and between:
 ---
 text: Provider
-  *{{provider_name}}*
-  {{provider_address}}
-  Registration: {{provider_registration}}
+text: *{{provider_name}}*
+text: {{provider_address}}
+text: Registration: {{provider_registration}}
 ---
 text: Client
-  *{{client_name}}*
-  {{client_address}}
-  Registration: {{client_registration}}
+text: *{{client_name}}*
+text: {{client_address}}
+text: Registration: {{client_registration}}
 ---
 section: Definitions
 ---

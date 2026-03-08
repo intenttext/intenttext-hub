@@ -7,64 +7,64 @@ track: | version: 0.1 | by: {{author}} | note: Initial draft circulated for feed
 section: Overview
 ---
 text: Document Information
-  *Spec ID:* {{spec_id}}
-  *Status:* {{status}}
-  *Author:* {{author}} · {{author_email}}
-  *Team:* {{team}}
-  *Created:* {{created_date}}
-  *Target Release:* {{target_release}}
+text: *Spec ID:* {{spec_id}}
+text: *Status:* {{status}}
+text: *Author:* {{author}} · {{author_email}}
+text: *Team:* {{team}}
+text: *Created:* {{created_date}}
+text: *Target Release:* {{target_release}}
 ---
 text: Problem Statement
-  {{problem_statement}}
+text: {{problem_statement}}
 ---
 text: Proposed Solution
-  {{proposed_solution}}
+text: {{proposed_solution}}
 ---
 section: Requirements
 ---
 text: {{requirement_id}} — {{title}}
-  *Priority:* {{priority}} · *Category:* {{category}}
-  {{description}}
+text: *Priority:* {{priority}} · *Category:* {{category}}
+text: {{description}}
 ---
 section: Design
 ---
 text: Architecture Overview
-  {{architecture_overview}}
+text: {{architecture_overview}}
 ---
 text: Data Model
-  {{data_model}}
+text: {{data_model}}
 ---
 text: API Surface
-  {{api_surface}}
+text: {{api_surface}}
 ---
 text: Security Considerations
-  {{security_considerations}}
+text: {{security_considerations}}
 ---
 section: Implementation Plan
 ---
 text: Phases
-  {{implementation_phases}}
+text: {{implementation_phases}}
 ---
 text: Dependencies
-  {{dependencies}}
+text: {{dependencies}}
 ---
 text: Testing Strategy
-  {{testing_strategy}}
+text: {{testing_strategy}}
 ---
 section: Constraints
 ---
 policy: {{constraint_title}}
-  {{constraint_body}}
+text: {{constraint_body}}
 ---
 section: Performance Targets
 ---
 text: Benchmarks
-  {{performance_targets}}
+text: {{performance_targets}}
 ---
 section: Open Questions
 ---
 text: Unresolved Items
-  {{open_questions}}
+text: {{open_questions}}
 ---
 section: Approval
 ---

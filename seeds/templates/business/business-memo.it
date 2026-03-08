@@ -6,41 +6,41 @@ track: | version: 0.9 | by: {{author}} | note: Initial draft
 section: Memo Header
 ---
 text: Memorandum
-  *To:* {{to}}
-  *From:* {{from}}
-  *Date:* {{date}}
-  *Subject:* {{subject}}
-  *Priority:* {{priority}}
-  *Distribution:* {{distribution}}
+text: *To:* {{to}}
+text: *From:* {{from}}
+text: *Date:* {{date}}
+text: *Subject:* {{subject}}
+text: *Priority:* {{priority}}
+text: *Distribution:* {{distribution}}
 ---
 section: Executive Summary
 ---
 text: Summary
-  {{executive_summary}}
+text: {{executive_summary}}
 ---
 section: Background
 ---
 text: Context
-  {{background}}
+text: {{background}}
 ---
 section: Analysis
 ---
 text: Findings
-  {{analysis}}
+text: {{analysis}}
 ---
 section: Recommendation
 ---
 text: Recommended Action
-  {{recommendation}}
+text: {{recommendation}}
 ---
 section: Next Steps
 ---
 text: Implementation Plan
-  {{next_steps}}
+text: {{next_steps}}
 ---
 section: Attachments
 ---
 text: Supporting Materials
-  {{attachments}}
+text: {{attachments}}
 ---
 approve: Approved | by: {{approver_name}} | role: {{approver_title}} | at: {{approval_date}}

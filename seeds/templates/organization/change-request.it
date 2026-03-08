@@ -7,76 +7,76 @@ track: | version: 0.1 | by: {{requester}} | note: Initial submission
 section: Request Summary
 ---
 text: Change Request Details
-  *Request ID:* {{request_id}}
-  *Priority:* {{priority}}
-  *Category:* {{category}}
-  *Status:* {{status}}
-  *Requested By:* {{requester}} · {{requester_email}}
-  *Department:* {{department}}
-  *Date Submitted:* {{date_submitted}}
-  *Requested Implementation Date:* {{requested_date}}
+text: *Request ID:* {{request_id}}
+text: *Priority:* {{priority}}
+text: *Category:* {{category}}
+text: *Status:* {{status}}
+text: *Requested By:* {{requester}} · {{requester_email}}
+text: *Department:* {{department}}
+text: *Date Submitted:* {{date_submitted}}
+text: *Requested Implementation Date:* {{requested_date}}
 ---
 section: Description of Change
 ---
 text: Change Description
-  {{change_description}}
+text: {{change_description}}
 ---
 text: Business Justification
-  {{business_justification}}
+text: {{business_justification}}
 ---
 section: Impact Analysis
 ---
 text: Systems and Services Affected
-  {{systems_affected}}
+text: {{systems_affected}}
 ---
 text: User Impact
-  {{user_impact}}
+text: {{user_impact}}
 ---
 text: Dependencies
-  {{dependencies}}
+text: {{dependencies}}
 ---
 section: Risk Assessment
 ---
 text: Risk Analysis
-  *Risk Level:* {{risk_level}}
-  *Probability of Failure:* {{failure_probability}}
-  *Impact if Failed:* {{failure_impact}}
+text: *Risk Level:* {{risk_level}}
+text: *Probability of Failure:* {{failure_probability}}
+text: *Impact if Failed:* {{failure_impact}}
 ---
 text: Risk Factors
-  {{risk_factors}}
+text: {{risk_factors}}
 ---
 section: Implementation Plan
 ---
 text: Implementation Steps
-  {{implementation_plan}}
+text: {{implementation_plan}}
 ---
 text: Implementation Window
-  *Start:* {{implementation_start}}
-  *End:* {{implementation_end}}
-  *Maintenance Window:* {{maintenance_window}}
+text: *Start:* {{implementation_start}}
+text: *End:* {{implementation_end}}
+text: *Maintenance Window:* {{maintenance_window}}
 ---
 section: Testing and Validation
 ---
 text: Test Plan
-  {{test_plan}}
+text: {{test_plan}}
 ---
 section: Rollback Plan
 ---
 text: Rollback Procedure
-  {{rollback_plan}}
+text: {{rollback_plan}}
 ---
 text: Rollback Criteria
-  {{rollback_criteria}}
+text: {{rollback_criteria}}
 ---
 section: Communication Plan
 ---
 text: Stakeholder Notifications
-  {{communication_plan}}
+text: {{communication_plan}}
 ---
 section: Resource Requirements
 ---
 text: Resources and Budget
-  {{resource_requirements}}
+text: {{resource_requirements}}
 ---
 section: Approval
 ---

@@ -5,34 +5,34 @@ track: | version: 1.0 | by: Career Services
 section: Header
 ---
 text: Applicant
-  *Name:* {{applicant_name}}
-  *Email:* {{applicant_email}}
-  *Phone:* {{applicant_phone}}
-  *Date:* {{date}}
+text: *Name:* {{applicant_name}}
+text: *Email:* {{applicant_email}}
+text: *Phone:* {{applicant_phone}}
+text: *Date:* {{date}}
 ---
 text: Addressee
-  {{hiring_manager_name}}
-  {{hiring_manager_title}}
-  {{company_name}}
-  {{company_address}}
+text: {{hiring_manager_name}}
+text: {{hiring_manager_title}}
+text: {{company_name}}
+text: {{company_address}}
 ---
 section: Letter
 ---
 text: Salutation
-  Dear {{hiring_manager_name}},
+text: Dear {{hiring_manager_name}},
 ---
 text: Opening
-  {{opening_paragraph}}
+text: {{opening_paragraph}}
 ---
 text: Relevant Experience
-  {{experience_paragraph}}
+text: {{experience_paragraph}}
 ---
 text: Value Proposition
-  {{value_paragraph}}
+text: {{value_paragraph}}
 ---
 text: Closing
-  {{closing_paragraph}}
+text: {{closing_paragraph}}
 ---
 text: Sign-Off
-  Sincerely,
-  {{applicant_name}}
+text: Sincerely,
+text: {{applicant_name}}

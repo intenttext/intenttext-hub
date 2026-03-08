@@ -5,34 +5,34 @@ track: | version: 1.0 | by: Communications
 section: Short Bio
 ---
 text: One-Paragraph Bio
-  {{short_bio}}
+text: {{short_bio}}
 ---
 section: Full Bio
 ---
 text: Background
-  {{background}}
+text: {{background}}
 ---
 text: Career & Expertise
-  {{career_expertise}}
+text: {{career_expertise}}
 ---
 text: Current Focus
-  {{current_focus}}
+text: {{current_focus}}
 ---
 text: Personal Interests
-  {{personal_interests}}
+text: {{personal_interests}}
 ---
 section: Links & Profiles
 ---
 text: Online Presence
-  *Website:* {{website}}
-  *LinkedIn:* {{linkedin}}
-  *Twitter / X:* {{twitter}}
-  *GitHub:* {{github}}
-  *Speaking Reel:* {{speaking_reel}}
+text: *Website:* {{website}}
+text: *LinkedIn:* {{linkedin}}
+text: *Twitter / X:* {{twitter}}
+text: *GitHub:* {{github}}
+text: *Speaking Reel:* {{speaking_reel}}
 ---
 section: Headshot & Usage
 ---
 text: Photo & Attribution
-  *Headshot URL:* {{headshot_url}}
-  *Photo Credit:* {{photo_credit}}
-  *Usage Notes:* {{usage_notes}}
+text: *Headshot URL:* {{headshot_url}}
+text: *Photo Credit:* {{photo_credit}}
+text: *Usage Notes:* {{usage_notes}}

@@ -4,58 +4,58 @@ meta: | type: template | domain: organization | description: Vendor and supplier
 section: Assessment Overview
 ---
 text: Assessment Details
-  *Assessment ID:* {{assessment_id}}
-  *Vendor:* {{vendor_name}}
-  *Vendor Contact:* {{vendor_contact}} · {{vendor_email}}
-  *Category:* {{vendor_category}}
-  *Assessment Date:* {{assessment_date}}
-  *Assessor:* {{assessor}}
-  *Assessment Method:* {{assessment_method}}
+text: *Assessment ID:* {{assessment_id}}
+text: *Vendor:* {{vendor_name}}
+text: *Vendor Contact:* {{vendor_contact}} · {{vendor_email}}
+text: *Category:* {{vendor_category}}
+text: *Assessment Date:* {{assessment_date}}
+text: *Assessor:* {{assessor}}
+text: *Assessment Method:* {{assessment_method}}
 ---
 text: Purpose
-  {{purpose}}
+text: {{purpose}}
 ---
 section: Vendor Profile
 ---
 text: Company Information
-  *Founded:* {{vendor_founded}}
-  *Headquarters:* {{vendor_headquarters}}
-  *Employees:* {{vendor_employees}}
-  *Annual Revenue:* {{vendor_revenue}}
-  *Key Certifications:* {{vendor_certifications}}
-  *Existing Relationship:* {{existing_relationship}}
+text: *Founded:* {{vendor_founded}}
+text: *Headquarters:* {{vendor_headquarters}}
+text: *Employees:* {{vendor_employees}}
+text: *Annual Revenue:* {{vendor_revenue}}
+text: *Key Certifications:* {{vendor_certifications}}
+text: *Existing Relationship:* {{existing_relationship}}
 ---
 section: Evaluation Criteria
 ---
 text: {{criterion_name}} — Score: {{score}}/{{max_score}}
-  *Weight:* {{weight}} · *Risk Rating:* {{risk_rating}}
-  {{criterion_notes}}
+text: *Weight:* {{weight}} · *Risk Rating:* {{risk_rating}}
+text: {{criterion_notes}}
 ---
 section: Scoring Summary
 ---
 text: Overall Score
-  *Weighted Total:* {{weighted_total}} / {{max_weighted_total}}
-  *Overall Risk Rating:* {{overall_risk_rating}}
-  *Rating Threshold:* {{rating_threshold}}
+text: *Weighted Total:* {{weighted_total}} / {{max_weighted_total}}
+text: *Overall Risk Rating:* {{overall_risk_rating}}
+text: *Rating Threshold:* {{rating_threshold}}
 ---
 section: Strengths and Concerns
 ---
 text: Key Strengths
-  {{strengths}}
+text: {{strengths}}
 ---
 text: Key Concerns
-  {{concerns}}
+text: {{concerns}}
 ---
 section: Risk Mitigation
 ---
 text: Recommended Mitigations
-  {{mitigations}}
+text: {{mitigations}}
 ---
 section: Recommendation
 ---
 text: Assessment Decision
-  *Recommendation:* {{recommendation}}
-  *Conditions:* {{conditions}}
+text: *Recommendation:* {{recommendation}}
+text: *Conditions:* {{conditions}}
 ---
 section: Approval
 ---

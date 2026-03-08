@@ -4,34 +4,34 @@ meta: | type: template | domain: business | description: Project kickoff documen
 section: Project Overview
 ---
 text: Project Details
-  *Project Name:* {{project_name}}
-  *Project Code:* {{project_code}}
-  *Sponsor:* {{sponsor_name}}
-  *Project Manager:* {{project_manager}}
-  *Start Date:* {{start_date}}
-  *Target Completion:* {{target_completion}}
-  *Budget:* {{budget}}
+text: *Project Name:* {{project_name}}
+text: *Project Code:* {{project_code}}
+text: *Sponsor:* {{sponsor_name}}
+text: *Project Manager:* {{project_manager}}
+text: *Start Date:* {{start_date}}
+text: *Target Completion:* {{target_completion}}
+text: *Budget:* {{budget}}
 ---
 section: Goals and Objectives
 ---
 text: Strategic Goals
-  {{strategic_goals}}
+text: {{strategic_goals}}
 ---
 text: Success Criteria
-  {{success_criteria}}
+text: {{success_criteria}}
 ---
 section: Scope
 ---
 text: In Scope
-  {{in_scope}}
+text: {{in_scope}}
 ---
 text: Out of Scope
-  {{out_of_scope}}
+text: {{out_of_scope}}
 ---
 section: Team
 ---
 text: {{name}}
-  *Role:* {{role}} · *Department:* {{department}} · *Allocation:* {{allocation}} · *Contact:* {{email}}
+text: *Role:* {{role}} · *Department:* {{department}} · *Allocation:* {{allocation}} · *Contact:* {{email}}
 ---
 section: Timeline and Milestones
 ---
@@ -44,15 +44,15 @@ warning: {{description}} | likelihood: {{likelihood}} | impact: {{impact}} | mit
 section: Key Decisions
 ---
 text: Decisions Made at Kickoff
-  {{decisions}}
+text: {{decisions}}
 ---
 section: Communication Plan
 ---
 text: Cadence
-  *Status Reports:* {{status_cadence}}
-  *Steering Committee:* {{steering_cadence}}
-  *Team Standups:* {{standup_cadence}}
-  *Escalation Path:* {{escalation_path}}
+text: *Status Reports:* {{status_cadence}}
+text: *Steering Committee:* {{steering_cadence}}
+text: *Team Standups:* {{standup_cadence}}
+text: *Escalation Path:* {{escalation_path}}
 ---
 approve: Approved | by: {{sponsor_name}} | role: Executive Sponsor | at: {{sponsor_approval_date}}
 ---

@@ -4,59 +4,59 @@ meta: | type: template | domain: business | description: Business proposal with 
 section: Cover
 ---
 text: Proposal Information
-  *Proposal Number:* {{proposal_number}}
-  *Date:* {{date}}
-  *Valid Until:* {{valid_until}}
-  *Prepared For:* {{client_name}}, {{client_company}}
-  *Prepared By:* {{author_name}}, {{author_company}}
+text: *Proposal Number:* {{proposal_number}}
+text: *Date:* {{date}}
+text: *Valid Until:* {{valid_until}}
+text: *Prepared For:* {{client_name}}, {{client_company}}
+text: *Prepared By:* {{author_name}}, {{author_company}}
 ---
 section: Executive Summary
 ---
 text: Overview
-  {{executive_summary}}
+text: {{executive_summary}}
 ---
 section: Problem Statement
 ---
 text: Current Challenges
-  {{problem_statement}}
+text: {{problem_statement}}
 ---
 section: Proposed Solution
 ---
 text: Solution Overview
-  {{solution_overview}}
+text: {{solution_overview}}
 ---
 text: Key Benefits
-  {{key_benefits}}
+text: {{key_benefits}}
 ---
 section: Pricing
 ---
 text: {{item}}
-  *Description:* {{description}} · *Cost:* {{cost}}
+text: *Description:* {{description}} · *Cost:* {{cost}}
 ---
 text: Pricing Summary
-  *Total Investment:* {{total_cost}}
-  *Payment Terms:* {{pricing_payment_terms}}
+text: *Total Investment:* {{total_cost}}
+text: *Payment Terms:* {{pricing_payment_terms}}
 ---
 section: Timeline
 ---
 text: {{phase}}
-  *Duration:* {{duration}} · *Deliverables:* {{deliverables}}
+text: *Duration:* {{duration}} · *Deliverables:* {{deliverables}}
 ---
 text: Project Duration
-  *Estimated Start:* {{start_date}}
-  *Estimated Completion:* {{end_date}}
+text: *Estimated Start:* {{start_date}}
+text: *Estimated Completion:* {{end_date}}
 ---
 section: Why Us
 ---
 text: Our Qualifications
-  {{qualifications}}
+text: {{qualifications}}
 ---
 section: Next Steps
 ---
 text: Call to Action
-  {{next_steps}}
+text: {{next_steps}}
 ---
 text: Contact
-  {{contact_name}}
-  {{contact_title}}
-  {{contact_email}} · {{contact_phone}}
+text: {{contact_name}}
+text: {{contact_title}}
+text: {{contact_email}} · {{contact_phone}}

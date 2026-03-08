@@ -4,56 +4,56 @@ meta: | type: template | domain: business | description: Job offer letter with r
 section: Offer Details
 ---
 text: Position Offered
-  *Company:* {{company_name}}
-  *Position:* {{position_title}}
-  *Department:* {{department}}
-  *Reporting To:* {{reporting_to}}
-  *Employment Type:* {{employment_type}}
-  *Start Date:* {{start_date}}
-  *Work Location:* {{work_location}}
+text: *Company:* {{company_name}}
+text: *Position:* {{position_title}}
+text: *Department:* {{department}}
+text: *Reporting To:* {{reporting_to}}
+text: *Employment Type:* {{employment_type}}
+text: *Start Date:* {{start_date}}
+text: *Work Location:* {{work_location}}
 ---
 section: Compensation
 ---
 text: Base Compensation
-  *Annual Salary:* {{annual_salary}}
-  *Pay Frequency:* {{pay_frequency}}
-  *Signing Bonus:* {{signing_bonus}}
+text: *Annual Salary:* {{annual_salary}}
+text: *Pay Frequency:* {{pay_frequency}}
+text: *Signing Bonus:* {{signing_bonus}}
 ---
 text: Equity
-  {{equity_details}}
+text: {{equity_details}}
 ---
 text: Performance Bonus
-  {{bonus_details}}
+text: {{bonus_details}}
 ---
 section: Benefits
 ---
 text: Benefits Package
-  {{benefits_summary}}
+text: {{benefits_summary}}
 ---
 text: Paid Time Off
-  {{pto_details}}
+text: {{pto_details}}
 ---
 section: Conditions of Employment
 ---
 text: Contingencies
-  {{conditions}}
+text: {{conditions}}
 ---
 text: At-Will Statement
-  {{at_will_statement}}
+text: {{at_will_statement}}
 ---
 section: Confidentiality and Non-Compete
 ---
 text: Agreements Required
-  {{agreements}}
+text: {{agreements}}
 ---
 section: Acceptance
 ---
 text: Acceptance Instructions
-  To accept this offer, please sign below and return this letter by {{acceptance_deadline}}. If we do not receive your signed acceptance by this date, this offer will expire.
+text: To accept this offer, please sign below and return this letter by {{acceptance_deadline}}. If we do not receive your signed acceptance by this date, this offer will expire.
 ---
 text: Candidate
-  *Name:* {{candidate_name}}
-  *Email:* {{candidate_email}}
+text: *Name:* {{candidate_name}}
+text: *Email:* {{candidate_email}}
 ---
 sign: {{hiring_manager}} | role: {{hiring_manager_title}} | on behalf of: {{company_name}} | at: {{offer_date}} | hash: {{document_hash}}
 ---

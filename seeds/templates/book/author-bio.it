@@ -4,7 +4,7 @@ meta: | type: template | domain: book | description: Author biography page with 
 section: About the Author
 ---
 text: *{{author_name}}*
-  Photo: {{photo_credit}}
+text: Photo: {{photo_credit}}
 ---
 text: {{short_bio}}
 ---
@@ -19,5 +19,5 @@ text: {{long_bio_current}}
 section: Contact
 ---
 text: {{contact_website}}
-  {{contact_email}}
-  {{contact_social}}
+text: {{contact_email}}
+text: {{contact_social}}

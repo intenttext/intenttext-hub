@@ -4,12 +4,12 @@ meta: | type: template | domain: editorial | description: Press release with hea
 section: Release Header
 ---
 text: FOR IMMEDIATE RELEASE
-  *Date:* {{release_date}}
+text: *Date:* {{release_date}}
 ---
 section: Headline
 ---
 text: {{headline}}
-  *{{subheadline}}*
+text: *{{subheadline}}*
 ---
 section: Dateline and Lede
 ---
@@ -28,13 +28,13 @@ quote: {{partner_quote}} | by: {{partner_name}}, {{partner_title}}, {{partner_or
 section: Boilerplate
 ---
 text: About {{company_name}}
-  {{boilerplate}}
+text: {{boilerplate}}
 ---
 section: Media Contact
 ---
 text: {{contact_name}}
-  *Title:* {{contact_title}}
-  *Email:* {{contact_email}}
-  *Phone:* {{contact_phone}}
+text: *Title:* {{contact_title}}
+text: *Email:* {{contact_email}}
+text: *Phone:* {{contact_phone}}
 ---
 text: ###

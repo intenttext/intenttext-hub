@@ -4,10 +4,10 @@ meta: | type: template | domain: editorial | description: Editorial story brief 
 section: Story Overview
 ---
 text: {{working_title}}
-  *Reporter:* {{reporter_name}}
-  *Editor:* {{assigning_editor}}
-  *Section:* {{section}}
-  *Pitch Date:* {{pitch_date}}
+text: *Reporter:* {{reporter_name}}
+text: *Editor:* {{assigning_editor}}
+text: *Section:* {{section}}
+text: *Pitch Date:* {{pitch_date}}
 ---
 section: Angle
 ---
@@ -20,22 +20,22 @@ text: {{audience}}
 section: Key Questions
 ---
 text: {{question}}
-  *Why it matters:* {{relevance}}
+text: *Why it matters:* {{relevance}}
 ---
 section: Sources
 ---
 text: {{name}} — {{role}}
-  *Affiliation:* {{affiliation}}
-  *Contact:* {{contact}}
-  *What they bring:* {{value}}
+text: *Affiliation:* {{affiliation}}
+text: *Contact:* {{contact}}
+text: *What they bring:* {{value}}
 ---
 section: Logistics
 ---
 text: Production Details
-  *Deadline:* {{deadline}}
-  *Target Word Count:* {{word_count}}
-  *Multimedia:* {{multimedia_needs}}
-  *Travel Required:* {{travel}}
+text: *Deadline:* {{deadline}}
+text: *Target Word Count:* {{word_count}}
+text: *Multimedia:* {{multimedia_needs}}
+text: *Travel Required:* {{travel}}
 ---
 section: Background
 ---

@@ -4,30 +4,30 @@ meta: | type: template | domain: business | description: Payment confirmation re
 section: Receipt Details
 ---
 text: Payment Confirmation
-  *Receipt Number:* {{receipt_number}}
-  *Date:* {{date}}
-  *Status:* {{status}}
+text: *Receipt Number:* {{receipt_number}}
+text: *Date:* {{date}}
+text: *Status:* {{status}}
 ---
 text: Received From
-  {{payer_name}}
-  {{payer_company}}
-  {{payer_address}}
+text: {{payer_name}}
+text: {{payer_company}}
+text: {{payer_address}}
 ---
 text: Issued By
-  {{issuer_company}}
-  {{issuer_address}}
-  {{issuer_email}}
+text: {{issuer_company}}
+text: {{issuer_address}}
+text: {{issuer_email}}
 ---
 section: Payment Information
 ---
 text: Transaction Details
-  *Amount:* {{amount}}
-  *Payment Method:* {{payment_method}}
-  *Reference Number:* {{reference_number}}
-  *Invoice Reference:* {{invoice_reference}}
+text: *Amount:* {{amount}}
+text: *Payment Method:* {{payment_method}}
+text: *Reference Number:* {{reference_number}}
+text: *Invoice Reference:* {{invoice_reference}}
 ---
 text: Description
-  {{description}}
+text: {{description}}
 ---
 sign: {{issuer_signatory}} | role: {{issuer_role}} | at: {{signed_date}} | hash: {{document_hash}}
 ---

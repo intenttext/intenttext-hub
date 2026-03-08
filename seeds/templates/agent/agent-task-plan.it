@@ -5,39 +5,39 @@ track: | version: 1.0 | by: {{author}} | note: Plan created {{created_date}}
 section: Objective
 ---
 text: Goal
-  *Agent:* {{agent_name}}
-  *Model:* {{model}}
-  *Goal:* {{goal_description}}
-  *Max Steps:* {{max_steps}}
-  *Timeout:* {{timeout}}
-  *Priority:* {{priority}}
+text: *Agent:* {{agent_name}}
+text: *Model:* {{model}}
+text: *Goal:* {{goal_description}}
+text: *Max Steps:* {{max_steps}}
+text: *Timeout:* {{timeout}}
+text: *Priority:* {{priority}}
 ---
 section: Context
 ---
 text: Input Context
-  {{context_description}}
+text: {{context_description}}
 ---
 text: Constraints
-  {{constraints}}
+text: {{constraints}}
 ---
 section: Execution Steps
 ---
 step: {{name}} | tool: {{tool}} | timeout: {{step_timeout}}
-  *Description:* {{description}}
-  *Input:* {{input}}
-  *Expected Output:* {{expected_output}}
-  *Fallback:* {{fallback}}
+text: *Description:* {{description}}
+text: *Input:* {{input}}
+text: *Expected Output:* {{expected_output}}
+text: *Fallback:* {{fallback}}
 ---
 gate: Checkpoint — validate intermediate results | approver: {{checkpoint_approver}} | timeout: {{checkpoint_timeout}}
 ---
 section: Completion Criteria
 ---
 text: Success Conditions
-  {{success_criteria}}
+text: {{success_criteria}}
 ---
 text: Failure Handling
-  *On Failure:* {{failure_action}}
-  *Retry Limit:* {{retry_limit}}
-  *Escalation:* {{escalation_contact}}
+text: *On Failure:* {{failure_action}}
+text: *Retry Limit:* {{retry_limit}}
+text: *Escalation:* {{escalation_contact}}
 ---
 text: Plan authored by {{author}} · {{created_date}}

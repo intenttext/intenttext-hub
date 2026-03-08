@@ -7,70 +7,70 @@ track: | version: 0.1 | by: {{maintainer}} | note: Initial runbook created from 
 section: Service Overview
 ---
 text: Service Information
-  *Service Name:* {{service_name}}
-  *Service ID:* {{service_id}}
-  *Team:* {{owning_team}}
-  *Tier:* {{service_tier}}
-  *Repository:* {{repository_url}}
-  *Dashboard:* {{dashboard_url}}
-  *Alerting Channel:* {{alerting_channel}}
+text: *Service Name:* {{service_name}}
+text: *Service ID:* {{service_id}}
+text: *Team:* {{owning_team}}
+text: *Tier:* {{service_tier}}
+text: *Repository:* {{repository_url}}
+text: *Dashboard:* {{dashboard_url}}
+text: *Alerting Channel:* {{alerting_channel}}
 ---
 text: Description
-  {{service_description}}
+text: {{service_description}}
 ---
 text: Architecture Summary
-  {{architecture_summary}}
+text: {{architecture_summary}}
 ---
 section: On-Call
 ---
 text: On-Call Rotation
-  *Schedule:* {{oncall_schedule}}
-  *Primary:* {{oncall_primary}}
-  *Secondary:* {{oncall_secondary}}
-  *Escalation Manager:* {{escalation_manager}}
+text: *Schedule:* {{oncall_schedule}}
+text: *Primary:* {{oncall_primary}}
+text: *Secondary:* {{oncall_secondary}}
+text: *Escalation Manager:* {{escalation_manager}}
 ---
 section: Standard Operating Procedures
 ---
 text: {{procedure_name}}
-  *Trigger:* {{trigger}}
-  *Severity:* {{severity}}
-  *Steps:*
-  {{steps}}
+text: *Trigger:* {{trigger}}
+text: *Severity:* {{severity}}
+text: *Steps:*
+text: {{steps}}
 ---
 section: Escalation Path
 ---
 text: {{level}}
-  *Contact:* {{contact}}
-  *Role:* {{role}}
-  *Response Time:* {{response_time}}
-  *When to Escalate:* {{escalation_criteria}}
+text: *Contact:* {{contact}}
+text: *Role:* {{role}}
+text: *Response Time:* {{response_time}}
+text: *When to Escalate:* {{escalation_criteria}}
 ---
 section: SLA Obligations
 ---
 policy: Service Level Commitments
-  {{sla_obligations}}
+text: {{sla_obligations}}
 ---
 section: Dependencies
 ---
 text: Upstream Dependencies
-  {{upstream_dependencies}}
+text: {{upstream_dependencies}}
 ---
 text: Downstream Consumers
-  {{downstream_consumers}}
+text: {{downstream_consumers}}
 ---
 section: Recovery Procedures
 ---
 text: Disaster Recovery
-  {{disaster_recovery}}
+text: {{disaster_recovery}}
 ---
 text: Data Backup and Restore
-  {{backup_restore}}
+text: {{backup_restore}}
 ---
 section: Maintenance
 ---
 text: Routine Maintenance Tasks
-  {{maintenance_tasks}}
+text: {{maintenance_tasks}}
 ---
 text: Last Reviewed
-  *Date:* {{last_reviewed_date}}
-  *Reviewer:* {{reviewer}}
+text: *Date:* {{last_reviewed_date}}
+text: *Reviewer:* {{reviewer}}

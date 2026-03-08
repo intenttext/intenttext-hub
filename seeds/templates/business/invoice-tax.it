@@ -5,44 +5,44 @@ track: | version: 1.0 | by: Accounts Receivable
 section: Invoice Details
 ---
 text: Invoice Information
-  *Invoice Number:* {{invoice_number}}
-  *Date:* {{date}}
-  *Due Date:* {{due_date}}
-  *Payment Terms:* {{payment_terms}}
-  *Currency:* {{currency}}
+text: *Invoice Number:* {{invoice_number}}
+text: *Date:* {{date}}
+text: *Due Date:* {{due_date}}
+text: *Payment Terms:* {{payment_terms}}
+text: *Currency:* {{currency}}
 ---
 text: From
-  {{company_name}}
-  {{company_address}}
-  *Tax ID:* {{company_tax_id}}
-  {{company_email}}
+text: {{company_name}}
+text: {{company_address}}
+text: *Tax ID:* {{company_tax_id}}
+text: {{company_email}}
 ---
 text: Bill To
-  {{client_name}}
-  {{client_company}}
-  {{client_address}}
-  *Tax ID:* {{client_tax_id}}
-  {{client_email}}
+text: {{client_name}}
+text: {{client_company}}
+text: {{client_address}}
+text: *Tax ID:* {{client_tax_id}}
+text: {{client_email}}
 ---
 section: Line Items
 ---
 text: {{description}}
-  *Quantity:* {{quantity}} · *Unit Price:* {{unit_price}} · *Tax Category:* {{tax_category}} · *Amount:* {{amount}}
+text: *Quantity:* {{quantity}} · *Unit Price:* {{unit_price}} · *Tax Category:* {{tax_category}} · *Amount:* {{amount}}
 ---
 section: Tax Breakdown
 ---
 text: {{tax_name}} ({{tax_rate}})
-  *Taxable Amount:* {{taxable_amount}} · *Tax Amount:* {{tax_amount}}
+text: *Taxable Amount:* {{taxable_amount}} · *Tax Amount:* {{tax_amount}}
 ---
 section: Totals
 ---
 text: Summary
-  *Subtotal:* {{subtotal}}
-  *Total Tax:* {{total_tax}}
-  *Total Due:* {{total}}
+text: *Subtotal:* {{subtotal}}
+text: *Total Tax:* {{total_tax}}
+text: *Total Due:* {{total}}
 ---
 text: Payment Instructions
-  {{payment_instructions}}
+text: {{payment_instructions}}
 ---
 sign: {{authorized_by}} | role: Controller | at: {{signed_date}} | hash: {{document_hash}}
 ---

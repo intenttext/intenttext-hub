@@ -4,96 +4,96 @@ meta: | type: template | domain: organization | description: GDPR-compliant data
 section: Parties
 ---
 text: Data Controller
-  *Name:* {{controller_name}}
-  *Address:* {{controller_address}}
-  *Registration Number:* {{controller_registration}}
-  *Contact:* {{controller_contact}} · {{controller_email}}
-  *Data Protection Officer:* {{controller_dpo}} · {{controller_dpo_email}}
+text: *Name:* {{controller_name}}
+text: *Address:* {{controller_address}}
+text: *Registration Number:* {{controller_registration}}
+text: *Contact:* {{controller_contact}} · {{controller_email}}
+text: *Data Protection Officer:* {{controller_dpo}} · {{controller_dpo_email}}
 ---
 text: Data Processor
-  *Name:* {{processor_name}}
-  *Address:* {{processor_address}}
-  *Registration Number:* {{processor_registration}}
-  *Contact:* {{processor_contact}} · {{processor_email}}
-  *Data Protection Officer:* {{processor_dpo}} · {{processor_dpo_email}}
+text: *Name:* {{processor_name}}
+text: *Address:* {{processor_address}}
+text: *Registration Number:* {{processor_registration}}
+text: *Contact:* {{processor_contact}} · {{processor_email}}
+text: *Data Protection Officer:* {{processor_dpo}} · {{processor_dpo_email}}
 ---
 section: Subject Matter and Duration
 ---
 text: Processing Overview
-  *Agreement ID:* {{agreement_id}}
-  *Effective Date:* {{effective_date}}
-  *Duration:* {{duration}}
-  *Nature of Processing:* {{nature_of_processing}}
-  *Purpose of Processing:* {{purpose_of_processing}}
+text: *Agreement ID:* {{agreement_id}}
+text: *Effective Date:* {{effective_date}}
+text: *Duration:* {{duration}}
+text: *Nature of Processing:* {{nature_of_processing}}
+text: *Purpose of Processing:* {{purpose_of_processing}}
 ---
 section: Categories of Data Subjects and Personal Data
 ---
 text: Data Subjects
-  {{data_subjects}}
+text: {{data_subjects}}
 ---
 text: Categories of Personal Data
-  {{data_categories}}
+text: {{data_categories}}
 ---
 text: Special Categories of Data
-  {{special_categories}}
+text: {{special_categories}}
 ---
 section: Controller Obligations
 ---
 text: Controller Responsibilities
-  {{controller_obligations}}
+text: {{controller_obligations}}
 ---
 section: Processor Obligations
 ---
 text: Processor Responsibilities
-  {{processor_obligations}}
+text: {{processor_obligations}}
 ---
 section: Technical and Organisational Measures
 ---
 text: Security Safeguards
-  {{security_measures}}
+text: {{security_measures}}
 ---
 section: Sub-Processors
 ---
 text: Sub-Processing Arrangements
-  {{sub_processor_terms}}
+text: {{sub_processor_terms}}
 ---
 text: {{sub_processor_name}}
-  *Location:* {{sub_processor_location}} · *Purpose:* {{sub_processor_purpose}} · *Data Transferred:* {{sub_processor_data}}
+text: *Location:* {{sub_processor_location}} · *Purpose:* {{sub_processor_purpose}} · *Data Transferred:* {{sub_processor_data}}
 ---
 section: International Transfers
 ---
 text: Cross-Border Data Transfers
-  {{transfer_safeguards}}
+text: {{transfer_safeguards}}
 ---
 section: Data Subject Rights
 ---
 text: Assistance with Data Subject Requests
-  {{data_subject_rights}}
+text: {{data_subject_rights}}
 ---
 section: Data Breach Notification
 ---
 text: Breach Notification Procedure
-  {{breach_notification}}
+text: {{breach_notification}}
 ---
 section: Audit Rights
 ---
 text: Audit and Inspection
-  {{audit_rights}}
+text: {{audit_rights}}
 ---
 section: Termination and Data Return
 ---
 text: Data Return and Deletion
-  {{data_return}}
+text: {{data_return}}
 ---
 section: Liability and Indemnification
 ---
 text: Liability
-  {{liability}}
+text: {{liability}}
 ---
 section: Governing Law
 ---
 text: Jurisdiction
-  {{governing_law}}
+text: {{governing_law}}
 ---
 section: Signatures
 ---
