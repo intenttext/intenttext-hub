@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@intenttext/core": "^2.12.1",
+    "@intenttext/core": "^2.13.3",
     "mongodb": "^7.1.0",
     "next": "14.2.35",
     "react": "^18",
