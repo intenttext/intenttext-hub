@@ -6,7 +6,7 @@ track: | version: 0.1 | by: {{author}} | note: Initial draft circulated for feed
 ---
 section: Overview
 ---
-note: Document Information
+text: Document Information
   *Spec ID:* {{spec_id}}
   *Status:* {{status}}
   *Author:* {{author}} · {{author_email}}
@@ -14,10 +14,10 @@ note: Document Information
   *Created:* {{created_date}}
   *Target Release:* {{target_release}}
 ---
-note: Problem Statement
+text: Problem Statement
   {{problem_statement}}
 ---
-note: Proposed Solution
+text: Proposed Solution
   {{proposed_solution}}
 ---
 section: Requirements
@@ -29,27 +29,27 @@ each: requirements
 ---
 section: Design
 ---
-note: Architecture Overview
+text: Architecture Overview
   {{architecture_overview}}
 ---
-note: Data Model
+text: Data Model
   {{data_model}}
 ---
-note: API Surface
+text: API Surface
   {{api_surface}}
 ---
-note: Security Considerations
+text: Security Considerations
   {{security_considerations}}
 ---
 section: Implementation Plan
 ---
-note: Phases
+text: Phases
   {{implementation_phases}}
 ---
-note: Dependencies
+text: Dependencies
   {{dependencies}}
 ---
-note: Testing Strategy
+text: Testing Strategy
   {{testing_strategy}}
 ---
 section: Constraints
@@ -59,12 +59,12 @@ policy: {{constraint_title}}
 ---
 section: Performance Targets
 ---
-note: Benchmarks
+text: Benchmarks
   {{performance_targets}}
 ---
 section: Open Questions
 ---
-note: Unresolved Items
+text: Unresolved Items
   {{open_questions}}
 ---
 section: Approval

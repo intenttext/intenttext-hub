@@ -3,14 +3,14 @@ meta: | type: template | domain: developer | description: Changelog and release 
 ---
 section: Release Information
 ---
-note: Release Details
+text: Release Details
   *Version:* {{version}}
   *Release Date:* {{release_date}}
   *Codename:* {{codename}}
   *Stability:* {{stability}}
   *Upgrade Path:* {{upgrade_path}}
 ---
-note: Summary
+text: Summary
   {{release_summary}}
 ---
 section: Added
@@ -39,15 +39,15 @@ each: removed_items
 ---
 section: Breaking Changes
 ---
-note: Migration Notes
+text: Migration Notes
   {{breaking_changes}}
 ---
 section: Known Issues
 ---
-note: Open Issues
+text: Open Issues
   {{known_issues}}
 ---
 section: Contributors
 ---
-note: Acknowledgements
+text: Acknowledgements
   {{contributors}}

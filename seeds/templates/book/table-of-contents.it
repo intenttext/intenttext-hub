@@ -3,7 +3,7 @@ meta: | type: template | domain: book | description: Book or report table of con
 ---
 section: {{book_title}}
 ---
-note: *{{subtitle}}*
+text: *{{subtitle}}*
   by {{author}}
 ---
 section: Contents

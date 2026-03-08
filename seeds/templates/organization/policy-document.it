@@ -6,7 +6,7 @@ track: | version: 0.1 | by: {{policy_owner}} | note: Initial draft
 ---
 section: Document Control
 ---
-note: Policy Information
+text: Policy Information
   *Policy ID:* {{policy_id}}
   *Department:* {{department}}
   *Classification:* {{classification}}
@@ -16,17 +16,17 @@ note: Policy Information
 ---
 section: Purpose
 ---
-note: Purpose
+text: Purpose
   {{purpose}}
 ---
 section: Scope
 ---
-note: Scope
+text: Scope
   {{scope}}
 ---
 section: Definitions
 ---
-note: Key Definitions
+text: Key Definitions
   {{definitions}}
 ---
 section: Policy Statements
@@ -43,20 +43,20 @@ each: responsible_parties
 ---
 section: Compliance and Enforcement
 ---
-note: Compliance Requirements
+text: Compliance Requirements
   {{compliance_requirements}}
 ---
-note: Enforcement
+text: Enforcement
   {{enforcement}}
 ---
 section: Exceptions
 ---
-note: Exception Process
+text: Exception Process
   {{exception_process}}
 ---
 section: Related Documents
 ---
-note: References
+text: References
   {{related_documents}}
 ---
 section: Approval

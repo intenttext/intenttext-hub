@@ -3,7 +3,7 @@ meta: | type: template | domain: organization | description: Compliance verifica
 ---
 section: Overview
 ---
-note: Compliance Programme Details
+text: Compliance Programme Details
   *Checklist ID:* {{checklist_id}}
   *Regulation / Framework:* {{framework}}
   *Reporting Period:* {{reporting_period}}
@@ -11,7 +11,7 @@ note: Compliance Programme Details
   *Prepared By:* {{prepared_by}}
   *Preparation Date:* {{preparation_date}}
 ---
-note: Scope
+text: Scope
   {{scope}}
 ---
 section: Compliance Requirements
@@ -22,19 +22,19 @@ each: requirements
 ---
 section: Findings Summary
 ---
-note: Summary of Results
+text: Summary of Results
   *Total Requirements:* {{total_requirements}}
   *Compliant:* {{compliant_count}}
   *Partially Compliant:* {{partial_count}}
   *Non-Compliant:* {{non_compliant_count}}
   *Not Applicable:* {{na_count}}
 ---
-note: Key Findings
+text: Key Findings
   {{key_findings}}
 ---
 section: Remediation Plan
 ---
-note: Open Remediation Items
+text: Open Remediation Items
   {{remediation_plan}}
 ---
 section: Approval

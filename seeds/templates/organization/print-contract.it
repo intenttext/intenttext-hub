@@ -10,12 +10,12 @@ section: Parties
 ---
 paragraph: This Agreement ("Agreement") is entered into as of {{effective_date}} by and between:
 ---
-note: Provider
+text: Provider
   *{{provider_name}}*
   {{provider_address}}
   Registration: {{provider_registration}}
 ---
-note: Client
+text: Client
   *{{client_name}}*
   {{client_address}}
   Registration: {{client_registration}}

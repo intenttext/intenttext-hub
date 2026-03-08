@@ -3,21 +3,21 @@ meta: | type: template | domain: book | description: Author biography page with 
 ---
 section: About the Author
 ---
-note: *{{author_name}}*
+text: *{{author_name}}*
   Photo: {{photo_credit}}
 ---
-note: {{short_bio}}
+text: {{short_bio}}
 ---
 section: Biography
 ---
-note: {{long_bio_early}}
+text: {{long_bio_early}}
 ---
-note: {{long_bio_career}}
+text: {{long_bio_career}}
 ---
-note: {{long_bio_current}}
+text: {{long_bio_current}}
 ---
 section: Contact
 ---
-note: {{contact_website}}
+text: {{contact_website}}
   {{contact_email}}
   {{contact_social}}

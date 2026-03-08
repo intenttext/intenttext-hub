@@ -4,7 +4,7 @@ track: | version: 1.0 | by: Career Services
 ---
 section: Contact Information
 ---
-note: Personal Details
+text: Personal Details
   *Name:* {{full_name}}
   *Title:* {{professional_title}}
   *Email:* {{email}}
@@ -15,7 +15,7 @@ note: Personal Details
 ---
 section: Professional Summary
 ---
-note: Summary
+text: Summary
   {{summary}}
 ---
 section: Work Experience
@@ -42,8 +42,8 @@ each: skills
 ---
 section: Certifications
 ---
-note: Professional Certifications
+text: Professional Certifications
   {{certifications}}
 ---
-note: Languages
+text: Languages
   {{languages}}

@@ -3,7 +3,7 @@ meta: | type: template | domain: editorial | description: Editorial story brief 
 ---
 section: Story Overview
 ---
-note: {{working_title}}
+text: {{working_title}}
   *Reporter:* {{reporter_name}}
   *Editor:* {{assigning_editor}}
   *Section:* {{section}}
@@ -11,11 +11,11 @@ note: {{working_title}}
 ---
 section: Angle
 ---
-note: {{angle}}
+text: {{angle}}
 ---
 section: Target Audience
 ---
-note: {{audience}}
+text: {{audience}}
 ---
 section: Key Questions
 ---
@@ -33,7 +33,7 @@ each: sources
 ---
 section: Logistics
 ---
-note: Production Details
+text: Production Details
   *Deadline:* {{deadline}}
   *Target Word Count:* {{word_count}}
   *Multimedia:* {{multimedia_needs}}
@@ -41,4 +41,4 @@ note: Production Details
 ---
 section: Background
 ---
-note: {{background_context}}
+text: {{background_context}}

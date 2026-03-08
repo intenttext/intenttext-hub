@@ -4,10 +4,10 @@ track: | version: 1.0 | by: Client Success
 ---
 section: Welcome
 ---
-note: Welcome to {{company_name}}
+text: Welcome to {{company_name}}
   {{welcome_message}}
 ---
-note: Engagement Overview
+text: Engagement Overview
   *Client:* {{client_name}}
   *Project:* {{project_name}}
   *Start Date:* {{start_date}}
@@ -30,10 +30,10 @@ each: onboarding_steps
 ---
 section: Next Steps
 ---
-note: Immediate Actions
+text: Immediate Actions
   {{next_steps}}
 ---
-note: Important Links
+text: Important Links
   *Client Portal:* {{portal_url}}
   *Shared Workspace:* {{workspace_url}}
   *Support Channel:* {{support_channel}}
@@ -46,5 +46,5 @@ each: faq_items
 ---
 section: Contact & Escalation
 ---
-note: Escalation Path
+text: Escalation Path
   {{escalation_info}}

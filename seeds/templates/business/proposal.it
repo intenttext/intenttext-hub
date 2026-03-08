@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Business proposal with 
 ---
 section: Cover
 ---
-note: Proposal Information
+text: Proposal Information
   *Proposal Number:* {{proposal_number}}
   *Date:* {{date}}
   *Valid Until:* {{valid_until}}
@@ -12,20 +12,20 @@ note: Proposal Information
 ---
 section: Executive Summary
 ---
-note: Overview
+text: Overview
   {{executive_summary}}
 ---
 section: Problem Statement
 ---
-note: Current Challenges
+text: Current Challenges
   {{problem_statement}}
 ---
 section: Proposed Solution
 ---
-note: Solution Overview
+text: Solution Overview
   {{solution_overview}}
 ---
-note: Key Benefits
+text: Key Benefits
   {{key_benefits}}
 ---
 section: Pricing
@@ -34,7 +34,7 @@ each: pricing_items
   note: {{item}}
     *Description:* {{description}} · *Cost:* {{cost}}
 ---
-note: Pricing Summary
+text: Pricing Summary
   *Total Investment:* {{total_cost}}
   *Payment Terms:* {{pricing_payment_terms}}
 ---
@@ -44,21 +44,21 @@ each: timeline_items
   note: {{phase}}
     *Duration:* {{duration}} · *Deliverables:* {{deliverables}}
 ---
-note: Project Duration
+text: Project Duration
   *Estimated Start:* {{start_date}}
   *Estimated Completion:* {{end_date}}
 ---
 section: Why Us
 ---
-note: Our Qualifications
+text: Our Qualifications
   {{qualifications}}
 ---
 section: Next Steps
 ---
-note: Call to Action
+text: Call to Action
   {{next_steps}}
 ---
-note: Contact
+text: Contact
   {{contact_name}}
   {{contact_title}}
   {{contact_email}} · {{contact_phone}}

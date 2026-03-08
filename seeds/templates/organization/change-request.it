@@ -6,7 +6,7 @@ track: | version: 0.1 | by: {{requester}} | note: Initial submission
 ---
 section: Request Summary
 ---
-note: Change Request Details
+text: Change Request Details
   *Request ID:* {{request_id}}
   *Priority:* {{priority}}
   *Category:* {{category}}
@@ -18,64 +18,64 @@ note: Change Request Details
 ---
 section: Description of Change
 ---
-note: Change Description
+text: Change Description
   {{change_description}}
 ---
-note: Business Justification
+text: Business Justification
   {{business_justification}}
 ---
 section: Impact Analysis
 ---
-note: Systems and Services Affected
+text: Systems and Services Affected
   {{systems_affected}}
 ---
-note: User Impact
+text: User Impact
   {{user_impact}}
 ---
-note: Dependencies
+text: Dependencies
   {{dependencies}}
 ---
 section: Risk Assessment
 ---
-note: Risk Analysis
+text: Risk Analysis
   *Risk Level:* {{risk_level}}
   *Probability of Failure:* {{failure_probability}}
   *Impact if Failed:* {{failure_impact}}
 ---
-note: Risk Factors
+text: Risk Factors
   {{risk_factors}}
 ---
 section: Implementation Plan
 ---
-note: Implementation Steps
+text: Implementation Steps
   {{implementation_plan}}
 ---
-note: Implementation Window
+text: Implementation Window
   *Start:* {{implementation_start}}
   *End:* {{implementation_end}}
   *Maintenance Window:* {{maintenance_window}}
 ---
 section: Testing and Validation
 ---
-note: Test Plan
+text: Test Plan
   {{test_plan}}
 ---
 section: Rollback Plan
 ---
-note: Rollback Procedure
+text: Rollback Procedure
   {{rollback_plan}}
 ---
-note: Rollback Criteria
+text: Rollback Criteria
   {{rollback_criteria}}
 ---
 section: Communication Plan
 ---
-note: Stakeholder Notifications
+text: Stakeholder Notifications
   {{communication_plan}}
 ---
 section: Resource Requirements
 ---
-note: Resources and Budget
+text: Resources and Budget
   {{resource_requirements}}
 ---
 section: Approval

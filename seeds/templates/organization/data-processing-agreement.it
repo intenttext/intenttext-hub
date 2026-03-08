@@ -3,14 +3,14 @@ meta: | type: template | domain: organization | description: GDPR-compliant data
 ---
 section: Parties
 ---
-note: Data Controller
+text: Data Controller
   *Name:* {{controller_name}}
   *Address:* {{controller_address}}
   *Registration Number:* {{controller_registration}}
   *Contact:* {{controller_contact}} · {{controller_email}}
   *Data Protection Officer:* {{controller_dpo}} · {{controller_dpo_email}}
 ---
-note: Data Processor
+text: Data Processor
   *Name:* {{processor_name}}
   *Address:* {{processor_address}}
   *Registration Number:* {{processor_registration}}
@@ -19,7 +19,7 @@ note: Data Processor
 ---
 section: Subject Matter and Duration
 ---
-note: Processing Overview
+text: Processing Overview
   *Agreement ID:* {{agreement_id}}
   *Effective Date:* {{effective_date}}
   *Duration:* {{duration}}
@@ -28,33 +28,33 @@ note: Processing Overview
 ---
 section: Categories of Data Subjects and Personal Data
 ---
-note: Data Subjects
+text: Data Subjects
   {{data_subjects}}
 ---
-note: Categories of Personal Data
+text: Categories of Personal Data
   {{data_categories}}
 ---
-note: Special Categories of Data
+text: Special Categories of Data
   {{special_categories}}
 ---
 section: Controller Obligations
 ---
-note: Controller Responsibilities
+text: Controller Responsibilities
   {{controller_obligations}}
 ---
 section: Processor Obligations
 ---
-note: Processor Responsibilities
+text: Processor Responsibilities
   {{processor_obligations}}
 ---
 section: Technical and Organisational Measures
 ---
-note: Security Safeguards
+text: Security Safeguards
   {{security_measures}}
 ---
 section: Sub-Processors
 ---
-note: Sub-Processing Arrangements
+text: Sub-Processing Arrangements
   {{sub_processor_terms}}
 ---
 each: sub_processors
@@ -63,37 +63,37 @@ each: sub_processors
 ---
 section: International Transfers
 ---
-note: Cross-Border Data Transfers
+text: Cross-Border Data Transfers
   {{transfer_safeguards}}
 ---
 section: Data Subject Rights
 ---
-note: Assistance with Data Subject Requests
+text: Assistance with Data Subject Requests
   {{data_subject_rights}}
 ---
 section: Data Breach Notification
 ---
-note: Breach Notification Procedure
+text: Breach Notification Procedure
   {{breach_notification}}
 ---
 section: Audit Rights
 ---
-note: Audit and Inspection
+text: Audit and Inspection
   {{audit_rights}}
 ---
 section: Termination and Data Return
 ---
-note: Data Return and Deletion
+text: Data Return and Deletion
   {{data_return}}
 ---
 section: Liability and Indemnification
 ---
-note: Liability
+text: Liability
   {{liability}}
 ---
 section: Governing Law
 ---
-note: Jurisdiction
+text: Jurisdiction
   {{governing_law}}
 ---
 section: Signatures

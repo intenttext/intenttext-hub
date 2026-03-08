@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Project kickoff documen
 ---
 section: Project Overview
 ---
-note: Project Details
+text: Project Details
   *Project Name:* {{project_name}}
   *Project Code:* {{project_code}}
   *Sponsor:* {{sponsor_name}}
@@ -14,18 +14,18 @@ note: Project Details
 ---
 section: Goals and Objectives
 ---
-note: Strategic Goals
+text: Strategic Goals
   {{strategic_goals}}
 ---
-note: Success Criteria
+text: Success Criteria
   {{success_criteria}}
 ---
 section: Scope
 ---
-note: In Scope
+text: In Scope
   {{in_scope}}
 ---
-note: Out of Scope
+text: Out of Scope
   {{out_of_scope}}
 ---
 section: Team
@@ -48,12 +48,12 @@ each: risks
 ---
 section: Key Decisions
 ---
-note: Decisions Made at Kickoff
+text: Decisions Made at Kickoff
   {{decisions}}
 ---
 section: Communication Plan
 ---
-note: Cadence
+text: Cadence
   *Status Reports:* {{status_cadence}}
   *Steering Committee:* {{steering_cadence}}
   *Team Standups:* {{standup_cadence}}

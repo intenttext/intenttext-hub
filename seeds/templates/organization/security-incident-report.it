@@ -3,7 +3,7 @@ meta: | type: template | domain: organization | description: Security incident r
 ---
 section: Incident Summary
 ---
-note: Incident Details
+text: Incident Details
   *Incident ID:* {{incident_id}}
   *Severity:* {{severity}}
   *Status:* {{status}}
@@ -13,7 +13,7 @@ note: Incident Details
   *Reported By:* {{reported_by}}
   *Incident Commander:* {{incident_commander}}
 ---
-note: Executive Summary
+text: Executive Summary
   {{executive_summary}}
 ---
 section: Timeline of Events
@@ -24,12 +24,12 @@ each: timeline_events
 ---
 section: Affected Systems
 ---
-note: Impacted Assets
+text: Impacted Assets
   {{affected_systems}}
 ---
 section: Impact Assessment
 ---
-note: Business Impact
+text: Business Impact
   *Data Compromised:* {{data_compromised}}
   *Users Affected:* {{users_affected}}
   *Service Downtime:* {{service_downtime}}
@@ -38,20 +38,20 @@ note: Business Impact
 ---
 section: Root Cause Analysis
 ---
-note: Root Cause
+text: Root Cause
   {{root_cause}}
 ---
 section: Response Actions Taken
 ---
-note: Containment and Eradication
+text: Containment and Eradication
   {{containment_actions}}
 ---
-note: Recovery
+text: Recovery
   {{recovery_actions}}
 ---
 section: Lessons Learned
 ---
-note: Key Takeaways
+text: Key Takeaways
   {{lessons_learned}}
 ---
 section: Action Items

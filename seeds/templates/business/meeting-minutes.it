@@ -5,7 +5,7 @@ track: | version: 0.9 | by: Corporate Secretary | note: Draft circulated for rev
 ---
 section: Meeting Information
 ---
-note: Details
+text: Details
   *Meeting Title:* {{meeting_title}}
   *Date:* {{meeting_date}}
   *Time:* {{start_time}} — {{end_time}}
@@ -20,17 +20,17 @@ each: attendees
 ---
 section: Agenda
 ---
-note: Agenda Items
+text: Agenda Items
   {{agenda}}
 ---
 section: Discussion Summary
 ---
-note: Key Discussion Points
+text: Key Discussion Points
   {{discussion_summary}}
 ---
 section: Decisions
 ---
-note: Decisions Reached
+text: Decisions Reached
   {{decisions}}
 ---
 section: Action Items
@@ -41,13 +41,13 @@ each: action_items
 ---
 section: Next Meeting
 ---
-note: Scheduled Follow-Up
+text: Scheduled Follow-Up
   *Date:* {{next_meeting_date}}
   *Time:* {{next_meeting_time}}
   *Location:* {{next_meeting_location}}
   *Preliminary Agenda:* {{next_meeting_agenda}}
 ---
-note: Minutes Prepared By
+text: Minutes Prepared By
   {{prepared_by}} · {{prepared_date}}
 ---
 approve: {{chair_name}}

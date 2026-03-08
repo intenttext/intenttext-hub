@@ -4,7 +4,7 @@ track: | version: 1.0 | by: {{author}} | note: Workflow created {{created_date}}
 ---
 section: Workflow Configuration
 ---
-note: Overview
+text: Overview
   *Workflow ID:* {{workflow_id}}
   *Owner:* {{owner}}
   *Environment:* {{environment}}
@@ -29,8 +29,8 @@ gate: {{final_gate_label}} | approver: {{final_approver}} | timeout: {{final_gat
 ---
 section: Completion
 ---
-note: Success
+text: Success
   *Deliverable:* {{deliverable}}
   *Notification:* {{completion_notification}}
 ---
-note: Workflow maintained by {{author}} · {{created_date}}
+text: Workflow maintained by {{author}} · {{created_date}}

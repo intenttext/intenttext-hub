@@ -4,18 +4,18 @@ track: | version: 1.0 | by: Finance
 ---
 section: Invoice Details
 ---
-note: Invoice Information
+text: Invoice Information
   *Invoice Number:* {{invoice_number}}
   *Date:* {{date}}
   *Due Date:* {{due_date}}
   *Payment Terms:* {{payment_terms}}
 ---
-note: From
+text: From
   {{company_name}}
   {{company_address}}
   {{company_email}}
 ---
-note: Bill To
+text: Bill To
   {{client_name}}
   {{client_company}}
   {{client_address}}
@@ -29,12 +29,12 @@ each: items
 ---
 section: Totals
 ---
-note: Summary
+text: Summary
   *Subtotal:* {{subtotal}}
   *Tax ({{tax_rate}}):* {{tax_amount}}
   *Total Due:* {{total}}
 ---
-note: Payment Instructions
+text: Payment Instructions
   {{payment_instructions}}
 ---
 sign: {{authorized_by}}

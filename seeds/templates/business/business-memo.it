@@ -5,7 +5,7 @@ track: | version: 0.9 | by: {{author}} | note: Initial draft
 ---
 section: Memo Header
 ---
-note: Memorandum
+text: Memorandum
   *To:* {{to}}
   *From:* {{from}}
   *Date:* {{date}}
@@ -15,32 +15,32 @@ note: Memorandum
 ---
 section: Executive Summary
 ---
-note: Summary
+text: Summary
   {{executive_summary}}
 ---
 section: Background
 ---
-note: Context
+text: Context
   {{background}}
 ---
 section: Analysis
 ---
-note: Findings
+text: Findings
   {{analysis}}
 ---
 section: Recommendation
 ---
-note: Recommended Action
+text: Recommended Action
   {{recommendation}}
 ---
 section: Next Steps
 ---
-note: Implementation Plan
+text: Implementation Plan
   {{next_steps}}
 ---
 section: Attachments
 ---
-note: Supporting Materials
+text: Supporting Materials
   {{attachments}}
 ---
 approve: {{approver_name}}

@@ -3,30 +3,30 @@ meta: | type: template | domain: business | description: Payment confirmation re
 ---
 section: Receipt Details
 ---
-note: Payment Confirmation
+text: Payment Confirmation
   *Receipt Number:* {{receipt_number}}
   *Date:* {{date}}
   *Status:* {{status}}
 ---
-note: Received From
+text: Received From
   {{payer_name}}
   {{payer_company}}
   {{payer_address}}
 ---
-note: Issued By
+text: Issued By
   {{issuer_company}}
   {{issuer_address}}
   {{issuer_email}}
 ---
 section: Payment Information
 ---
-note: Transaction Details
+text: Transaction Details
   *Amount:* {{amount}}
   *Payment Method:* {{payment_method}}
   *Reference Number:* {{reference_number}}
   *Invoice Reference:* {{invoice_reference}}
 ---
-note: Description
+text: Description
   {{description}}
 ---
 sign: {{issuer_signatory}}

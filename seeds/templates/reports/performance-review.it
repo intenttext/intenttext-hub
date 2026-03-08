@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Annual employee perform
 ---
 section: Review Information
 ---
-note: Details
+text: Details
   *Employee:* {{employee_name}}
   *Employee ID:* {{employee_id}}
   *Title:* {{employee_title}}
@@ -19,7 +19,7 @@ each: goals
     *Weight:* {{weight}} · *Target:* {{target}} · *Actual:* {{actual}} · *Rating:* {{rating}}
     *Commentary:* {{commentary}}
 ---
-note: Overall Goal Attainment
+text: Overall Goal Attainment
   *Weighted Score:* {{overall_goal_score}}
 ---
 section: Key Achievements
@@ -31,40 +31,40 @@ each: achievements
 ---
 section: Competency Assessment
 ---
-note: Technical Skills
+text: Technical Skills
   *Rating:* {{technical_rating}}
   {{technical_commentary}}
 ---
-note: Communication and Collaboration
+text: Communication and Collaboration
   *Rating:* {{communication_rating}}
   {{communication_commentary}}
 ---
-note: Leadership and Initiative
+text: Leadership and Initiative
   *Rating:* {{leadership_rating}}
   {{leadership_commentary}}
 ---
-note: Problem Solving and Judgment
+text: Problem Solving and Judgment
   *Rating:* {{problem_solving_rating}}
   {{problem_solving_commentary}}
 ---
 section: Overall Performance
 ---
-note: Summary
+text: Summary
   *Overall Rating:* {{overall_rating}}
   *Recommendation:* {{recommendation}}
 ---
-note: Manager Commentary
+text: Manager Commentary
   {{manager_commentary}}
 ---
 section: Development Plan
 ---
-note: Areas for Growth
+text: Areas for Growth
   {{growth_areas}}
 ---
-note: Development Actions
+text: Development Actions
   {{development_actions}}
 ---
-note: Career Aspirations
+text: Career Aspirations
   {{career_aspirations}}
 ---
 section: Sign-Off

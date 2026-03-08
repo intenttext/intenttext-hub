@@ -4,7 +4,7 @@ track: | version: 1.0 | by: HR Services
 ---
 section: Referee Information
 ---
-note: From
+text: From
   *Name:* {{referee_name}}
   *Title:* {{referee_title}}
   *Organization:* {{referee_organization}}
@@ -14,29 +14,29 @@ note: From
 ---
 section: Subject
 ---
-note: Regarding
+text: Regarding
   *Candidate:* {{subject_name}}
   *Relationship:* {{relationship}}
   *Duration:* {{relationship_duration}}
 ---
 section: Letter
 ---
-note: Opening
+text: Opening
   {{opening}}
 ---
-note: Professional Context
+text: Professional Context
   {{professional_context}}
 ---
-note: Key Strengths
+text: Key Strengths
   {{key_strengths}}
 ---
-note: Specific Accomplishments
+text: Specific Accomplishments
   {{accomplishments}}
 ---
-note: Character & Work Ethic
+text: Character & Work Ethic
   {{character}}
 ---
-note: Recommendation
+text: Recommendation
   {{recommendation}}
 ---
 section: Authorization

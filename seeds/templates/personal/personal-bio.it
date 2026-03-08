@@ -4,26 +4,26 @@ track: | version: 1.0 | by: Communications
 ---
 section: Short Bio
 ---
-note: One-Paragraph Bio
+text: One-Paragraph Bio
   {{short_bio}}
 ---
 section: Full Bio
 ---
-note: Background
+text: Background
   {{background}}
 ---
-note: Career & Expertise
+text: Career & Expertise
   {{career_expertise}}
 ---
-note: Current Focus
+text: Current Focus
   {{current_focus}}
 ---
-note: Personal Interests
+text: Personal Interests
   {{personal_interests}}
 ---
 section: Links & Profiles
 ---
-note: Online Presence
+text: Online Presence
   *Website:* {{website}}
   *LinkedIn:* {{linkedin}}
   *Twitter / X:* {{twitter}}
@@ -32,7 +32,7 @@ note: Online Presence
 ---
 section: Headshot & Usage
 ---
-note: Photo & Attribution
+text: Photo & Attribution
   *Headshot URL:* {{headshot_url}}
   *Photo Credit:* {{photo_credit}}
   *Usage Notes:* {{usage_notes}}

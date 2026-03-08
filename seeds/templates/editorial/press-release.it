@@ -3,17 +3,17 @@ meta: | type: template | domain: editorial | description: Press release with hea
 ---
 section: Release Header
 ---
-note: FOR IMMEDIATE RELEASE
+text: FOR IMMEDIATE RELEASE
   *Date:* {{release_date}}
 ---
 section: Headline
 ---
-note: {{headline}}
+text: {{headline}}
   *{{subheadline}}*
 ---
 section: Dateline and Lede
 ---
-note: {{dateline}} — {{lede}}
+text: {{dateline}} — {{lede}}
 ---
 section: Body
 ---
@@ -29,14 +29,14 @@ quote: {{partner_quote}} | by: {{partner_name}}, {{partner_title}}, {{partner_or
 ---
 section: Boilerplate
 ---
-note: About {{company_name}}
+text: About {{company_name}}
   {{boilerplate}}
 ---
 section: Media Contact
 ---
-note: {{contact_name}}
+text: {{contact_name}}
   *Title:* {{contact_title}}
   *Email:* {{contact_email}}
   *Phone:* {{contact_phone}}
 ---
-note: ###
+text: ###

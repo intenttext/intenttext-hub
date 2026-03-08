@@ -3,12 +3,12 @@ meta: | type: template | domain: editorial | description: Op-ed column with head
 ---
 section: Headline
 ---
-note: {{headline}}
+text: {{headline}}
   *By {{byline}}* · {{publication_date}}
 ---
 section: Opening
 ---
-note: {{opening_paragraph}}
+text: {{opening_paragraph}}
 ---
 section: Argument
 ---
@@ -19,15 +19,15 @@ quote: {{supporting_quote}} | by: {{supporting_quote_source}}
 ---
 section: Counterpoint
 ---
-note: {{counterpoint}}
+text: {{counterpoint}}
 ---
 quote: {{counterpoint_quote}} | by: {{counterpoint_quote_source}}
 ---
 section: Conclusion
 ---
-note: {{closing_paragraph}}
+text: {{closing_paragraph}}
 ---
 section: About the Author
 ---
-note: {{author_bio}}
+text: {{author_bio}}
   *Contact:* {{author_contact}}

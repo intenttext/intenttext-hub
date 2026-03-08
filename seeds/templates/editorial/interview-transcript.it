@@ -3,12 +3,12 @@ meta: | type: template | domain: editorial | description: Q&A interview transcri
 ---
 section: Subject Profile
 ---
-note: {{subject_name}}
+text: {{subject_name}}
   *Title:* {{subject_title}}
   *Organization:* {{subject_organization}}
   *Bio:* {{subject_bio}}
 ---
-note: Interview Context
+text: Interview Context
   *Interviewer:* {{interviewer_name}}, {{interviewer_title}}
   *Date:* {{interview_date}}
   *Location:* {{location}}
@@ -22,6 +22,6 @@ each: qa_pairs
 ---
 section: Editor Notes
 ---
-note: {{editor_notes}}
+text: {{editor_notes}}
 ---
-note: Transcript prepared by {{interviewer_name}} · {{interview_date}}
+text: Transcript prepared by {{interviewer_name}} · {{interview_date}}

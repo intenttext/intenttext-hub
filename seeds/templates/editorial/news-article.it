@@ -3,12 +3,12 @@ meta: | type: template | domain: editorial | description: News article with head
 ---
 section: Headline
 ---
-note: {{headline}}
+text: {{headline}}
   *{{byline}}* · {{dateline}}
 ---
 section: Lede
 ---
-note: {{lede}}
+text: {{lede}}
 ---
 section: Body
 ---
@@ -26,4 +26,4 @@ each: continued_paragraphs
 ---
 quote: {{closing_quote}} | by: {{closing_quote_attribution}}
 ---
-note: *{{tagline}}*
+text: *{{tagline}}*

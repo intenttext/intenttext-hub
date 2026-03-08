@@ -6,13 +6,13 @@ track: | version: 0.8 | by: Operations | note: Initial scope definition
 ---
 section: Parties
 ---
-note: Service Provider
+text: Service Provider
   *Name:* {{provider_name}}
   *Address:* {{provider_address}}
   *Contact:* {{provider_contact}} · {{provider_email}}
   *Registration:* {{provider_registration}}
 ---
-note: Client
+text: Client
   *Name:* {{client_name}}
   *Address:* {{client_address}}
   *Contact:* {{client_contact}} · {{client_email}}
@@ -20,20 +20,20 @@ note: Client
 ---
 section: Scope of Services
 ---
-note: Services Description
+text: Services Description
   {{services_description}}
 ---
-note: Deliverables
+text: Deliverables
   {{deliverables}}
 ---
-note: Service Period
+text: Service Period
   *Effective Date:* {{effective_date}}
   *Term:* {{term}}
   *Renewal:* {{renewal_terms}}
 ---
 section: Payment Terms
 ---
-note: Compensation
+text: Compensation
   *Total Contract Value:* {{contract_value}}
   *Payment Schedule:* {{payment_schedule}}
   *Late Payment Penalty:* {{late_penalty}}
@@ -41,24 +41,24 @@ note: Compensation
 ---
 section: Confidentiality
 ---
-note: Confidentiality Obligations
+text: Confidentiality Obligations
   {{confidentiality_clause}}
 ---
 section: Termination
 ---
-note: Termination Conditions
+text: Termination Conditions
   *For Convenience:* {{termination_convenience}}
   *For Cause:* {{termination_cause}}
   *Effect of Termination:* {{termination_effect}}
 ---
 section: Limitation of Liability
 ---
-note: Liability Cap
+text: Liability Cap
   {{liability_clause}}
 ---
 section: Governing Law
 ---
-note: Jurisdiction
+text: Jurisdiction
   {{governing_law}}
 ---
 section: Signatures

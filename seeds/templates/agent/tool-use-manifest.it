@@ -4,7 +4,7 @@ track: | version: 1.0 | by: {{author}} | note: Manifest created {{created_date}}
 ---
 section: Agent Configuration
 ---
-note: Agent Details
+text: Agent Details
   *Agent:* {{agent_name}}
   *Model:* {{model}}
   *Owner:* {{owner}}
@@ -32,9 +32,9 @@ policy: Fallback order | always: prefer_cached_result_if_fresh | never: retry_mo
 ---
 section: Permissions Boundary
 ---
-note: Access Controls
+text: Access Controls
   *Read Scopes:* {{read_scopes}}
   *Write Scopes:* {{write_scopes}}
   *Denied Operations:* {{denied_operations}}
 ---
-note: Manifest maintained by {{author}} · {{created_date}}
+text: Manifest maintained by {{author}} · {{created_date}}

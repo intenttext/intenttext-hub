@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Financial period summar
 ---
 section: Report Information
 ---
-note: Period Details
+text: Period Details
   *Company:* {{company_name}}
   *Period:* {{period}}
   *Prepared By:* {{prepared_by}}
@@ -16,7 +16,7 @@ each: revenue_lines
   note: {{source}}
     *Amount:* {{amount}} · *Prior Period:* {{prior_period}} · *Change:* {{change}} · *Notes:* {{notes}}
 ---
-note: Revenue Totals
+text: Revenue Totals
   *Total Revenue:* {{total_revenue}}
   *Prior Period Revenue:* {{prior_period_revenue}}
   *Revenue Growth:* {{revenue_growth}}
@@ -27,14 +27,14 @@ each: expense_lines
   note: {{category}}
     *Amount:* {{amount}} · *Budget:* {{budget}} · *Variance:* {{variance}} · *Notes:* {{notes}}
 ---
-note: Expense Totals
+text: Expense Totals
   *Total Expenses:* {{total_expenses}}
   *Budget:* {{total_budget}}
   *Overall Variance:* {{expense_variance}}
 ---
 section: Profitability
 ---
-note: Profit Metrics
+text: Profit Metrics
   *Gross Profit:* {{gross_profit}}
   *Gross Margin:* {{gross_margin}}
   *Operating Profit:* {{operating_profit}}
@@ -45,7 +45,7 @@ note: Profit Metrics
 ---
 section: Key Metrics
 ---
-note: Performance Indicators
+text: Performance Indicators
   *Monthly Recurring Revenue:* {{mrr}}
   *Customer Acquisition Cost:* {{cac}}
   *Lifetime Value:* {{ltv}}
@@ -55,10 +55,10 @@ note: Performance Indicators
 ---
 section: Highlights and Commentary
 ---
-note: Executive Summary
+text: Executive Summary
   {{executive_summary}}
 ---
-note: Risks and Outlook
+text: Risks and Outlook
   {{risks_outlook}}
 ---
 approve: {{cfo_name}}

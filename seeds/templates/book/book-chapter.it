@@ -3,7 +3,7 @@ meta: | type: template | domain: book | description: Book chapter with chapter n
 ---
 section: Chapter {{chapter_number}}
 ---
-note: *{{chapter_title}}*
+text: *{{chapter_title}}*
 ---
 quote: {{epigraph}} | by: {{epigraph_attribution}}
 ---
@@ -24,4 +24,4 @@ section: {{closing_section_title}}
 each: closing_paragraphs
   note: {{text}}
 ---
-note: *{{chapter_closing_line}}*
+text: *{{chapter_closing_line}}*

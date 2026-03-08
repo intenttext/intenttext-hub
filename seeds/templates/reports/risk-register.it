@@ -5,7 +5,7 @@ track: | version: 0.9 | by: {{register_owner}} | note: Initial risk identificati
 ---
 section: Register Information
 ---
-note: Details
+text: Details
   *Project:* {{project_name}}
   *Project Code:* {{project_code}}
   *Risk Owner:* {{register_owner}}
@@ -15,7 +15,7 @@ note: Details
 ---
 section: Risk Summary
 ---
-note: Risk Distribution
+text: Risk Distribution
   *Critical:* {{critical_count}} · *High:* {{high_count}} · *Medium:* {{medium_count}} · *Low:* {{low_count}}
   *Risks Mitigated This Period:* {{mitigated_count}}
   *New Risks Identified:* {{new_risks_count}}
@@ -34,7 +34,7 @@ each: risks
 ---
 section: Risk Matrix
 ---
-note: Scoring Guide
+text: Scoring Guide
   *5 — Critical:* Project failure or major strategic impact
   *4 — High:* Significant schedule or budget overrun
   *3 — Medium:* Manageable with active intervention
@@ -43,7 +43,7 @@ note: Scoring Guide
 ---
 section: Closed Risks
 ---
-note: Recently Closed
+text: Recently Closed
   {{closed_risks}}
 ---
 section: Approval

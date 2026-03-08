@@ -3,13 +3,13 @@ meta: | type: template | domain: editorial | description: Newsletter issue with 
 ---
 section: Header
 ---
-note: {{newsletter_name}} · {{issue_label}}
+text: {{newsletter_name}} · {{issue_label}}
   *Date:* {{publish_date}}
   *Editor:* {{editor_name}}
 ---
 section: Editor Introduction
 ---
-note: {{intro}}
+text: {{intro}}
 ---
 section: Stories
 ---
@@ -30,7 +30,7 @@ each: quick_links
 ---
 section: Sign-Off
 ---
-note: {{sign_off}}
+text: {{sign_off}}
   *{{editor_name}}, {{editor_title}}*
 ---
 track: {{issue_label}} | status: {{issue_status}} | date: {{publish_date}}

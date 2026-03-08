@@ -4,13 +4,13 @@ track: | version: 1.0 | by: Career Services
 ---
 section: Header
 ---
-note: Applicant
+text: Applicant
   *Name:* {{applicant_name}}
   *Email:* {{applicant_email}}
   *Phone:* {{applicant_phone}}
   *Date:* {{date}}
 ---
-note: Addressee
+text: Addressee
   {{hiring_manager_name}}
   {{hiring_manager_title}}
   {{company_name}}
@@ -18,21 +18,21 @@ note: Addressee
 ---
 section: Letter
 ---
-note: Salutation
+text: Salutation
   Dear {{hiring_manager_name}},
 ---
-note: Opening
+text: Opening
   {{opening_paragraph}}
 ---
-note: Relevant Experience
+text: Relevant Experience
   {{experience_paragraph}}
 ---
-note: Value Proposition
+text: Value Proposition
   {{value_paragraph}}
 ---
-note: Closing
+text: Closing
   {{closing_paragraph}}
 ---
-note: Sign-Off
+text: Sign-Off
   Sincerely,
   {{applicant_name}}

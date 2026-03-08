@@ -4,7 +4,7 @@ track: | version: 1.0 | by: {{source_agent}} | note: Handoff initiated {{handoff
 ---
 section: Handoff Summary
 ---
-note: Transfer Details
+text: Transfer Details
   *From Agent:* {{source_agent}}
   *To Agent:* {{target_agent}}
   *Reason:* {{handoff_reason}}
@@ -16,7 +16,7 @@ section: Context
 context: {{context_label}}
   {{context_body}}
 ---
-note: State Snapshot
+text: State Snapshot
   *Current Phase:* {{current_phase}}
   *Progress:* {{progress_summary}}
   *Last Successful Action:* {{last_action}}
@@ -33,17 +33,17 @@ each: pending_tasks
 ---
 section: Instructions for Receiving Agent
 ---
-note: Execution Guidance
+text: Execution Guidance
   {{execution_instructions}}
 ---
-note: Constraints
+text: Constraints
   {{constraints}}
 ---
-note: Known Risks
+text: Known Risks
   {{known_risks}}
 ---
 section: Handoff Signal
 ---
-emit: {{handoff_event}} | phase: handoff | level: info
+signal: {{handoff_event}} | phase: handoff | level: info
 ---
-note: Handoff prepared by {{source_agent}} · {{handoff_timestamp}}
+text: Handoff prepared by {{source_agent}} · {{handoff_timestamp}}

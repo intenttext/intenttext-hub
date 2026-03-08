@@ -4,20 +4,20 @@ track: | version: 1.0 | by: Accounts Receivable
 ---
 section: Invoice Details
 ---
-note: Invoice Information
+text: Invoice Information
   *Invoice Number:* {{invoice_number}}
   *Date:* {{date}}
   *Due Date:* {{due_date}}
   *Payment Terms:* {{payment_terms}}
   *Currency:* {{currency}}
 ---
-note: From
+text: From
   {{company_name}}
   {{company_address}}
   *Tax ID:* {{company_tax_id}}
   {{company_email}}
 ---
-note: Bill To
+text: Bill To
   {{client_name}}
   {{client_company}}
   {{client_address}}
@@ -38,12 +38,12 @@ each: tax_lines
 ---
 section: Totals
 ---
-note: Summary
+text: Summary
   *Subtotal:* {{subtotal}}
   *Total Tax:* {{total_tax}}
   *Total Due:* {{total}}
 ---
-note: Payment Instructions
+text: Payment Instructions
   {{payment_instructions}}
 ---
 sign: {{authorized_by}}

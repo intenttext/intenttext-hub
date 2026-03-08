@@ -3,18 +3,18 @@ meta: | type: template | domain: developer | description: API endpoint documenta
 ---
 section: Overview
 ---
-note: API Information
+text: API Information
   *Base URL:* {{base_url}}
   *Authentication:* {{auth_method}}
   *Rate Limit:* {{rate_limit}}
   *Content-Type:* {{content_type}}
 ---
-note: Description
+text: Description
   {{api_description}}
 ---
 section: Endpoint
 ---
-note: {{method}} {{endpoint_path}}
+text: {{method}} {{endpoint_path}}
   *Summary:* {{endpoint_summary}}
   *Authentication Required:* {{auth_required}}
   *Idempotent:* {{idempotent}}
@@ -29,11 +29,10 @@ each: parameters
 ---
 section: Request Body
 ---
-note: Body Schema
+text: Body Schema
   {{request_body_description}}
 ---
-code: json
-  {{request_body_example}}
+code: ```{{request_body_example}}``` | lang: json
 ---
 section: Response Codes
 ---
@@ -43,32 +42,27 @@ each: response_codes
 ---
 section: Success Response Example
 ---
-code: json
-  {{success_response_example}}
+code: ```{{success_response_example}}``` | lang: json
 ---
 section: Error Response Example
 ---
-code: json
-  {{error_response_example}}
+code: ```{{error_response_example}}``` | lang: json
 ---
 section: Code Examples
 ---
 sub: cURL
 ---
-code: bash
-  {{curl_example}}
+code: ```{{curl_example}}``` | lang: bash
 ---
 sub: Python
 ---
-code: python
-  {{python_example}}
+code: ```{{python_example}}``` | lang: python
 ---
 sub: JavaScript
 ---
-code: javascript
-  {{javascript_example}}
+code: ```{{javascript_example}}``` | lang: javascript
 ---
 section: Notes
 ---
-note: Additional Information
+text: Additional Information
   {{additional_notes}}

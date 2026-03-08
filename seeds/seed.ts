@@ -129,17 +129,34 @@ async function seed() {
   console.log("Indexes ensured.");
 
   let inserted = 0;
-  let skipped = 0;
+  let updated = 0;
 
   for (const tmpl of templates) {
+    const document = parseIntentText(tmpl.source);
     const existing = await collection.findOne({ slug: tmpl.slug });
+
     if (existing) {
-      console.log(`  skip  ${tmpl.slug}`);
-      skipped++;
+      await collection.updateOne(
+        { slug: tmpl.slug },
+        {
+          $set: {
+            name: tmpl.name,
+            description: tmpl.description,
+            category: tmpl.category,
+            domain: tmpl.domain,
+            tags: tmpl.tags,
+            source: tmpl.source,
+            example_data: tmpl.example_data,
+            recommended_theme: tmpl.recommended_theme,
+            document,
+            updatedAt: new Date(),
+          },
+        },
+      );
+      updated++;
+      console.log(`  ~     ${tmpl.slug}`);
       continue;
     }
-
-    const document = parseIntentText(tmpl.source);
 
     await collection.insertOne({
       slug: tmpl.slug,
@@ -165,9 +182,7 @@ async function seed() {
     console.log(`  +     ${tmpl.slug}`);
   }
 
-  console.log(
-    `\nDone. ${inserted} inserted, ${skipped} skipped (already exist).`,
-  );
+  console.log(`\nDone. ${inserted} inserted, ${updated} updated.`);
   await client.close();
 }
 

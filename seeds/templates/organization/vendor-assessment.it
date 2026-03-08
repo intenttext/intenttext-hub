@@ -3,7 +3,7 @@ meta: | type: template | domain: organization | description: Vendor and supplier
 ---
 section: Assessment Overview
 ---
-note: Assessment Details
+text: Assessment Details
   *Assessment ID:* {{assessment_id}}
   *Vendor:* {{vendor_name}}
   *Vendor Contact:* {{vendor_contact}} · {{vendor_email}}
@@ -12,12 +12,12 @@ note: Assessment Details
   *Assessor:* {{assessor}}
   *Assessment Method:* {{assessment_method}}
 ---
-note: Purpose
+text: Purpose
   {{purpose}}
 ---
 section: Vendor Profile
 ---
-note: Company Information
+text: Company Information
   *Founded:* {{vendor_founded}}
   *Headquarters:* {{vendor_headquarters}}
   *Employees:* {{vendor_employees}}
@@ -34,27 +34,27 @@ each: assessment_criteria
 ---
 section: Scoring Summary
 ---
-note: Overall Score
+text: Overall Score
   *Weighted Total:* {{weighted_total}} / {{max_weighted_total}}
   *Overall Risk Rating:* {{overall_risk_rating}}
   *Rating Threshold:* {{rating_threshold}}
 ---
 section: Strengths and Concerns
 ---
-note: Key Strengths
+text: Key Strengths
   {{strengths}}
 ---
-note: Key Concerns
+text: Key Concerns
   {{concerns}}
 ---
 section: Risk Mitigation
 ---
-note: Recommended Mitigations
+text: Recommended Mitigations
   {{mitigations}}
 ---
 section: Recommendation
 ---
-note: Assessment Decision
+text: Assessment Decision
   *Recommendation:* {{recommendation}}
   *Conditions:* {{conditions}}
 ---

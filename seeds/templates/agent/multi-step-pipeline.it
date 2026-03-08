@@ -4,7 +4,7 @@ track: | version: 1.0 | by: {{author}} | note: Pipeline defined {{created_date}}
 ---
 section: Pipeline Overview
 ---
-note: Configuration
+text: Configuration
   *Pipeline ID:* {{pipeline_id}}
   *Owner:* {{owner}}
   *Model:* {{model}}
@@ -24,7 +24,7 @@ each: pipeline_steps
 ---
 section: Error Handling
 ---
-note: Global Error Strategy
+text: Global Error Strategy
   *Strategy:* {{error_strategy}}
   *Dead Letter Queue:* {{dlq_destination}}
   *Alert Channel:* {{alert_channel}}
@@ -32,10 +32,10 @@ note: Global Error Strategy
 ---
 section: Outputs
 ---
-emit: {{output_event_success}} | phase: complete | level: success
-emit: {{output_event_failure}} | phase: error | level: error
+signal: {{output_event_success}} | phase: complete | level: success
+signal: {{output_event_failure}} | phase: error | level: error
 ---
-note: Output Schema
+text: Output Schema
   {{output_schema_description}}
 ---
-note: Pipeline maintained by {{author}} · Last updated {{created_date}}
+text: Pipeline maintained by {{author}} · Last updated {{created_date}}

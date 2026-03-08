@@ -14,7 +14,7 @@ figure: {{figure_1_caption}} | src: {{figure_1_src}} | alt: {{figure_1_alt}}
 ---
 section: Revenue Breakdown
 ---
-headers: | Segment | Revenue | Growth | Share
+columns: | Segment | Revenue | Growth | Share
 row: | {{seg_1_name}} | {{seg_1_revenue}} | {{seg_1_growth}} | {{seg_1_share}}
 row: | {{seg_2_name}} | {{seg_2_revenue}} | {{seg_2_growth}} | {{seg_2_share}}
 row: | {{seg_3_name}} | {{seg_3_revenue}} | {{seg_3_growth}} | {{seg_3_share}}

@@ -5,7 +5,7 @@ track: | version: 0.9 | by: {{author_name}} | note: Previous week status
 ---
 section: Report Overview
 ---
-note: Details
+text: Details
   *Project:* {{project_name}}
   *Team:* {{team_name}}
   *Reported By:* {{author_name}}
@@ -33,10 +33,10 @@ each: next_week
 ---
 section: Key Metrics
 ---
-note: Sprint Progress
+text: Sprint Progress
   *Story Points Completed:* {{points_completed}} / {{points_committed}}
   *Open Bugs:* {{open_bugs}}
   *Code Review Turnaround:* {{review_turnaround}}
   *Test Coverage:* {{test_coverage}}
 ---
-note: Prepared by {{author_name}} · {{report_date}}
+text: Prepared by {{author_name}} · {{report_date}}

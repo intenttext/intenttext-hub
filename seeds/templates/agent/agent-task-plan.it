@@ -4,7 +4,7 @@ track: | version: 1.0 | by: {{author}} | note: Plan created {{created_date}}
 ---
 section: Objective
 ---
-note: Goal
+text: Goal
   *Agent:* {{agent_name}}
   *Model:* {{model}}
   *Goal:* {{goal_description}}
@@ -14,10 +14,10 @@ note: Goal
 ---
 section: Context
 ---
-note: Input Context
+text: Input Context
   {{context_description}}
 ---
-note: Constraints
+text: Constraints
   {{constraints}}
 ---
 section: Execution Steps
@@ -33,12 +33,12 @@ gate: Checkpoint — validate intermediate results | approver: {{checkpoint_appr
 ---
 section: Completion Criteria
 ---
-note: Success Conditions
+text: Success Conditions
   {{success_criteria}}
 ---
-note: Failure Handling
+text: Failure Handling
   *On Failure:* {{failure_action}}
   *Retry Limit:* {{retry_limit}}
   *Escalation:* {{escalation_contact}}
 ---
-note: Plan authored by {{author}} · {{created_date}}
+text: Plan authored by {{author}} · {{created_date}}

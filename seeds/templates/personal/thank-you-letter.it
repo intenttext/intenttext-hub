@@ -4,30 +4,30 @@ track: | version: 1.0 | by: Correspondence
 ---
 section: Header
 ---
-note: From
+text: From
   *Name:* {{sender_name}}
   *Email:* {{sender_email}}
   *Date:* {{date}}
 ---
-note: To
+text: To
   {{recipient_name}}
   {{recipient_title}}
   {{recipient_organization}}
 ---
 section: Letter
 ---
-note: Salutation
+text: Salutation
   Dear {{recipient_name}},
 ---
-note: Context & Gratitude
+text: Context & Gratitude
   {{gratitude_paragraph}}
 ---
-note: Specific Appreciation
+text: Specific Appreciation
   {{specific_appreciation}}
 ---
-note: Forward-Looking Close
+text: Forward-Looking Close
   {{forward_looking}}
 ---
-note: Warm Close
+text: Warm Close
   With sincere thanks,
   {{sender_name}}

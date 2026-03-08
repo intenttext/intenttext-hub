@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Structured incident pos
 ---
 section: Incident Summary
 ---
-note: Incident Details
+text: Incident Details
   *Incident ID:* {{incident_id}}
   *Title:* {{incident_title}}
   *Severity:* {{severity}}
@@ -12,7 +12,7 @@ note: Incident Details
   *Status:* {{status}}
   *Incident Commander:* {{incident_commander}}
 ---
-note: Executive Summary
+text: Executive Summary
   {{executive_summary}}
 ---
 section: Timeline
@@ -23,33 +23,33 @@ each: timeline_events
 ---
 section: Impact
 ---
-note: Customer Impact
+text: Customer Impact
   *Users Affected:* {{users_affected}}
   *Regions Affected:* {{regions_affected}}
   *Revenue Impact:* {{revenue_impact}}
   *SLA Breach:* {{sla_breach}}
 ---
-note: Technical Impact
+text: Technical Impact
   *Services Degraded:* {{services_degraded}}
   *Error Rate Peak:* {{error_rate_peak}}
   *Requests Failed:* {{requests_failed}}
 ---
 section: Root Cause
 ---
-note: Root Cause Analysis
+text: Root Cause Analysis
   {{root_cause}}
 ---
-note: Contributing Factors
+text: Contributing Factors
   {{contributing_factors}}
 ---
 section: Detection and Response
 ---
-note: Detection
+text: Detection
   *Detected By:* {{detected_by}}
   *Time to Detect:* {{time_to_detect}}
   *Alert Fired:* {{alert_fired}}
 ---
-note: Response
+text: Response
   *Time to Mitigate:* {{time_to_mitigate}}
   *Time to Resolve:* {{time_to_resolve}}
   *Rollback Performed:* {{rollback_performed}}
@@ -62,10 +62,10 @@ each: action_items
 ---
 section: Lessons Learned
 ---
-note: What Went Well
+text: What Went Well
   {{went_well}}
 ---
-note: What Went Poorly
+text: What Went Poorly
   {{went_poorly}}
 ---
 approve: {{engineering_lead}}

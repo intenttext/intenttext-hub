@@ -8,7 +8,7 @@ each: authors
 ---
 section: Abstract
 ---
-note: {{abstract}}
+text: {{abstract}}
 ---
 section: Keywords
 ---

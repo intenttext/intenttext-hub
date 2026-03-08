@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Job offer letter with r
 ---
 section: Offer Details
 ---
-note: Position Offered
+text: Position Offered
   *Company:* {{company_name}}
   *Position:* {{position_title}}
   *Department:* {{department}}
@@ -14,44 +14,44 @@ note: Position Offered
 ---
 section: Compensation
 ---
-note: Base Compensation
+text: Base Compensation
   *Annual Salary:* {{annual_salary}}
   *Pay Frequency:* {{pay_frequency}}
   *Signing Bonus:* {{signing_bonus}}
 ---
-note: Equity
+text: Equity
   {{equity_details}}
 ---
-note: Performance Bonus
+text: Performance Bonus
   {{bonus_details}}
 ---
 section: Benefits
 ---
-note: Benefits Package
+text: Benefits Package
   {{benefits_summary}}
 ---
-note: Paid Time Off
+text: Paid Time Off
   {{pto_details}}
 ---
 section: Conditions of Employment
 ---
-note: Contingencies
+text: Contingencies
   {{conditions}}
 ---
-note: At-Will Statement
+text: At-Will Statement
   {{at_will_statement}}
 ---
 section: Confidentiality and Non-Compete
 ---
-note: Agreements Required
+text: Agreements Required
   {{agreements}}
 ---
 section: Acceptance
 ---
-note: Acceptance Instructions
+text: Acceptance Instructions
   To accept this offer, please sign below and return this letter by {{acceptance_deadline}}. If we do not receive your signed acceptance by this date, this offer will expire.
 ---
-note: Candidate
+text: Candidate
   *Name:* {{candidate_name}}
   *Email:* {{candidate_email}}
 ---

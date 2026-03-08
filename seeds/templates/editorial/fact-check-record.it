@@ -3,7 +3,7 @@ meta: | type: template | domain: editorial | description: Fact-checking document
 ---
 section: Article Information
 ---
-note: {{article_title}}
+text: {{article_title}}
   *Author:* {{article_author}}
   *Fact-Checker:* {{fact_checker}}
   *Date Assigned:* {{date_assigned}}
@@ -21,7 +21,7 @@ each: claims
 ---
 section: Overall Assessment
 ---
-note: {{overall_assessment}}
+text: {{overall_assessment}}
   *Claims Reviewed:* {{total_claims}}
   *Verified:* {{verified_count}}
   *Corrected:* {{corrected_count}}

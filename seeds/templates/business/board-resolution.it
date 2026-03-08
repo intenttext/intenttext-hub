@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Corporate board resolut
 ---
 section: Resolution Header
 ---
-note: Corporate Resolution
+text: Corporate Resolution
   *Corporation:* {{corporation_name}}
   *Resolution Number:* {{resolution_number}}
   *Date of Meeting:* {{meeting_date}}
@@ -12,27 +12,27 @@ note: Corporate Resolution
 ---
 section: Quorum Confirmation
 ---
-note: Quorum Statement
+text: Quorum Statement
   A quorum of the Board of Directors of {{corporation_name}} being present, the following resolution was duly proposed, seconded, and adopted by {{vote_result}} vote of the directors present.
 ---
 section: Recitals
 ---
-note: Recitals
+text: Recitals
   {{recitals}}
 ---
 section: Resolved Clauses
 ---
-note: Resolution
+text: Resolution
   {{resolved_clauses}}
 ---
 section: Authorization
 ---
-note: Authorization and Delegation
+text: Authorization and Delegation
   {{authorization}}
 ---
 section: Effective Date
 ---
-note: Effectiveness
+text: Effectiveness
   This resolution shall become effective as of {{effective_date}} and shall remain in full force until amended or revoked by subsequent action of the Board.
 ---
 section: Director Signatures
@@ -41,7 +41,7 @@ each: directors
   sign: {{name}}
     | role: {{title}} | at: {{signed_date}}
 ---
-note: Corporate Secretary Certification
+text: Corporate Secretary Certification
   I, {{secretary_name}}, Corporate Secretary of {{corporation_name}}, hereby certify that the foregoing is a true and correct copy of the resolution duly adopted at the {{meeting_type}} of the Board of Directors held on {{meeting_date}}.
 ---
 sign: {{secretary_name}}

@@ -3,7 +3,7 @@ meta: | type: template | domain: business | description: Employee expense claim 
 ---
 section: Report Information
 ---
-note: Expense Report Details
+text: Expense Report Details
   *Report ID:* {{report_id}}
   *Employee:* {{employee_name}}
   *Employee ID:* {{employee_id}}
@@ -21,26 +21,26 @@ each: expenses
 ---
 section: Totals
 ---
-note: Expense Summary
+text: Expense Summary
   *Total Claimed:* {{total_claimed}}
   *Company Card Charges:* {{company_card_total}}
   *Out-of-Pocket Amount:* {{out_of_pocket_total}}
   *Advance Received:* {{advance_received}}
   *Net Reimbursement Due:* {{net_reimbursement}}
 ---
-note: Currency and Payment
+text: Currency and Payment
   *Currency:* {{currency}}
   *Reimbursement Method:* {{reimbursement_method}}
 ---
 section: Receipts
 ---
-note: Receipt Summary
+text: Receipt Summary
   *Total Receipts Attached:* {{receipt_count}}
   *Missing Receipts:* {{missing_receipts}}
 ---
 section: Policy Compliance
 ---
-note: Compliance Notes
+text: Compliance Notes
   {{compliance_notes}}
 ---
 sign: {{employee_name}}

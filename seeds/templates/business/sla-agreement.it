@@ -3,19 +3,19 @@ meta: | type: template | domain: business | description: Service level agreement
 ---
 section: Parties
 ---
-note: Service Provider
+text: Service Provider
   *Name:* {{provider_name}}
   *Address:* {{provider_address}}
   *Contact:* {{provider_contact}} · {{provider_email}}
 ---
-note: Customer
+text: Customer
   *Name:* {{customer_name}}
   *Address:* {{customer_address}}
   *Contact:* {{customer_contact}} · {{customer_email}}
 ---
 section: Agreement Overview
 ---
-note: Agreement Details
+text: Agreement Details
   *Agreement ID:* {{agreement_id}}
   *Effective Date:* {{effective_date}}
   *Term:* {{term}}
@@ -30,7 +30,7 @@ each: sla_metrics
 ---
 section: Uptime Commitment
 ---
-note: Availability
+text: Availability
   *Monthly Uptime Target:* {{uptime_target}}
   *Scheduled Maintenance Window:* {{maintenance_window}}
   *Maintenance Notification:* {{maintenance_notice}}
@@ -38,31 +38,31 @@ note: Availability
 ---
 section: Incident Response
 ---
-note: Response and Resolution Times
+text: Response and Resolution Times
   *Severity 1 (Critical):* Response within {{sev1_response}}, resolution within {{sev1_resolution}}
   *Severity 2 (High):* Response within {{sev2_response}}, resolution within {{sev2_resolution}}
   *Severity 3 (Medium):* Response within {{sev3_response}}, resolution within {{sev3_resolution}}
   *Severity 4 (Low):* Response within {{sev4_response}}, resolution within {{sev4_resolution}}
 ---
-note: Escalation Procedure
+text: Escalation Procedure
   {{escalation_procedure}}
 ---
 section: Service Credits
 ---
-note: Credit Schedule
+text: Credit Schedule
   {{credit_schedule}}
 ---
-note: Credit Limitations
+text: Credit Limitations
   {{credit_limitations}}
 ---
 section: Reporting
 ---
-note: Performance Reporting
+text: Performance Reporting
   {{reporting_terms}}
 ---
 section: Review and Amendment
 ---
-note: SLA Review
+text: SLA Review
   {{review_terms}}
 ---
 section: Signatures

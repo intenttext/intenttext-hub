@@ -344,13 +344,13 @@ step: Notify sales team
     tags: ["meetings", "notes", "decisions", "actions"],
     source: `title: Weekly Product Sync — March 15, 2026
 ---
-note: Meeting Details
+text: Meeting Details
   *Date:* March 15, 2026 — 10:00 AM UTC
   *Duration:* 45 minutes
   *Attendees:* Sarah Chen, Marcus Johnson, Priya Patel, Alex Kim
   *Facilitator:* Sarah Chen
 ---
-note: Agenda
+text: Agenda
   1. Sprint review — what shipped last week
   2. Customer feedback triage
   3. Q2 roadmap priorities
@@ -358,14 +358,14 @@ note: Agenda
 ---
 section: Sprint Review
 ---
-note: Shipped last week
+text: Shipped last week
   Completed 12 of 14 planned stories. Two items carried over:
   *Search redesign* — needs accessibility review, targeting Wednesday
   *API rate limiting* — blocked on infrastructure decision
 ---
 section: Customer Feedback
 ---
-note: Top feedback themes
+text: Top feedback themes
   Analyzed 47 support tickets and 12 NPS responses:
   *Export functionality* — 15 requests for CSV export from dashboards
   *Mobile experience* — 8 reports of layout issues on tablets
@@ -373,12 +373,12 @@ note: Top feedback themes
 ---
 section: Decisions
 ---
-note: Decision — CSV export priority
+text: Decision — CSV export priority
   *Decision:* Move CSV export to Sprint 24 as a P1 item.
   *Rationale:* High customer demand, estimated 3 story points.
   *Owner:* Marcus Johnson
 ---
-note: Decision — Mobile fix sprint
+text: Decision — Mobile fix sprint
   *Decision:* Dedicate 20% of Sprint 24 to tablet layout fixes.
   *Rationale:* Growing mobile usage (23% of traffic).
   *Owner:* Priya Patel
@@ -411,21 +411,21 @@ step: Audit tablet layout issues
     source: `title: Technical Spec — Real-Time Notifications
 | version: 1.0
 ---
-note: Overview
+text: Overview
   Add real-time push notifications to the web and mobile apps.
   Users receive instant updates for mentions, assignment changes,
   and status updates without polling.
 ---
 section: Requirements
 ---
-note: Functional requirements
+text: Functional requirements
   *FR-1:* Deliver notifications within 2 seconds of the triggering event
   *FR-2:* Support web push, mobile push (iOS + Android), and in-app
   *FR-3:* Users can configure notification preferences per event type
   *FR-4:* Batch low-priority notifications into a 5-minute digest
   *FR-5:* Mark as read/unread, with bulk actions
 ---
-note: Non-functional requirements
+text: Non-functional requirements
   *NFR-1:* Handle 10,000 concurrent WebSocket connections per node
   *NFR-2:* 99.9% delivery rate for critical notifications
   *NFR-3:* Maximum 50ms added latency to the triggering action
@@ -433,14 +433,14 @@ note: Non-functional requirements
 ---
 section: Architecture
 ---
-note: System design
+text: System design
   *Event bus:* Redis Streams for event ingestion and fan-out
   *WebSocket server:* Dedicated Node.js service with Socket.IO
   *Push service:* Firebase Cloud Messaging for mobile, Web Push API for browsers
   *Storage:* PostgreSQL for notification records, Redis for online presence
   *Queue:* Bull queue for batch digest processing
 ---
-note: Data flow
+text: Data flow
   1. Service emits event to Redis Stream
   2. Notification worker consumes event, resolves recipients
   3. For each recipient: check preferences, format message
@@ -476,7 +476,7 @@ step: Phase 4 — Mobile push
 ---
 section: Risks
 ---
-note: Risk assessment
+text: Risk assessment
   *High:* WebSocket scaling under peak load — mitigate with horizontal scaling and connection limits
   *Medium:* Push notification delivery on iOS — mitigate with APNs best practices and retry logic
   *Low:* Redis single point of failure — mitigate with Redis Sentinel failover
@@ -491,27 +491,27 @@ note: Risk assessment
     tags: ["reporting", "status", "metrics", "weekly"],
     source: `title: Engineering Weekly Report — Week 11, 2026
 ---
-note: Summary
+text: Summary
   Strong week with 94% sprint velocity. Shipped the dashboard redesign
   ahead of schedule. Two P1 bugs resolved within SLA. Hiring pipeline
   healthy with 3 candidates in final rounds.
 ---
 section: Key Metrics
 ---
-note: Sprint velocity
+text: Sprint velocity
   *Planned:* 34 story points
   *Completed:* 32 story points
   *Velocity:* 94%
   *Carry-over:* 2 points (API rate limiting — blocked on infra)
 ---
-note: Quality metrics
+text: Quality metrics
   *P1 bugs opened:* 2
   *P1 bugs closed:* 2
   *Mean time to resolve (P1):* 4.2 hours
   *Test coverage:* 87.3% (+0.4% from last week)
   *Build success rate:* 98.7%
 ---
-note: System health
+text: System health
   *Uptime:* 99.98%
   *P99 latency:* 342ms (target: under 500ms)
   *Error rate:* 0.03%
@@ -519,24 +519,24 @@ note: System health
 ---
 section: Highlights
 ---
-note: Dashboard redesign shipped
+text: Dashboard redesign shipped
   Launched the new analytics dashboard to 100% of users on Tuesday.
   Initial feedback positive — 4.2/5 in-app rating from 230 responses.
   Page load time improved by 40% with the new data fetching approach.
 ---
-note: Search performance optimization
+text: Search performance optimization
   Reduced search query time from 820ms to 210ms by adding
   composite indexes and query plan optimization. Deployed Thursday.
 ---
 section: Blockers and Risks
 ---
-note: API rate limiting — blocked
+text: API rate limiting — blocked
   Waiting on infrastructure team's decision on rate limiting strategy.
   Options: API gateway (Kong) vs application-level (custom middleware).
   *Impact:* Delays the partner API launch by 1 week if not resolved by Friday.
   *Action:* Escalated to VP Engineering. Decision meeting scheduled Thursday.
 ---
-note: Database migration risk
+text: Database migration risk
   The user table migration for multi-tenancy is estimated at 4 hours
   of downtime. Exploring zero-downtime migration with shadow tables.
   *Action:* Proof of concept by next Wednesday.
@@ -652,14 +652,27 @@ async function seed() {
   console.log("Indexes created.");
 
   // Seed inline templates (legacy)
+  let inlineInserted = 0;
+  let inlineUpdated = 0;
   for (const tmpl of templates) {
+    const document = parseIntentText(tmpl.source);
     const existing = await collection.findOne({ slug: tmpl.slug });
+
     if (existing) {
-      console.log(`  ⏭  ${tmpl.slug} — already exists, skipping.`);
+      await collection.updateOne(
+        { slug: tmpl.slug },
+        {
+          $set: {
+            source: tmpl.source,
+            document,
+            updatedAt: new Date(),
+          },
+        },
+      );
+      inlineUpdated++;
+      console.log(`  ~  ${tmpl.slug} — updated.`);
       continue;
     }
-
-    const document = parseIntentText(tmpl.source);
 
     await collection.insertOne({
       ...tmpl,
@@ -672,20 +685,40 @@ async function seed() {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
+    inlineInserted++;
     console.log(`  ✓  ${tmpl.slug} — inserted.`);
   }
 
   // Seed file-based templates (v2.10 — from templates/ directory)
   const fileTemplates = loadFileTemplates();
-  let fileCount = 0;
+  let fileInserted = 0;
+  let fileUpdated = 0;
   for (const tmpl of fileTemplates) {
+    const document = parseIntentText(tmpl.source);
     const existing = await collection.findOne({ slug: tmpl.slug });
+
     if (existing) {
-      console.log(`  ⏭  ${tmpl.slug} — already exists, skipping.`);
+      await collection.updateOne(
+        { slug: tmpl.slug },
+        {
+          $set: {
+            name: tmpl.name,
+            description: tmpl.description,
+            category: tmpl.category,
+            domain: tmpl.domain,
+            tags: tmpl.tags,
+            source: tmpl.source,
+            example_data: tmpl.example_data,
+            recommended_theme: tmpl.recommended_theme,
+            document,
+            updatedAt: new Date(),
+          },
+        },
+      );
+      fileUpdated++;
+      console.log(`  ~  ${tmpl.slug} — updated (file).`);
       continue;
     }
-
-    const document = parseIntentText(tmpl.source);
 
     await collection.insertOne({
       slug: tmpl.slug,
@@ -707,12 +740,12 @@ async function seed() {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
-    fileCount++;
+    fileInserted++;
     console.log(`  ✓  ${tmpl.slug} — inserted (file).`);
   }
 
   console.log(
-    `\nDone. ${templates.length} inline + ${fileCount} file templates seeded.`,
+    `\nDone. Inline: ${inlineInserted} inserted, ${inlineUpdated} updated. File: ${fileInserted} inserted, ${fileUpdated} updated.`,
   );
 
   // ── Seed built-in themes ──
@@ -723,19 +756,32 @@ async function seed() {
   await themesCollection.createIndex({ tier: 1 });
 
   const themeNames = listBuiltinThemes();
-  let themeCount = 0;
+  let themeInserted = 0;
+  let themeUpdated = 0;
   for (const name of themeNames) {
     const theme = getBuiltinTheme(name);
     if (!theme) continue;
 
-    const existing = await themesCollection.findOne({ slug: name });
-    if (existing) {
-      console.log(`  ⏭  ${name} — already exists, skipping.`);
-      continue;
-    }
-
     const webCss = generateThemeCSS(theme, "web");
     const printCss = generateThemeCSS(theme, "print");
+
+    const existing = await themesCollection.findOne({ slug: name });
+    if (existing) {
+      await themesCollection.updateOne(
+        { slug: name },
+        {
+          $set: {
+            theme_json: JSON.stringify(theme),
+            web_css: webCss,
+            print_css: printCss,
+            updated_at: new Date(),
+          },
+        },
+      );
+      themeUpdated++;
+      console.log(`  ~  ${name} — updated.`);
+      continue;
+    }
 
     await themesCollection.insertOne({
       id: `builtin-${name}`,
@@ -753,11 +799,11 @@ async function seed() {
       created_at: new Date(),
       updated_at: new Date(),
     });
-    themeCount++;
+    themeInserted++;
     console.log(`  ✓  ${name} — inserted.`);
   }
 
-  console.log(`\n${themeCount} themes seeded.`);
+  console.log(`\nThemes: ${themeInserted} inserted, ${themeUpdated} updated.`);
   await client.close();
 }
 

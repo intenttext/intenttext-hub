@@ -4,7 +4,7 @@ track: | version: 1.0 | by: {{author}} | note: Spec created {{created_date}}
 ---
 section: Scope
 ---
-note: Overview
+text: Overview
   *System:* {{system_name}}
   *Agent:* {{agent_name}}
   *Environment:* {{environment}}
@@ -37,7 +37,7 @@ policy: {{logging_policy_name}} | scope: global
 ---
 section: Escalation Matrix
 ---
-note: Escalation Rules
+text: Escalation Rules
   *Severity Critical:* {{escalation_critical}}
   *Severity High:* {{escalation_high}}
   *Severity Medium:* {{escalation_medium}}
@@ -45,9 +45,9 @@ note: Escalation Rules
 ---
 section: Monitoring
 ---
-note: Alerting
+text: Alerting
   *Dashboard:* {{dashboard_url}}
   *Alert Channel:* {{alert_channel}}
   *On-Call Rotation:* {{oncall_rotation}}
 ---
-note: Spec maintained by {{author}} · {{created_date}}
+text: Spec maintained by {{author}} · {{created_date}}

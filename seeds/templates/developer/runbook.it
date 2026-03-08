@@ -6,7 +6,7 @@ track: | version: 0.1 | by: {{maintainer}} | note: Initial runbook created from 
 ---
 section: Service Overview
 ---
-note: Service Information
+text: Service Information
   *Service Name:* {{service_name}}
   *Service ID:* {{service_id}}
   *Team:* {{owning_team}}
@@ -15,15 +15,15 @@ note: Service Information
   *Dashboard:* {{dashboard_url}}
   *Alerting Channel:* {{alerting_channel}}
 ---
-note: Description
+text: Description
   {{service_description}}
 ---
-note: Architecture Summary
+text: Architecture Summary
   {{architecture_summary}}
 ---
 section: On-Call
 ---
-note: On-Call Rotation
+text: On-Call Rotation
   *Schedule:* {{oncall_schedule}}
   *Primary:* {{oncall_primary}}
   *Secondary:* {{oncall_secondary}}
@@ -54,25 +54,25 @@ policy: Service Level Commitments
 ---
 section: Dependencies
 ---
-note: Upstream Dependencies
+text: Upstream Dependencies
   {{upstream_dependencies}}
 ---
-note: Downstream Consumers
+text: Downstream Consumers
   {{downstream_consumers}}
 ---
 section: Recovery Procedures
 ---
-note: Disaster Recovery
+text: Disaster Recovery
   {{disaster_recovery}}
 ---
-note: Data Backup and Restore
+text: Data Backup and Restore
   {{backup_restore}}
 ---
 section: Maintenance
 ---
-note: Routine Maintenance Tasks
+text: Routine Maintenance Tasks
   {{maintenance_tasks}}
 ---
-note: Last Reviewed
+text: Last Reviewed
   *Date:* {{last_reviewed_date}}
   *Reviewer:* {{reviewer}}

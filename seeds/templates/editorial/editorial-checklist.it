@@ -3,7 +3,7 @@ meta: | type: template | domain: editorial | description: Pre-publication checkl
 ---
 section: Publication Details
 ---
-note: {{article_title}}
+text: {{article_title}}
   *Author:* {{author_name}}
   *Section:* {{section}}
   *Target Publish Date:* {{publish_date}}
@@ -19,7 +19,7 @@ each: checklist_items
 ---
 section: Legal and Compliance
 ---
-note: Legal Review
+text: Legal Review
   *Reviewed by:* {{legal_reviewer}}
   *Date:* {{legal_review_date}}
   *Outcome:* {{legal_outcome}}

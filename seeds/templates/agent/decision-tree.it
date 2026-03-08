@@ -4,14 +4,14 @@ track: | version: 1.0 | by: {{author}} | note: Decision tree defined {{created_d
 ---
 section: Decision Context
 ---
-note: Overview
+text: Overview
   *Agent:* {{agent_name}}
   *Model:* {{model}}
   *Objective:* {{objective}}
   *Input Signal:* {{input_signal}}
   *Confidence Threshold:* {{confidence_threshold}}
 ---
-note: Evaluation Criteria
+text: Evaluation Criteria
   {{evaluation_criteria}}
 ---
 section: Decision Nodes
@@ -26,16 +26,16 @@ each: decision_nodes
 ---
 section: Fallback Path
 ---
-note: Default Outcome
+text: Default Outcome
   *Fallback Action:* {{fallback_action}}
   *Trigger:* {{fallback_trigger}}
   *Notification:* {{fallback_notification}}
 ---
 section: Audit Trail
 ---
-note: Logging
+text: Logging
   *Log Destination:* {{log_destination}}
   *Retention:* {{log_retention}}
   *Include Reasoning:* {{include_reasoning}}
 ---
-note: Decision tree maintained by {{author}} · {{created_date}}
+text: Decision tree maintained by {{author}} · {{created_date}}
