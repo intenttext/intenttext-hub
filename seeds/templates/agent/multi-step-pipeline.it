@@ -31,8 +31,8 @@ text: *Max Pipeline Retries:* {{max_retries}}
 ---
 section: Outputs
 ---
-signal: {{output_event_success}} | phase: complete | level: success
-signal: {{output_event_failure}} | phase: error | level: error
+x-agent: signal | content: {{output_event_success}} | phase: complete | level: success
+x-agent: signal | content: {{output_event_failure}} | phase: error | level: error
 ---
 text: Output Schema
 text: {{output_schema_description}}

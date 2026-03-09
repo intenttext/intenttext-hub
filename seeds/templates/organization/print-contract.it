@@ -1,7 +1,7 @@
 title: {{title}}
 meta: | type: template | domain: organization | description: Print-ready contract with digital signatures, physical signature lines, and professional print layout | theme: legal | version: 1.0 | author: IntentText | since: 2.11
 summary: {{summary}}
-font: {{font_family}} | size: {{font_size}} | leading: {{leading}} | heading: {{heading_font}}
+x-layout: font | content: {{font_family}} | size: {{font_size}} | leading: {{leading}} | heading: {{heading_font}}
 page: {{page_size}} | margins: {{margins}} | numbering: arabic
 header: | left: {{header_left}} | right: {{header_right}}
 footer: | center: Page {{page_num}} of {{total_pages}} | right: {{footer_right}}

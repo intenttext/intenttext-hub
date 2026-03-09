@@ -1,7 +1,7 @@
 title: {{title}}
 meta: | type: template | domain: reports | description: AI agent performance report with task completion, success rate, token usage, and error tracking | theme: technical | version: 1.0 | author: IntentText | since: 2.11
 summary: {{summary}}
-byline: {{author}} | role: {{author_role}} | date: {{report_date}}
+x-writer: byline | content: {{author}} | role: {{author_role}} | date: {{report_date}}
 ---
 section: Session Overview
 ---

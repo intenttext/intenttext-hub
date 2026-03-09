@@ -19,7 +19,7 @@ done: {{description}} | owner: {{owner}} | completed: {{completed_date}}
 ---
 section: Blockers
 ---
-warning: {{description}} | raised_by: {{raised_by}} | severity: {{severity}} | status: {{status}}
+info: {{description}} | type: warning | raised_by: {{raised_by}} | severity: {{severity}} | status: {{status}}
 ---
 section: Next Week Plan
 ---

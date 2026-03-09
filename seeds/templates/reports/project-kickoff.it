@@ -39,7 +39,7 @@ task: {{name}} | target: {{target_date}} | owner: {{owner}} | status: {{status}}
 ---
 section: Risks
 ---
-warning: {{description}} | likelihood: {{likelihood}} | impact: {{impact}} | mitigation: {{mitigation}} | owner: {{owner}}
+info: {{description}} | type: warning | likelihood: {{likelihood}} | impact: {{impact}} | mitigation: {{mitigation}} | owner: {{owner}}
 ---
 section: Key Decisions
 ---

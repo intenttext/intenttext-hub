@@ -38,7 +38,7 @@ text: {{summary_opinion}}
 ---
 section: Findings
 ---
-warning: {{title}}
+info: {{title}} | type: warning
 text: *Finding ID:* {{finding_id}} · *Severity:* {{severity}} · *Category:* {{category}}
 text: *Description:* {{description}}
 text: *Evidence:* {{evidence}}

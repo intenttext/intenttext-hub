@@ -1,7 +1,7 @@
 title: {{title}}
 meta: | type: template | domain: business | description: SLA performance report with uptime, response time, resolution metrics, and operations sign-off | theme: corporate | version: 1.0 | author: IntentText | since: 2.11
 summary: {{summary}}
-byline: {{author}} | role: {{author_role}} | date: {{report_date}}
+x-writer: byline | content: {{author}} | role: {{author_role}} | date: {{report_date}}
 track: | version: 1.0 | by: {{author}}
 ---
 section: Service Availability

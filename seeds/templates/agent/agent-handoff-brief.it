@@ -43,6 +43,6 @@ text: {{known_risks}}
 ---
 section: Handoff Signal
 ---
-signal: {{handoff_event}} | phase: handoff | level: info
+x-agent: signal | content: {{handoff_event}} | phase: handoff | level: info
 ---
 text: Handoff prepared by {{source_agent}} · {{handoff_timestamp}}
