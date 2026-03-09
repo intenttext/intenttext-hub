@@ -25,6 +25,8 @@ export function validateSubmission(
   const parseResult = parseIntentTextSafe(source, {
     unknownKeyword: "note",
     maxBlocks: 500,
+    maxLineLength: 10000,
+    strict: false,
   });
 
   if (parseResult.errors.length > 0) {
